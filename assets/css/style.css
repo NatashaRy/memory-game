@@ -5,6 +5,13 @@ body {
     font-size: 18px;
     text-align: center;
     line-height: 1.5em;
+    margin: 25px 40px;
+}
+.logo {
+    max-width: 100px;
+}
+.skip-forward {
+    text-align: right;
 }
 
 /* -------- Typography */
@@ -24,7 +31,6 @@ body {
     from {background-color: #D32F2F;}
     to {background-color: #4FC3F7;}
 }
-
 
 .btn {
     font-family: 'lato', sans-serif;
@@ -47,22 +53,38 @@ body {
     animation-fill-mode: forwards;
 }
 
+/* --------- Icons */
+.fa-arrow-right {
+    font-size: 26px;
+    color: #212121;
+    margin: 0;
+    padding: 2px;
+}
+a.circle-icons {
+    border: solid 2px #212121;
+    border-radius: 25px;
+    padding: 7px 8px;
+}
+
 /* --------- Landing page - Home  */
 .logo {
     max-width: 200px;
 }
-.home {
-    text-align: center;
+.fullscreen {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 98vh;
     gap: 15px;
+}
+.home {
+    text-align: center;
+    justify-content: center;
 }
 .intro {
     max-width: 50%;
 }
+
 
 
 /* --------- Game layout */
