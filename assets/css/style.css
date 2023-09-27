@@ -7,11 +7,30 @@ body {
     line-height: 1.5em;
     margin: 25px 40px;
 }
+.fullscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95vh;
+    gap: 15px;
+}
 .logo {
     max-width: 100px;
+    margin-bottom: 30px;
 }
 .skip-forward {
-    text-align: right;
+    align-self: end;
+}
+
+/* -------- Generic classes */
+.jcc {
+    justify-content: center;
+}
+.aic {
+    align-items: center;
+}
+.sb {
+    justify-content: space-between;
 }
 
 /* -------- Typography */
@@ -24,7 +43,6 @@ body {
     font-size: 50px;
     font-weight: bold;
 }
-
 /* --------- Buttons */
 /* Hover animation */
 @keyframes btn-hover {
@@ -57,29 +75,22 @@ body {
 .fa-arrow-right {
     font-size: 26px;
     color: #212121;
-    margin: 0;
-    padding: 2px;
+    margin: 10px;
+    padding: 11px 12px;
+    border: solid 3px #212121;
+    border-radius: 26px;
 }
-a.circle-icons {
-    border: solid 2px #212121;
-    border-radius: 25px;
-    padding: 7px 8px;
+.fa-arrow-right:hover {
+    color: #00695C;
+    border: solid 5px #00695C;
 }
 
 /* --------- Landing page - Home  */
 .logo {
     max-width: 200px;
 }
-.fullscreen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 98vh;
-    gap: 15px;
-}
 .home {
     text-align: center;
-    justify-content: center;
 }
 .intro {
     max-width: 50%;
