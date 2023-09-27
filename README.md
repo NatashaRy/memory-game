@@ -51,27 +51,27 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
 ​
 ​
 ### **Wireframes:**
-**Desktop**
+#### **Pages on desktop**
 ![Image of wireframed pages for desktop.](docs/images/desktop-wireframes.png)
 
-**Tablet**
+#### **Pages on tablet**
 ![Image of wireframed pages for tablet.](docs/images/tablet-wireframes.png)
 
-**Mobile**
+#### **Pages on mobile**
 ![Image of wireframed pages for mobile.](docs/images/mobile-wireframes.png)
 ​
 ### **Color Scheme:**
+We have made a color palette for Memory Master to create a harmounious and engaging gaming enviroment. Shades of blue and green are our main colors with a touch of red in our dark accent color to make importent elements pop compared to other elements.
+
 ​![Image of color scheme.](docs/images/mm-colors.png)
 
-We have made a color palette for Memory Master to create a harmounious and engaging gaming enviroment. Shades of blue and green are our main colors with a touch of red in our dark accent color to make importent elements pop compared to other elements.
- 
 #### **General benefits for our color palette**
 * The palette is not overly vibrant or distracting, allowing players to focus on the gameplay and memory tasks.
 * The colors, when used with proper contrast, can cater to a wider audience, including those with visual impairments.
 * The calming nature of the primary colors can set a relaxed mood, making the game more enjoyable and less stressful.
 * Different shades and contrasts allow for a clear distinction between flipped and unflipped cards, matched pairs, and other game elements.
 
-​
+#### **Color explaination**
 **Soft blue** (#E0F7FA): Our main color is a gentle shade provides a serene backdrop, setting a calming atmosphere that's conducive for concentration and focus, essential for a memory game.
 
 **Light teal** (#4FC3F7): Beloning to the same color family as the soft blue to ensure cohesiveness and a harmonious look. The color adds a splash of vibrancy and playfulness, making the game interface lively and inviting.
@@ -88,12 +88,12 @@ Together, these colors not only create a visually appealing interface but also p
 All color combinations are tested with WebAIM AAA, to ensure accessability. 
 
 ## **Typography**
-![Image of typography scheme.](docs/images/mm-typography.png)
-​
 * We have chosen to use two fonts for Memory Master:
   * Open Sans - For all the headings.
   * Lato - For all body text.
   * Lato Bold - For all buttons.  
+
+![Image of typography scheme.](docs/images/mm-typography.png)
 ​
 * Both Open Sans and Lato are sans-serifs and known for clarity and simplity, which is very suitable for a game interface wher quick readability might be crucial. These fonts can ensure that users can easily read instruction, scores and other game-related texts. 
 * The fonts provides clean lines and modern design, perfect for a modern and memory game. 
@@ -102,7 +102,7 @@ All color combinations are tested with WebAIM AAA, to ensure accessability.
 ## **Game rules and mechanics**
 Players must match pairs of cards based on memory. The goal is to match all pairs in the fewest moves and the shortest time possible.
 
-### *Game board:*
+### **Game board:**
 * The game board consist of a grid of cards, face down.
 * Grid size are adjusted depending on difficulty: 
     * Desktop:
@@ -114,6 +114,23 @@ Players must match pairs of cards based on memory. The goal is to match all pair
         * Easy: 4*4 cards (totalt 16 cards, 8 pairs)
         * Medium: 4*6 cards (totalt 24 cards, 12 pairs)
         * Hard: 4*8 cards (totalt 32 cards, 16 pairs)
+
+### **Card matching**
+* Every card has a twin, two of the cards has the same symbol.
+* Users flip two cards at the time, trying to find the matching pairs.
+* If the card matches, they will disapear from the grid. If not, they flip back face down.
+
+### **Moves and scoring**
+* Each attempt to match two cards count as a move.
+* The game tracks the number of moves made.
+* Users are scored based on the number of moves: fewer moves results in a higher score.
+
+### **Timer**
+* A timer starts when the game begins, tracking how long the player takes to match all pairs.
+
+### **End of game**
+* The game ends when all card pair are matched.
+* Users recive feedback on their performance, including time and total moves. 
 
 
 ## **Current Features Common to all pages**
@@ -162,7 +179,7 @@ We always have bugs in development, a few bullet points here to talk about bugs 
 ## **Deployment**
 I deployed the page on GitHub pages via the following procedure: -
 ​
-1. From the project's [repository](pageurl), go to the **Settings** tab.
+1. From the project's [repository](https://github.com/NatashaRy/memory-game), go to the **Settings** tab.
 2. From the left-hand menu, select the **Pages** tab.
 3. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
 4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
@@ -183,8 +200,11 @@ It's always nice to mention those that helped you get there, if people gave you 
 ​
 ### **Content:**
 ​
-If you took any code from online source and by this i mean copy paste with zero changes mention it here!
+* All fonts are imported from Google Fonts - ![fonts.google.com](https://fonts.google.com)
+* All icons on memory cards are taken from Font Awesome - ![fontawesome.com](https://fontawesome.com/)
+* Wireframes were created in Adobe XD - ![adobexdplatform.com](https://adobexdplatform.com/)
   
 ### **Media:**
 ​
-Links to the locations of images if you've used them from an online source!
+* Memory Masters logotyp was created with Canva - ![canva.com](https://canva.com)
+* TinyPNG was used for image compression - ![tinypng.com](https://tinypng.com/)
