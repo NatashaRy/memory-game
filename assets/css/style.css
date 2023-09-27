@@ -2,10 +2,12 @@
 body {
     background-color: #E0F7FA;
     font-family: 'Lato';
+    font-size: 17px;
     text-align: center;
     vertical-align: middle;
 }
-/* --------- Headings */
+
+/* -------- Typography */
 .headings {
     color: #00695C;
     font-family: 'Open sans', sans-serif;
@@ -14,6 +16,16 @@ body {
 #heading1 {
     font-size: 50px;
     font-weight: bold;
+}
+
+/* --------- Buttons */
+.btn {
+    font-family: 'lato', sans-serif;
+    font-weight: bold;
+    background-color: #D32F2F;
+    color: #FAFAFA;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 /* --------- Landing page - Home  */
