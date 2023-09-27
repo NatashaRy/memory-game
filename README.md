@@ -51,14 +51,26 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
 ​
 ​
 ### **Wireframes:**
-​
-These are optional if you have any drawings or diagrams about how the site is intended to look include them here
+**Desktop**
+![Image of landing page on desktop.](docs/images/desktop01-landing-page.png) ![Image of instructions page on desktop.](docs/images/desktop02-instructions.png) ![Image of settings page on desktop.](docs/images/desktop03-choices.png)
+![Image of game page for easy difficulty on desktop.](docs/images/desktop04-game-page-easy.png) ![Image of game page for medium difficulty on desktop.](docs/images/desktop04-game-page-medium.png) ![Image of game page for hard difficulty on desktop.](docs/images/desktop04-game-page-hard.png)
+![Image of game page when pair is found on desktop.](docs/images/desktop05-game-page-pairing.png) ![Image of game page when pair is removed desktop.](docs/images/desktop06-game-page-pair-removed.png) ![Image of end page on desktop.](docs/images/desktop07-game-over-results.png)
+
+**Tablet**
+![Image of landing page on tablet.](docs/images/tablet01-landing-page.png) ![Image of instructions page on tablet.](docs/images/tablet02-instructions.png) ![Image of settings page on tablet.](docs/images/tablet03-choices.png)
+![Image of game page for easy difficulty on tablet.](docs/images/tablet04-game-page-medium.png) ![Image of game page for medium difficulty on tablet.](docs/images/tablet04-game-page-medium.png) ![Image of game page for hard difficulty on tablet.](docs/images/tablet04-game-page-hard.png)
+![Image of game page when pair is found on tablet.](docs/images/tablet05-game-page-pairing.png) ![Image of game page when pair is removed tablet.](docs/images/tablet06-game-page-pair-removed.png) ![Image of end page on tablet.](docs/images/tablet07-game-over-results.png)
+
+**Mobile**
+![Image of landing page on mobile.](docs/images/mobile01-landing-page.png) ![Image of instructions page on mobile.](docs/images/mobile02-instructions.png) ![Image of settings page on mobile.](docs/images/mobile03-choices.png)
+![Image of game page for easy difficulty on mobile.](docs/images/mobile04-game-page-easy.png) ![Image of game page for medium difficulty on mobile.](docs/images/mobile04-game-page-medium.png) ![Image of game page for hard difficulty on mobile.](docs/images/mobile04-game-page-hard.png)
+![Image of game page when pair is found on mobile.](docs/images/mobile05-game%20page-pairing.png) ![Image of game page when pair is removed mobile.](docs/images/mobile06-game-page-pair-removed.png) ![Image of end page on mobile.](docs/images/desktop07-game-over-results.png)
 ​
 ### **Color Scheme:**
-​![Image of color scheme.](docs/images/colors.png)
+​![Image of color scheme.](docs/images/mm-colors.png)
 
 We have made a color palette for Memory Master to create a harmounious and engaging gaming enviroment. Shades of blue and green are our main colors with a touch of red in our dark accent color to make importent elements pop compared to other elements.
-
+ 
 #### **General benefits for our color palette**
 * The palette is not overly vibrant or distracting, allowing players to focus on the gameplay and memory tasks.
 * The colors, when used with proper contrast, can cater to a wider audience, including those with visual impairments.
@@ -82,7 +94,7 @@ Together, these colors not only create a visually appealing interface but also p
 All color combinations are tested with WebAIM AAA, to ensure accessability. 
 
 ## **Typography**
-![Image of typography scheme.](docs/images/typography.png)
+![Image of typography scheme.](docs/images/mm-typography.png)
 ​
 * We have chosen to use two fonts for Memory Master:
   * Open Sans - For all the headings.
@@ -93,6 +105,23 @@ All color combinations are tested with WebAIM AAA, to ensure accessability.
 * The fonts provides clean lines and modern design, perfect for a modern and memory game. 
 * All fonts were sourced from Google fonts, as stated in the credits.
 ​
+## **Game rules and mechanics**
+Players must match pairs of cards based on memory. The goal is to match all pairs in the fewest moves and the shortest time possible.
+
+### *Game board:*
+* The game board consist of a grid of cards, face down.
+* Grid size are adjusted depending on difficulty: 
+    * Desktop:
+        * Easy: 4*4 cards (totalt 16 cards, 8 pairs)
+        * Medium: 6*4 cards (totalt 24 cards, 12 pairs) 
+        * Hard: 8*4 cards (totalt 32 cards, 16 pairs)
+
+    * Tablet and mobile:       
+        * Easy: 4*4 cards (totalt 16 cards, 8 pairs)
+        * Medium: 4*6 cards (totalt 24 cards, 12 pairs)
+        * Hard: 4*8 cards (totalt 32 cards, 16 pairs)
+
+
 ## **Current Features Common to all pages**
 ​
 #### *Navigation Bar:*
