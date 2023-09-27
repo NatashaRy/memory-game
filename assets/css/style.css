@@ -18,7 +18,7 @@ body {
     height: 88vh;
 }
 .logo {
-    width: 100px;
+    width: 150px;
     margin-bottom: 50px;
 }
 
@@ -32,8 +32,8 @@ body {
 .sb {
     justify-content: space-between;
 }
-.align-right {
-    align-self: flex-end;
+.asr {
+    align-self: end;
 }
 
 /* -------- Typography */
