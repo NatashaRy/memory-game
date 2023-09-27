@@ -19,17 +19,32 @@ body {
 }
 
 /* --------- Buttons */
+/* Hover animation */
+@keyframes btn-hover {
+    from {background-color: #D32F2F;}
+    to {background-color: #4FC3F7;}
+}
+
+
 .btn {
     font-family: 'lato', sans-serif;
     font-weight: bold;
     background-color: #D32F2F;
     font-size: 20px;
     color: #FAFAFA;
-    padding: 15px 20px;
+    padding: 14px 30px;
     text-align: center;
     vertical-align: middle;
-    border-radius: 16px;
+    border-radius: 20px;
     letter-spacing: 2px;
+}
+.btn:hover {
+    background-color: #4FC3F7;
+    color: #212121;
+    animation-name: btn-hover;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 }
 
 /* --------- Landing page - Home  */
