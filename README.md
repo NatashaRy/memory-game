@@ -52,19 +52,13 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
 ​
 ### **Wireframes:**
 **Desktop**
-![Image of landing page on desktop.](docs/images/desktop01-landing-page.png) ![Image of instructions page on desktop.](docs/images/desktop02-instructions.png) ![Image of settings page on desktop.](docs/images/desktop03-choices.png)
-![Image of game page for easy difficulty on desktop.](docs/images/desktop04-game-page-easy.png) ![Image of game page for medium difficulty on desktop.](docs/images/desktop04-game-page-medium.png) ![Image of game page for hard difficulty on desktop.](docs/images/desktop04-game-page-hard.png)
-![Image of game page when pair is found on desktop.](docs/images/desktop05-game-page-pairing.png) ![Image of game page when pair is removed desktop.](docs/images/desktop06-game-page-pair-removed.png) ![Image of end page on desktop.](docs/images/desktop07-game-over-results.png)
+![Image of wireframed pages for desktop.](docs/images/desktop-wireframes.png)
 
 **Tablet**
-![Image of landing page on tablet.](docs/images/tablet01-landing-page.png) ![Image of instructions page on tablet.](docs/images/tablet02-instructions.png) ![Image of settings page on tablet.](docs/images/tablet03-choices.png)
-![Image of game page for easy difficulty on tablet.](docs/images/tablet04-game-page-medium.png) ![Image of game page for medium difficulty on tablet.](docs/images/tablet04-game-page-medium.png) ![Image of game page for hard difficulty on tablet.](docs/images/tablet04-game-page-hard.png)
-![Image of game page when pair is found on tablet.](docs/images/tablet05-game-page-pairing.png) ![Image of game page when pair is removed tablet.](docs/images/tablet06-game-page-pair-removed.png) ![Image of end page on tablet.](docs/images/tablet07-game-over-results.png)
+![Image of wireframed pages for tablet.](docs/images/tablet-wireframes.png)
 
 **Mobile**
-![Image of landing page on mobile.](docs/images/mobile01-landing-page.png) ![Image of instructions page on mobile.](docs/images/mobile02-instructions.png) ![Image of settings page on mobile.](docs/images/mobile03-choices.png)
-![Image of game page for easy difficulty on mobile.](docs/images/mobile04-game-page-easy.png) ![Image of game page for medium difficulty on mobile.](docs/images/mobile04-game-page-medium.png) ![Image of game page for hard difficulty on mobile.](docs/images/mobile04-game-page-hard.png)
-![Image of game page when pair is found on mobile.](docs/images/mobile05-game%20page-pairing.png) ![Image of game page when pair is removed mobile.](docs/images/mobile06-game-page-pair-removed.png) ![Image of end page on mobile.](docs/images/desktop07-game-over-results.png)
+![Image of wireframed pages for mobile.](docs/images/mobile-wireframes.png)
 ​
 ### **Color Scheme:**
 ​![Image of color scheme.](docs/images/mm-colors.png)
