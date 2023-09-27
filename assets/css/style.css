@@ -8,7 +8,7 @@ body {
     padding: 25px 40px;
     margin: 0;
 }
-.fullscreen {
+.flex {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,21 +18,26 @@ body {
     height: 88vh;
 }
 .logo {
-    width: 150px;
-    margin-bottom: 50px;
+    width: 120px;
+    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 /* -------- Generic classes */
-.jcc {
+.justify-c {
     justify-content: center;
 }
-.aic {
+.align-c {
     align-items: center;
 }
-.sb {
+.space-b {
     justify-content: space-between;
 }
-.asr {
+.align-s {
+    align-self: flex-start;
+}
+.align-e {
     align-self: end;
 }
 
@@ -40,12 +45,14 @@ body {
 .headings {
     color: #00695C;
     font-family: 'Open sans', sans-serif;
-    margin: 15px;
+    margin: 20px;
+    font-weight: bold;
 }
 #heading1 {
     font-size: 50px;
-    font-weight: bold;
+    margin-bottom: 60px;
 }
+
 /* --------- Buttons */
 /* Hover animation */
 @keyframes btn-hover {
@@ -75,17 +82,27 @@ body {
 }
 
 /* --------- Icons */
-.fa-arrow-right {
-    font-size: 26px;
+.fa-solid, .fa-regular {
     color: #212121;
+    font-size: 26px;
+    margin: 0 10px;
+}
+.fa-gear:hover, .fa-circle-question:hover {
+    color: #00695C;
+}
+
+.fa-arrow-right {
+    color: #FAFAFA;
     margin: 10px;
     padding: 11px 12px;
     border: solid 3px #212121;
     border-radius: 26px;
+    background-color: #D32F2F;
 }
 .fa-arrow-right:hover {
-    color: #00695C;
-    border: solid 5px #00695C;
+    color: #D32F2F;
+    border: solid #D32F2F;
+    background-color: transparent;
 }
 
 /* --------- Landing page - Home  */
@@ -100,15 +117,13 @@ body {
 }
 
 
-
 /* --------- Game layout grid */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(4,1);
-    gap: 10px;
-    width: auto;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    width: 600px;
     margin: 0 auto;
-
 }
 
 .card {
