@@ -1,39 +1,167 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Memory Master**
+## **Site Overview**
+Memory Master is an engaging memory game that help the user improve cognitive skills while having an awesome time. 
+​
+We provide a fun game in a relaxing gaming enviroment. Our target audience are people who like to play online games, primarily those who prefer genres as puzzle and strategy. We also like to attract people who are seeking fun ways to improve their memory aswell as being challanged. Since we provide different variations of themes and difficulites Memory Master is suitable for all ages.
 
-Welcome,
+![Am I responsive screenshot](imagelocation so maybe docs/image.jpg)
+​
+## Table of contents:
+1. [**Site Overview**](#site-overview)
+1. [**Planning stage**](#planning-stage)
+    * [***Target Audiences***](#target-audiences)
+    * [***User Stories***](#user-stories)
+    * [***Site Aims***](#site-aims)
+    * [***Wireframes***](#wireframes)
+    * [***Color Scheme***](#color-scheme)
+    * [***Typography**](#typography)
+1. [**Current Features Common to all pages**](#current-features-common-to-all-pages)
+    * [***Header Element:***](#header-element)
+    * [***The rest of your features***](#features)
+    * [**Footer**](#footer)
+1. [**Future-Enhancements**](#future-enhancements)
+1. [**Testing Phase**](#testing-phase)
+1. [**Deployment**](#deployment)
+1. [**Tech**](#tech)
+1. [**Credits**](#credits)
+    * [**Honorable mentions**](#honorable-mentions)
+    * [**General reference**](#general-reference)
+    * [**Content**](#content)
+    * [**Media**](#media)
+​
+## **Planning stage**
+### **Target Audiences:**
+​​
+* Users interested in online games without creating an account.
+* Users intrested in getting challanged.
+* Users interested in improving their memory in an interactive way.
+​
+### **User Stories:**
+​​
+* As a user, I want to be entertained by playing online games that enhance my cognitive skills.
+* As a user, I want to be able to adjust the difficulty to keep getting challanged.
+* As a user, I want to increse my brain function and improving both my short- and long-term memory. 
+* As a user, I want to challenge myself and improve my skills.
+​
+### **Site Aims:**
+​​
+* To provide a fun, engaging and interactive online game.
+* To challange the users memory skills to improve cognitivity.
+* To offer a vary of options to keep the user entertained.
+​
+​
+### **Wireframes:**
+​
+These are optional if you have any drawings or diagrams about how the site is intended to look include them here
+​
+### **Color Scheme:**
+​![Image of color scheme.](docs/images/colors.png)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+We have made a color palette for Memory Master to create a harmounious and engaging gaming enviroment. Shades of blue and green are our main colors with a touch of red in our dark accent color to make importent elements pop compared to other elements.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+#### **General benefits for our color palette**
+* The palette is not overly vibrant or distracting, allowing players to focus on the gameplay and memory tasks.
+* The colors, when used with proper contrast, can cater to a wider audience, including those with visual impairments.
+* The calming nature of the primary colors can set a relaxed mood, making the game more enjoyable and less stressful.
+* Different shades and contrasts allow for a clear distinction between flipped and unflipped cards, matched pairs, and other game elements.
 
-## Codeanywhere Reminders
+​
+**Soft blue** (#E0F7FA): Our main color is a gentle shade provides a serene backdrop, setting a calming atmosphere that's conducive for concentration and focus, essential for a memory game.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+**Light teal** (#4FC3F7): Beloning to the same color family as the soft blue to ensure cohesiveness and a harmonious look. The color adds a splash of vibrancy and playfulness, making the game interface lively and inviting.
 
-`python3 -m http.server`
+**Deep teal** (#00695C): Our choice of dark main color is a shade of teal, which offers depth and contrast to our palette. It's a color that exudes sophistication and stability, reinforcing the game's credibility.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+**Off-white** (#FAFAFA): A neutral hue that offers purity of style and ensures that the game element are easily discernible and improves overall visual clarity. 
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+**Coral** (#D32F2F): Our vibrant accent color captures attention and is perfect for highlighting important game elements. Its warm contrasts create a good dynamic in the interface with the cooler shades. 
 
-`http_server`
+**Almost black** (#212121): For our paragraphs we have chosen a foundational color. It ensures legibility and provides a solid contrast against the lighter shades in the palette.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Together, these colors not only create a visually appealing interface but also prioritize user experience, ensuring that Memory Master is both delightful to play and easy on the eyes. 
+All color combinations are tested with WebAIM AAA, to ensure accessability. 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+## **Typography**
+![Image of typography scheme.](docs/images/typography.png)
+​
+* We have chosen to use two fonts for Memory Master:
+  * Open Sans - For all the headings.
+  * Lato - For all body text.
+  * Lato Bold - For all buttons.  
+​
+* Both Open Sans and Lato are sans-serifs and known for clarity and simplity, which is very suitable for a game interface wher quick readability might be crucial. These fonts can ensure that users can easily read instruction, scores and other game-related texts. 
+* The fonts provides clean lines and modern design, perfect for a modern and memory game. 
+* All fonts were sourced from Google fonts, as stated in the credits.
+​
+## **Current Features Common to all pages**
+​
+#### *Navigation Bar:*
+This is an example of the features section, your going to talk about each section of the page and what it offers for the navbar for example
+​
+* The user is given links to each section of the page
+* Each option is presented in a way that is always obvious and reable
+* on smaller screens a hamburger menu is provided to ensure mobile users have an optimal experience
+​
+#### *features
+​
+* This is where you will place all of your features think about each section of the page include a screenshot and a few bullet points on how it's presented and why
+​
+## **Future-Enhancements**
+​
+A webpage is a living beast it's going to evolve past the initial stages of release generally, it's always good to discuss where you this the page may go in the future
+​
+* At the time of making this page i didn't have the understanding to actual send e-mails from the contact form so intergration with email.js to send e-mails would improve the users experience
+​
+* Due to the subject matter, we have discussed the idea of including a small JS game to engage the user
+​
+## **Testing Phase**
+​
+This is the hardest bit of the readme, when we have completed a page we need to discuss testing.
+​
+Here is a good idea to talk about how and why you have tested with certain tools and validators so here a list of things to talk through
+​
+* Responsiveness - How do you test this, dev tools? checking on multiple devices?
+​
+* Functionality - Each feature needs to be tested before something is complete, talk about the process, click each link check each image, does form validation work, if your using javascript or anything else, does it always behave as the user expects
+​
+* Validators - Here include images from w3c html validator and css jigsaw (jshint for js and pep8 for python) and the results that came from it
+​
+​
+## **Bugs**
+​
+We always have bugs in development, a few bullet points here to talk about bugs you found and how you fixed them, in later projects this will be more detailed
+​
+* Issue - When on mobile the user had horizontal scroll with items overflowing
+* Cause - The images had absolute positioning and caused them to go off screen
+* Resolution - Changed the width of the image to stay within the confines of the screen.
+​
+***
+## **Deployment**
+I deployed the page on GitHub pages via the following procedure: -
+​
+1. From the project's [repository](pageurl), go to the **Settings** tab.
+2. From the left-hand menu, select the **Pages** tab.
+3. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
+4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
+​
+You  can find the live site via the following URL - [live webpage](https://yoururlhere)
+***
+​
+## **Tech**
+​​
+- HTML
+- CSS
+- JavaScript
+​
+## **Credits**
+### **Honorable mentions**
+​
+It's always nice to mention those that helped you get there, if people gave you support on slack or the local cat scared you into completing give them a mention!
+​
+### **Content:**
+​
+If you took any code from online source and by this i mean copy paste with zero changes mention it here!
+  
+### **Media:**
+​
+Links to the locations of images if you've used them from an online source!
