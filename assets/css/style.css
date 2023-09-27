@@ -2,9 +2,9 @@
 body {
     background-color: #E0F7FA;
     font-family: 'Lato';
-    font-size: 17px;
+    font-size: 18px;
     text-align: center;
-    vertical-align: middle;
+    line-height: 1.5em;
 }
 
 /* -------- Typography */
@@ -23,9 +23,13 @@ body {
     font-family: 'lato', sans-serif;
     font-weight: bold;
     background-color: #D32F2F;
+    font-size: 20px;
     color: #FAFAFA;
-    padding: 10px 20px;
+    padding: 15px 20px;
     text-align: center;
+    vertical-align: middle;
+    border-radius: 16px;
+    letter-spacing: 2px;
 }
 
 /* --------- Landing page - Home  */
@@ -34,6 +38,15 @@ body {
 }
 .home {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 98vh;
+    gap: 15px;
+}
+.intro {
+    max-width: 50%;
 }
 
 
