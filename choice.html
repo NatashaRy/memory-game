@@ -21,23 +21,41 @@
             <div><h1 class="headings heading1">Make your choice</h1></div>
             <div class="chioce-cards justify-c">
                 <div class="choice">
-                    <p class="title-number">
+                    <p>
                         <i class="fa-solid fa-hippo expl-icons"></i>
                     </p>
-                    <h2 class="heading2 card-title">Choose theme</h2>
+                    <h2><label for="theme" class="heading2 card-title">Choose theme</h2>
+                    <select id="theme">
+                        <option value="animals">Animals</option>
+                        <option value="fruits">Fruits</option>
+                    </select>
                 </div>
                 <div class="choice">
-                    <p class="title-number">
+                    <p>
                         <i class="fa-solid fa-baby expl-icons"></i>
                     </p>
-                    <h2 class="heading2 card-title ">Choose difficulty</h2>
+                    <h2><label for="difficulty" class="heading2 card-title">Choose difficulty:</label></h2>
+                    <select id="difficulty">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="easy">Hard</option>
+                    </select>
                 </div>
                 <div class="choice">
-                    <p class="title-number">
+                    <p>
                         <i class="fa-solid fa-volume-high expl-icons"></i>
                     </p>
-                    <h2 class="heading2 card-title ">Want sound?</h2>
+                    <h2><label for="sound" class="heading2 card-title ">Want sound effects?</h2>
+                    <select id="sound">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                 </div>
+        </section>
+        <section>
+            <div>
+                <button class="btn" id="play">Ready to play!</button>
+            </div>
         </section>
 
         <script src="assets/js/script.js"></script>
