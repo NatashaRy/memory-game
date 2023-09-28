@@ -82,27 +82,28 @@ body {
 }
 
 /* --------- Icons */
-.fa-solid, .fa-regular {
-    color: #212121;
-    font-size: 26px;
-    margin: 0 10px;
+.fa-gear {
+    font-size: 24px;
 }
-.fa-gear:hover, .fa-circle-question:hover {
-    color: #00695C;
+.fa-question {
+    font-size: 24px;
+    padding: 0 5px;
 }
-
 .fa-arrow-right {
+    font-size: 26px
+}
+.icons {
     color: #FAFAFA;
-    margin: 10px;
-    padding: 11px 12px;
+    margin: 5px;
+    padding: 13px 11px 10px;
     border: solid 3px #212121;
     border-radius: 26px;
     background-color: #D32F2F;
 }
-.fa-arrow-right:hover {
-    color: #D32F2F;
-    border: solid #D32F2F;
-    background-color: transparent;
+.icons:hover {
+    color: #FAFAFA;
+    border: solid #FAFAFA;
+    background-color: #00695C;
 }
 
 /* --------- Landing page - Home  */
@@ -116,6 +117,11 @@ body {
     max-width: 50%;
 }
 
+/* --------- Easy game page */
+.header-icons {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
 
 /* --------- Game layout grid */
 .card-grid {
