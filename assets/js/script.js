@@ -50,8 +50,9 @@ function generateSymbols(difficulty) {
     });
         
         if (window.location.pathname.includes('easy-game.html')) {
+        } else if (window.location.pathname.includes('medium-game.html')) {
 
-        }
+        } else if (window.location.pathname.includes('hard-game.html')) {}
 
 });
 
