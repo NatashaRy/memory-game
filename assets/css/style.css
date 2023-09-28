@@ -107,7 +107,7 @@ body {
 
 /* --------- Landing page - Home  */
 .logo {
-    max-width: 200px;
+    width: 200px;
 }
 .home {
     text-align: center;
