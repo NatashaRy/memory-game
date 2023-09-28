@@ -205,6 +205,7 @@ It's always nice to mention those that helped you get there, if people gave you 
 * Wireframes were created in Adobe XD - ![adobexdplatform.com](https://adobexdplatform.com/)
 * Animations on buttons are inspired from W3School - ![w3school.com](https://www.w3schools.com/css/css3_animations.asp)
 * Flipping card with CSS from W3School - ![w3school.com](https://www.w3schools.com/howto/howto_css_flip_card.asp)
+* Spread operator for cloning symbols array with  from Tutorial Points - ![tutorialpoints.com](https://www.tutorialspoint.com/how-to-clone-an-array-using-spread-operator-in-javascript#:~:text=The%20(...),same%20as%20the%20original%20array.)
   
 ### **Media:**
 ​
