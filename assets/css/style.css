@@ -98,6 +98,11 @@ body {
 
 
 /* --------- Icons */
+.header-icons {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
 .fa-gear {
     font-size: 24px;
 }
@@ -128,54 +133,6 @@ body {
     padding: 0;
     margin-bottom: 2px;
 }
-
-/* --------- Landing page - Home  */
-#logotype {
-    width: 200px;
-}
-.home {
-    text-align: center;
-}
-.intro {
-    max-width: 50%;
-}
-
-/* --------- Easy game page */
-.header-icons {
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-/* --------- Instructions + choice page */
-.instructions {
-    padding-top: 55px;
-}
-.instruction-cards, .chioce-cards {
-    display: flex;
-    align-items: stretch;
-    gap: 40px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    width: 70%;
-}
-
-.chioce-cards {
-    flex-wrap: nowrap;
-}
-
-.instruction, .choice {
-    background-color: #FAFAFA;
-    border: solid 3px #00695C;
-    width: 22%;
-    padding: 15px 20px;
-    width: 320px;
-}
-
-.choice {
-    padding: 60px 30px;
-}
-
-
 
 /* --------- Game layout grid */
 .card-container {
@@ -216,4 +173,55 @@ body {
 
 .card.flipped {
     transform: rotateY(180deg);
+}
+
+/* --------- Landing page - Home  */
+#logotype {
+    width: 200px;
+}
+.home {
+    text-align: center;
+}
+.intro {
+    max-width: 50%;
+}
+
+
+/* --------- Easy game page */
+.heading1 {
+    padding-bottom: 30px;
+}
+.card-container {
+    gap: 50px;
+    grid-template-columns: repeat(2,1fr);
+    width: 500px;
+}
+
+/* --------- Instructions + choice page */
+.instructions {
+    padding-top: 55px;
+}
+.instruction-cards, .chioce-cards {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.chioce-cards {
+    flex-wrap: nowrap;
+}
+
+.instruction, .choice {
+    background-color: #FAFAFA;
+    border: solid 3px #00695C;
+    width: 22%;
+    padding: 15px 20px;
+    width: 320px;
+}
+
+.choice {
+    padding: 60px 30px;
 }
