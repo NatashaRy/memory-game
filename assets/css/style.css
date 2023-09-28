@@ -146,11 +146,11 @@ body {
     margin-bottom: 0;
 }
 
-/* --------- Instructions page */
+/* --------- Instructions + choice page */
 .instructions {
     padding-top: 55px;
 }
-.instruction-cards {
+.instruction-cards, .chioce-cards {
     display: flex;
     align-items: stretch;
     gap: 40px;
@@ -159,12 +159,20 @@ body {
     width: 70%;
 }
 
-.instruction {
+.chioce-cards {
+    flex-wrap: nowrap;
+}
+
+.instruction, .choice {
     background-color: #FAFAFA;
     border: solid 3px #00695C;
     width: 22%;
     padding: 15px 20px;
     width: 320px;
+}
+
+.choice {
+    padding: 60px 30px;
 }
 
 
