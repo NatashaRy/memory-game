@@ -66,20 +66,21 @@ body {
     background-color: #D32F2F;
     font-size: 20px;
     color: #FAFAFA;
-    padding: 14px 30px;
+    padding: 10px 30px;
     text-align: center;
-    vertical-align: middle;
-    border-radius: 20px;
+    border-radius: 17px;
     letter-spacing: 2px;
+    line-height: 1.6;
 }
 .btn:hover {
     background-color: #4FC3F7;
     color: #212121;
     animation-name: btn-hover;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
+
 
 /* --------- Icons */
 .fa-gear {
