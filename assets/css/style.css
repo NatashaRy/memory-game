@@ -59,7 +59,7 @@ body {
     font-size: 25px;
 }
 
-.title-number {
+.sub-title {
     font-size: 25px;
     line-height: 0.5;
     font-weight: bold;
@@ -132,13 +132,14 @@ body {
     font-size: 45px;
     padding: 0;
     margin-bottom: 2px;
+    color: #D32F2F;
 }
 
 /* --------- Game layout grid */
 .card-container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 15px;
+    gap: 25px; 
     width: 600px;
     margin: 0 auto;
 }
@@ -190,12 +191,21 @@ body {
 /* --------- Easy game page */
 .heading1 {
     padding-bottom: 30px;
-}
-.card-container {
-    gap: 50px;
+} 
+.easy-container {
     grid-template-columns: repeat(2,1fr);
-    width: 500px;
-}
+    width: 450px;
+} 
+
+/* --------- Hard game page */
+.heading1 {
+    padding-bottom: 30px;
+} 
+.hard-container {
+    grid-template-columns: repeat(6,1fr);
+    width: 900px;
+} 
+
 
 /* --------- Instructions + choice page */
 .instructions {
@@ -212,6 +222,8 @@ body {
 
 .chioce-cards {
     flex-wrap: nowrap;
+    margin-bottom: 60px;
+
 }
 
 .instruction, .choice {
@@ -223,5 +235,20 @@ body {
 }
 
 .choice {
-    padding: 60px 30px;
+    padding: 50px 30px;
+    width: 300px;
+}
+
+#difficulty, #theme, #sound {
+    font-family: 'Lato';
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.5em;
+    padding: 25px 40px;
+    color: #212121;
+    border: solid 2px #00695C;
+    border-radius: 4px;
+    width: 95%;
+    padding: 6px;
+    margin-top: 10px;
 }
