@@ -11,7 +11,6 @@ body {
 .flex {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
 }
 .max-height {
@@ -42,16 +41,32 @@ body {
 }
 
 /* -------- Typography */
-.headings {
+.headings, .card-title {
     color: #00695C;
     font-family: 'Open sans', sans-serif;
-    margin: 20px;
-    font-weight: bold;
+    font-weight: 500;
+    margin: 10px;
 }
-#heading1 {
+
+.heading1 {
     font-size: 50px;
     margin-bottom: 60px;
+    font-weight: bold;
+    margin: 30px 10px;
 }
+
+.card-title {
+    font-size: 25px;
+}
+
+.title-number {
+    font-size: 25px;
+    line-height: 0.5;
+    font-weight: bold;
+    color: #D32F2F;
+    margin-bottom: 20px;
+}
+
 
 /* --------- Buttons */
 /* Hover animation */
@@ -107,6 +122,13 @@ body {
     background-color: #00695C;
 }
 
+.expl-icons {
+    font-weight: 900;
+    font-size: 45px;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
 /* --------- Landing page - Home  */
 #logotype {
     width: 200px;
@@ -126,14 +148,32 @@ body {
 
 /* --------- Instructions page */
 .instructions {
-    padding-top: 50px;
+    padding-top: 55px;
 }
+.instruction-cards {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.instruction {
+    background-color: #FAFAFA;
+    border: solid 3px #00695C;
+    width: 22%;
+    padding: 15px 20px;
+    width: 320px;
+}
+
+
 
 /* --------- Game layout grid */
 .card-container {
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 25px;
+    gap: 15px;
     width: 600px;
     margin: 0 auto;
 }
