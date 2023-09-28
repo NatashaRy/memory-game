@@ -140,4 +140,10 @@ body {
     border: solid 2px #212121;
     cursor: pointer;
     position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card.flipped {
+    transform: rotateY('180deg')
 }
