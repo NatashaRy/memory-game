@@ -129,7 +129,7 @@ body {
 
 .expl-icons {
     font-weight: 900;
-    font-size: 45px;
+    font-size: 40px;
     padding: 0;
     margin-bottom: 2px;
     color: #D32F2F;
@@ -186,6 +186,10 @@ body {
 .intro {
     max-width: 50%;
 }
+#heading-start {
+    padding-bottom: 0;
+    margin-bottom: 15px;
+}
 
 
 /* --------- Easy game page */
@@ -231,12 +235,12 @@ body {
     border: solid 3px #00695C;
     width: 22%;
     padding: 15px 20px;
-    width: 320px;
+    width: 300px;
 }
 
 .choice {
-    padding: 50px 30px;
-    width: 300px;
+    padding: 40px 30px;
+    width: 260px;
 }
 
 #difficulty, #theme, #sound {
