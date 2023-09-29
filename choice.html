@@ -10,21 +10,21 @@
         <title>Settings for Memory Master</title>
     </head>
     <body>
-        <header class="flex justify-c">
+        <header class="center-content">
             <div class="align-s header-icons">
                 <a href="instructions.html" class="icons" aria-label="Link to game instructions"><i class="fa-solid fa-question"></i></a>
             </div>
-            <div><img class="logo" src="assets/images/memory-master-logo.png" alt="logo"></div>
+            <div><img class="logo" src="assets/images/memory-master-logo.png" alt="logo" id="choice-logo"></div>
         </header>
 
-        <section class="flex align-c">
+        <section class="center-content">
             <div><h1 class="headings heading1">Make your choice</h1></div>
-            <div class="chioce-cards justify-c">
+            <div class="chioce-cards center-content flex-row">
                 <div class="choice">
                     <p>
                         <i class="fa-solid fa-hippo expl-icons"></i>
                     </p>
-                    <h2><label for="theme" class="heading2 card-title">Choose theme</h2>
+                    <h2><label for="theme" class="heading2 card-title">Choose theme:</label></h2>
                     <select id="theme">
                         <option value="animals">Animals</option>
                         <option value="fruits">Fruits</option>
@@ -36,27 +36,23 @@
                     </p>
                     <h2><label for="difficulty" class="heading2 card-title">Choose difficulty:</label></h2>
                     <select id="difficulty">
-                        <option value="easy-game.html">Easy</option>
-                        <option value="medium-game.html">Medium</option>
-                        <option value="hard-game.html">Hard</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
                     </select>
                 </div>
                 <div class="choice">
                     <p>
                         <i class="fa-solid fa-volume-high expl-icons"></i>
                     </p>
-                    <h2><label for="sound" class="heading2 card-title ">Want sound?</h2>
+                    <h2><label for="sound" class="heading2 card-title ">Want sound?</label></h2>
                     <select id="sound">
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
                 </div>
         </section>
-        <section>
-            <div>
-                <button id="start-game" class="btn" onclick="generateSymbols(difficulty)">Start game!</button>
-            </div>
-        </section>
+        <div class="center-content"><button id="start-game" class="btn">Start game!</button></div>
 
         <script src="assets/js/script.js"></script>
     </body>
