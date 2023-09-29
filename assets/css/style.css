@@ -19,7 +19,7 @@ body {
 }
 
 /* -------- Generic classes */
-.center-content {
+.center-content, .card-back {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,13 +112,16 @@ body {
 .fa-gear {
     font-size: 24px;
 }
+
 .fa-question {
     font-size: 24px;
     padding: 0 5px;
 }
+
 .fa-arrow-right {
     font-size: 26px
 }
+
 .icons {
     color: #FAFAFA;
     margin: 5px;
@@ -127,6 +130,7 @@ body {
     border-radius: 26px;
     background-color: #D32F2F;
 }
+
 .icons:hover {
     color: #FAFAFA;
     border: solid #FAFAFA;
@@ -149,6 +153,7 @@ body {
     width: 600px;
     margin: 0 auto;
 }
+
 .card {
     width: 100%;
     padding-top: 100%;
@@ -174,7 +179,7 @@ body {
 
 .card-back {
     background-color: #FAFAFA;
-    border: solid 3px #00695C;
+    border: solid 3px #D32F2F;
     transform: rotateY(180deg);
 }
 
@@ -182,19 +187,31 @@ body {
     transform: rotateY(180deg);
 }
 
+.heading-gamepage {
+    margin-bottom: 40px;
+}
+
 /* --------- Card symbols */
+.symbol {
+    font-size: 65px;
+    -webkit-text-stroke: 1.5px #212121;
+    -webkit-text-fill-color: #4FC3F7;
+}
 
 
 /* --------- Landing page - Home  */
 #logotype {
     width: 200px;
 }
+
 .home {
     text-align: center;
 }
+
 .intro {
     max-width: 50%;
 }
+
 #heading-start {
     padding-bottom: 0;
     margin-bottom: 15px;
@@ -219,12 +236,7 @@ body {
     width: 900px;
 } 
 
-
 /* --------- Instructions + choice page */
-/** .instructions {
-    padding-top: 0px;
-    justify-content: stretch;
-} */
 .instruction-cards, .chioce-cards {
     display: flex;
     align-items: stretch;
