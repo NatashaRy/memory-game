@@ -1,15 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // -------- Flipping cards
+    /**
+     * Limit the player to only be able to flip two cards at the same time.
+     * 1,5 seconds delay before flipping cards back if no match is found.
+     */
+    let countFlippedCards = 0;
+    let flippedCards = [];
+
     let cards = document.querySelectorAll('.card');
 
     for (let card of cards) {
         card.addEventListener('click', function() {
+            if (countFlippedCards == 2) {
+                return;
+            }
+
             this.classList.toggle('flipped');
+            flippedCards.push(this);
+            countFlippedCards++;
+
+            if (countFlippedCards == 2) {
+                setTimeout(() => {
+                    checkMatch();
+                }, 1200);
+            }
         });
     }
-    // Sets of different themes of symbols player can choose from.
-    const themes = {
+
+    /**
+     * Compare flipped cards.
+     * If a match is found the pairs are removed, otherwise the cards are flipped back over.
+     * Flipped cards counter are reset.
+     */
+    function checkMatch() {
+            if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
+            flippedCards[0].remove();
+            flippedCards[1].remove();
+        } else {
+            flippedCards[0].classList.remove('flipped');
+            flippedCards[1].classList.remove('flipped');
+        }
+
+        countFlippedCards = 0;
+        flippedCards = [];
+    }
+
+    // -------- Sets of different themes of symbols player can choose from.
+    let themes = {
         animals: ["fa-solid fa-hippo", "fa-solid fa-dog", "fa-solid fa-otter", "fa-solid fa-cow", "fa-solid fa-fish", "fa-solid fa-dragon","fa-solid fa-kiwi-bird", "fa-solid fa-worm", "fa-solid fa-spider", "fa-solid fa-shrimp", "fa-solid fa-mosquito", "fa-solid fa-locust", "fa-solid fa-horse-head", "fa-solid fa-horse","fa-solid fa-frog", "fa-solid fa-dove", "fa-solid fa-crow", "fa-solid fa-cat","fa-solid fa-bugs"],
         foods: ["fa-solid fa-carrot", "fa-solid fa-burger", "fa-solid fa-cookie", "fa-solid fa-drumstick-bite", "fa-solid fa-ice-cream", "fa-solid fa-pizza-slice", "fa-solid fa-bacon", "fa-solid fa-egg", "fa-solid fa-mug-hot", "fa-solid fa-martini-glass-citrus", "fa-solid fa-cheese", "fa-solid fa-champange-glasses", "fa-solid fa-candy-cane", "fa-solid fa-cake-candles", "fa-solid fa-bread-slice", "fa-solid fa-bowl-rice"],
         sports: ["fa-solid fa-baseball-bat-ball", "fa-solid fa-baseball", "fa-solid fa-table-tennis-paddle-ball", "fa-solid fa-person-swimming", "fa-solid fa-person-snowboarding", "fa-solid fa-golf-ball-tee","fa-solid fa-futbol", "fa-solid fa-football", "fa-solid fa-bowling-ball", "fa-solid fa-basketball", "fa-solid fa-person-biking", "fa-solid fa-person-running", "fa-solid fa-person-skating", "fa-solid fa-person-skiing","fa-solid fa-dumbbell", "fa-solid fa-bicycle", "fa-solid fa-hockey-puck", "fa-solid fa-volleyball","fa-solid fa-stopwatch-20"]
@@ -95,17 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /**
 
-function removePair() {
-
-}
-
-function checkCards() {
-
-}
-
-function chooseTheme() {
-
-}
 function countMoves() {
 
 }
