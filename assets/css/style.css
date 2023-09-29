@@ -179,7 +179,7 @@ body {
 
 .card-back {
     background-color: #FAFAFA;
-    border: solid 3px #D32F2F;
+    border: solid 3px #00695C;
     transform: rotateY(180deg);
 }
 
