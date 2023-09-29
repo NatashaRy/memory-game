@@ -44,6 +44,15 @@ body {
 .align-e {
     align-self: end;
 }
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.top-header {
+    width: 100%;
+}
 
 /* -------- Typography */
 .headings, .card-title {
@@ -63,15 +72,12 @@ body {
     font-size: 25px;
 }
 
-.sub-title {
+.sub-title  {
     font-size: 25px;
     line-height: 0.5;
     font-weight: bold;
     color: #D32F2F;
     margin-bottom: 20px;
-}
-.text-right {
-    text-align: right;
 }
 
 /* --------- Buttons */
@@ -145,6 +151,12 @@ body {
     color: #D32F2F;
 }
 
+.count-moves {
+    width: 185px;
+    background-color: #D32F2F;
+    border: solid 2px #212121;
+}
+
 /* --------- Game layout grid */
 .card-container {
     display: grid;
@@ -196,6 +208,20 @@ body {
     font-size: 65px;
     -webkit-text-stroke: 1.5px #212121;
     -webkit-text-fill-color: #4FC3F7;
+}
+
+/* --------- Top header */
+.moves {
+    color: #FAFAFA;
+    gap: 3px;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#moves {
+    font-weight: 900;
+    font-size: 22px;
 }
 
 /* --------- Landing page - Home  */
