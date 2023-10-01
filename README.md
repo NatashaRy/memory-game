@@ -106,14 +106,14 @@ Players must match pairs of cards based on memory. The goal is to match all pair
 * The game board consist of a grid of cards, face down.
 * Grid size are adjusted depending on difficulty: 
     * Desktop:
-        * Easy: 4*4 cards (totalt 16 cards, 8 pairs)
-        * Medium: 6*4 cards (totalt 24 cards, 12 pairs) 
-        * Hard: 8*4 cards (totalt 32 cards, 16 pairs)
+        * Easy: 2*2 cards (totalt 4 cards, 2 pairs)
+        * Medium: 4*4 cards (totalt 16 cards, 8 pairs) 
+        * Hard: 6*4 cards (totalt 24 cards, 12 pairs)
 
     * Tablet and mobile:       
-        * Easy: 4*4 cards (totalt 16 cards, 8 pairs)
-        * Medium: 4*6 cards (totalt 24 cards, 12 pairs)
-        * Hard: 4*8 cards (totalt 32 cards, 16 pairs)
+        * Easy: 2*2 cards (totalt 4 cards, 2 pairs)
+        * Medium: 4*4 cards (totalt 16 cards, 8 pairs) 
+        * Hard: 4*6 cards (totalt 24 cards, 12 pairs)
 
 ### **Card matching**
 * Every card has a twin, two of the cards has the same symbol.
