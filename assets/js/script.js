@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    // ------------ Global variables
+    let cards = document.querySelectorAll('.card');
+    let movesCount = 0;
+    let countFlippedCards = 0;
+    let flippedCards = [];
+
+    
     /**
      * Limit the player to only be able to flip two cards at the same time.
      * 1,5 seconds delay before flipping cards back if no match is found.
      */
-    let countFlippedCards = 0;
-    let flippedCards = [];
-
-    let cards = document.querySelectorAll('.card');
-
     for (let card of cards) {
         card.addEventListener('click', function() {
             if (countFlippedCards == 2) {
@@ -17,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             this.classList.toggle('flipped');
             flippedCards.push(this);
+            console.log('Cards have been flipped')
             countFlippedCards++;
+            console.log('Flipps are counted')
 
             if (countFlippedCards == 2) {
                 setTimeout(() => {
@@ -30,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
      * Compare flipped cards.
      * If a match is found the pairs are removed, otherwise the cards are flipped back over.
-     * Flipped cards counter are reset.
+     * Moves are counted.
      */
     function checkMatch() {
             if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
@@ -43,7 +47,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         countFlippedCards = 0;
         flippedCards = [];
+        movesCount++;
+        updateMoves();
     }
+
+    /**
+     *  Updates moves displayed on game page. 
+     */
+    function updateMoves() {
+        let moves = document.getElementById('moves');
+            moves.textContent = movesCount;
+        }
 
     // -------- Sets of different themes of symbols player can choose from.
     let themes = {
