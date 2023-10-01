@@ -30,8 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * Limit the player to only be able to flip two cards at the same time.
-     * 1,5 seconds delay before flipping cards back if no match is found.
+     * Prohibit the player to click the same card two times in one attempt and limits the player to only be able to flip two cards in one attempt.
+     * Timer starts when first card is flipped.     
+     * * 1,5 seconds delay before flipping cards back if no match is found.
      */
     for (let card of cards) {
         card.addEventListener('click', function() {
@@ -42,6 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!timerInterval) { // Check if timer hasn't started yet
                 startTimer();
                 console.log('Starting timer...')
+            }
+
+            if (flippedCards.includes(this)) {
+                alert('This card is already flipped, flip an other card.');
+                console.log('Card is already flipped.');
+                return;
             }
 
             this.classList.toggle('flipped');
