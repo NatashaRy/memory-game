@@ -152,9 +152,12 @@ body {
 }
 
 .count-moves {
-    width: 185px;
+    width: 190px;
     background-color: #D32F2F;
-    border: solid 2px #212121;
+    border: solid 3px #212121;
+    border-radius: 10px;
+    gap: 0px;
+    padding: 8px 0;
 }
 
 /* --------- Game layout grid */
@@ -211,17 +214,18 @@ body {
 }
 
 /* --------- Top header */
-.moves {
+.moves, .timer {
     color: #FAFAFA;
     gap: 3px;
-    margin: 10px;
+    margin: 0;
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    font-size: 18px;
 }
 
-#moves {
+#moves, #timer {
     font-weight: 900;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 /* --------- Landing page - Home  */
