@@ -257,9 +257,6 @@ body {
 } 
 
 /* --------- Hard game page */
-.heading1 {
-    padding-bottom: 30px;
-} 
 .hard-container {
     grid-template-columns: repeat(6,1fr);
     width: 900px;
@@ -310,4 +307,35 @@ body {
     width: 95%;
     padding: 6px;
     margin-top: 10px;
+}
+/* ---------- Results page */
+.heading-results {
+    color: #212121;
+    font-size: 25px;
+}
+.results-box {
+    gap: 0px;
+}
+.result-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+    padding-bottom: 20px;
+}
+.result-list li {
+    border-bottom: solid 3px #4FC3F7;
+    padding: 23px 0;
+}
+.result-label {
+    font-weight: bold;
+    padding-right: 70px;
+    color: #212121;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.result-value {
+    color: #00695C;
+    float: right;
+}
+.play-again {
+    margin-top: 20px;
 }

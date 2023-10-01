@@ -14,23 +14,20 @@
     <title>An easy game!</title>
 </head>
 <body>
-    <header class="center-content">
-        <div class="flex-row space-b top-header center-content">
-            <div class="text-left header-icons">
-                <a href="instructions.html" class="icons"><i class="fa-solid fa-question"></i></a>
-                <a href="choice.html" class="icons"><i class="fa-solid fa-gear"></i></a>
-            </div>
-    </header>
-
     <section class="max-height center-content">
-        <div class="center-content home">
-            <img class="logo" id="logotype" src="assets/images/memory-master-logo.png" alt="logo">
-            
-            <h1 class="headings heading1"  id="heading-start">Congratulations!</h1>
-            
-            <p>You nedded <span id="total-moves">0</span> moves and <span id="total-time">00:0.000</span><br>to find all pairs of difficulty level <span id="level"></span></p>
+        <div class="center-content results-box">
+            <img class="logo" id="logotype" src="assets/images/memory-master-logo.png" alt="logo">           
+            <h1 class="headings heading1">Congratulation!</h1>
 
-            <a href="choice.html"><button class="btn">Play again</button></a>
+                <h2 class="sub-title heading-results">Your results:</h2>       
+
+                <ul class="result-list text-left sub-title">
+                    <li><span class="result-label">Total moves: </span> <span class="result-value" id="total-moves">0</span></li>
+                    <li><span class="result-label">Total time: </span> <span class="result-value" id="total-time"> 00:0.000</span></li>
+                    <li><span class="result-label">Difficulty level: </span> <span class="result-value" id="level"></span></li>
+                </ul>
+
+            <a href="choice.html"><button class="btn play-again">Play again</button></a>
         </div>
     </section>
 
