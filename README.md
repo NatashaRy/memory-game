@@ -207,7 +207,8 @@ It's always nice to mention those that helped you get there, if people gave you 
 * Flipping card with CSS from W3School - ![w3school.com](https://www.w3schools.com/howto/howto_css_flip_card.asp)
 * Spread operator for cloning symbols array with  from Tutorial Points - ![tutorialpoints.com](https://www.tutorialspoint.com/how-to-clone-an-array-using-spread-operator-in-javascript#:~:text=The%20(...),same%20as%20the%20original%20array.)
 * Code for delaying cards flipping back if they don't match from Stackoverflow ![stackoverflow.com](https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript)
-  
+* Favicon created with Favicon.io - ![favicon.ic](https://favicon.io/favicon-converter/)
+
 ### **Media:**
 ​
 * Memory Masters logotyp was created with Canva - ![canva.com](https://canva.com)
