@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let startTime;
     let timerInterval;
     let countMatchingPairs = 0;
-    const totalTime = document.getItem('totalTime');
+    let difficulty;
 
     /**
      * Timer counting how long it takes for the player to find all pairs.
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (!timerInterval) {
                 startTimer();
-                console.log('Starting timer...')
+                console.log('Starting timer...');
             }
 
             if (flippedCards.includes(this)) {
@@ -54,15 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
             this.classList.toggle('flipped');
             flippedCards.push(this);
-            console.log('Flipped card.')
+            console.log('Flipped card.');
+
             countFlippedCards++;
-            console.log('Flips are counted')
+            console.log('Flips are counted');
 
             if (countFlippedCards == 2) {
                 setTimeout(() => {
                     checkMatch();
                 }, 1200);
-                console.log('Checking for matching pair...')
+                console.log('Checking for matching pair...');
             }
         })
     }
@@ -73,17 +74,17 @@ document.addEventListener('DOMContentLoaded', function() {
      * Moves are counted.
      */
     function checkMatch() {
-            if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
-            flippedCards[0].remove();
-            flippedCards[1].remove();
+        if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
+            flippedCards[0].style.visibility ='hidden';
+            flippedCards[1].style.visibility ='hidden';
             countMatchingPairs++;
-            console.log('Matching pair found added to pair count.')
+            console.log('Matching pair found and hidden.');
         } else {
             flippedCards[0].classList.remove('flipped');
             flippedCards[1].classList.remove('flipped');
-            console.log('Matching pair was not found.')
+            console.log('No match found.');
         }
-        if (countMatchingPairs === cards.length /2) {
+        if (countMatchingPairs === cards.length / 2) {
             allPairsMatched();
         }
 
@@ -97,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateMoves() {
         let moves = document.getElementById('moves');
             moves.textContent = movesCount;
-            console.log('Updating moves...')
+            console.log('Updating moves...');
         }
 
     // -------- Sets of different themes of symbols player can choose from.
@@ -141,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let theme = urlParams.get('theme');
 
     if (window.location.pathname.includes('easy-game.html')) {
+        difficulty = 'Easy';
         console.log('Easy game page loaded.');
 
         let shuffledSymbols = generateSymbols('easy', theme);
@@ -149,9 +151,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let icon = document.createElement('i');
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
+
             console.log(`Symbols: ${shuffledSymbols}`);
         }
     } else if (window.location.pathname.includes('medium-game.html')) {
+        difficulty = 'Medium';
         console.log('Medium game page loaded.');
 
         let shuffledSymbols = generateSymbols('medium', theme);
@@ -160,9 +164,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let icon = document.createElement('i');
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
+
             console.log(`Symbols: ${shuffledSymbols}`);
         }
     } else if (window.location.pathname.includes('hard-game.html')) {
+        difficulty = 'Hard';
         console.log('Hard game page loaded.');
 
         let shuffledSymbols = generateSymbols('hard', theme);
@@ -171,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let icon = document.createElement('i');
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
+
             console.log(`Symbols: ${shuffledSymbols}`);
         }
     } 
@@ -184,17 +191,41 @@ document.addEventListener('DOMContentLoaded', function() {
             let difficulty = document.getElementById('difficulty').value;
             let theme = document.getElementById('theme').value;
             window.location.href = difficulty + '-game.html?theme=' + theme;
-            console.log('Starting game....')
+            console.log('Starting game....');
         });
     }
     /**
      * Checks if all pairs are matched and redirect to results page.
-     * Store + saves tracked time and moves in the session, to show on result page.
+     * Store tracked time, moves and chosen difficulty level in the session, to show on results page.
      */
     function allPairsMatched() {
-       sessionStorage.setItem(totalTime, moves);
-       window.location.href = 'result.html';
-
-       document.getElementById('results').textContent = `You made ${moves} moves and ${totalTime} to find all pairs of ${difficulty}`;
+        const totalTime = document.getElementById('timer').textContent;
+        sessionStorage.setItem('totalTime', totalTime);
+        sessionStorage.setItem('totalMoves', movesCount.toString());
+        sessionStorage.setItem('level', difficulty.toString());
+    
+        console.log("Stored totalTime:", totalTime);
+        console.log("Stored totalMoves:", movesCount);
+        console.log("Stored level:", difficulty);
+        
+        window.location.href = ('results.html');
     }
+
+    /**
+     * Get the stored time, moves and difficulty level to display on results page.
+     */
+    function displayResults() {
+        if (window.location.pathname.includes('results.html')) {
+            const storedTotalTime = sessionStorage.getItem('totalTime');
+            const storedTotalMoves = sessionStorage.getItem('totalMoves');
+            const storedLevel = sessionStorage.getItem('level');
+
+            if (storedTotalTime && storedTotalMoves && storedLevel) {
+                document.getElementById('total-moves').textContent = storedTotalMoves;
+                document.getElementById('total-time').textContent = storedTotalTime;
+                document.getElementById('level').textContent = storedLevel;
+            }
+        }
+    }
+    displayResults();
 })
