@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // ------------ Global variables
+    // ------------ Global variables   
     let cards = document.querySelectorAll('.card');
     let movesCount = 0;
     let countFlippedCards = 0;
     let flippedCards = [];
     let startTime;
     let timerInterval;
+    let countMatchingPairs = 0;
+    const totalTime = document.getItem('totalTime');
 
     /**
      * Timer counting how long it takes for the player to find all pairs.
@@ -31,8 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /**
      * Prohibit the player to click the same card two times in one attempt and limits the player to only be able to flip two cards in one attempt.
-     * Timer starts when first card is flipped.     
-     * * 1,5 seconds delay before flipping cards back if no match is found.
+     * Timer starts when first card is flipped. 1,5 seconds delay before flipping cards back if no match is found.
      */
     for (let card of cards) {
         card.addEventListener('click', function() {
@@ -40,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            if (!timerInterval) { // Check if timer hasn't started yet
+            if (!timerInterval) {
                 startTimer();
                 console.log('Starting timer...')
             }
@@ -75,11 +76,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
             flippedCards[0].remove();
             flippedCards[1].remove();
-            console.log('Matching pair found.')
+            countMatchingPairs++;
+            console.log('Matching pair found added to pair count.')
         } else {
             flippedCards[0].classList.remove('flipped');
             flippedCards[1].classList.remove('flipped');
             console.log('Matching pair was not found.')
+        }
+        if (countMatchingPairs === cards.length /2) {
+            allPairsMatched();
         }
 
         countFlippedCards = 0;
@@ -88,9 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateMoves();
     }
 
-    /**
-     *  Updates moves displayed on game page. 
-     */
+    // -------- Updates moves displayed on game page. 
     function updateMoves() {
         let moves = document.getElementById('moves');
             moves.textContent = movesCount;
@@ -171,6 +174,9 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log(`Symbols: ${shuffledSymbols}`);
         }
     } 
+    /**
+     * Start the game when Start game with chosen theme and difficulty when button is clicked.
+     */
 
     let startGameButton = document.getElementById('start-game');
     if (startGameButton) {
@@ -180,5 +186,15 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = difficulty + '-game.html?theme=' + theme;
             console.log('Starting game....')
         });
+    }
+    /**
+     * Checks if all pairs are matched and redirect to results page.
+     * Store + saves tracked time and moves in the session, to show on result page.
+     */
+    function allPairsMatched() {
+       sessionStorage.setItem(totalTime, moves);
+       window.location.href = 'result.html';
+
+       document.getElementById('results').textContent = `You made ${moves} moves and ${totalTime} to find all pairs of ${difficulty}`;
     }
 })
