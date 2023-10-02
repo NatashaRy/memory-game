@@ -4,7 +4,7 @@ Memory Master is an engaging memory game that help the user improve cognitive sk
 ​
 We provide a fun game in a relaxing gaming enviroment. Our target audience are people who like to play online games, primarily those who prefer genres as puzzle and strategy. We also like to attract people who are seeking fun ways to improve their memory aswell as being challanged. Since we provide different variations of themes and difficulites Memory Master is suitable for all ages.
 
-![Am I responsive screenshot](imagelocation so maybe docs/image.jpg)
+![Am I responsive screenshot](docs/screenshots/am-i-responsive.png)
 ​
 ## Table of contents:
 1. [**Site Overview**](#site-overview)
@@ -31,34 +31,31 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
 ​
 ## **Planning stage**
 ### **Target Audiences:**
-​​
 * Users interested in online games without creating an account.
 * Users intrested in getting challanged.
 * Users interested in improving their memory in an interactive way.
 ​
 ### **User Stories:**
-​​
 * As a user, I want to be entertained by playing online games that enhance my cognitive skills.
 * As a user, I want to be able to adjust the difficulty to keep getting challanged.
 * As a user, I want to increse my brain function and improving both my short- and long-term memory. 
 * As a user, I want to challenge myself and improve my skills.
 ​
 ### **Site Aims:**
-​​
-* To provide a fun, engaging and interactive online game.
+​​* To provide a fun, engaging and interactive online game.
 * To challange the users memory skills to improve cognitivity.
 * To offer a vary of options to keep the user entertained.
 ​
 ​
 ### **Wireframes:**
 #### **Pages on desktop**
-![Image of wireframed pages for desktop.](docs/images/desktop-wireframes.png)
+![Image of wireframed pages for desktop.](docs/wireframes/desktop-wireframes.png)
 
 #### **Pages on tablet**
-![Image of wireframed pages for tablet.](docs/images/tablet-wireframes.png)
+![Image of wireframed pages for tablet.](docs/wireframes/tablet-wireframes.png)
 
 #### **Pages on mobile**
-![Image of wireframed pages for mobile.](docs/images/mobile-wireframes.png)
+![Image of wireframed pages for mobile.](docs/wireframes/mobile-wireframes.png)
 ​
 ### **Color Scheme:**
 We have made a color palette for Memory Master to create a harmounious and engaging gaming enviroment. Shades of blue and green are our main colors with a touch of red in our dark accent color to make importent elements pop compared to other elements.
@@ -70,6 +67,7 @@ We have made a color palette for Memory Master to create a harmounious and engag
 * The colors, when used with proper contrast, can cater to a wider audience, including those with visual impairments.
 * The calming nature of the primary colors can set a relaxed mood, making the game more enjoyable and less stressful.
 * Different shades and contrasts allow for a clear distinction between flipped and unflipped cards, matched pairs, and other game elements.
+
 
 #### **Color explaination**
 **Soft blue** (#E0F7FA): Our main color is a gentle shade provides a serene backdrop, setting a calming atmosphere that's conducive for concentration and focus, essential for a memory game.
@@ -83,6 +81,8 @@ We have made a color palette for Memory Master to create a harmounious and engag
 **Coral** (#D32F2F): Our vibrant accent color captures attention and is perfect for highlighting important game elements. Its warm contrasts create a good dynamic in the interface with the cooler shades. 
 
 **Almost black** (#212121): For our paragraphs we have chosen a foundational color. It ensures legibility and provides a solid contrast against the lighter shades in the palette.
+
+![Eight shapes contrast grid](docs/screenshots/contrast-grid.png)
 
 Together, these colors not only create a visually appealing interface but also prioritize user experience, ensuring that Memory Master is both delightful to play and easy on the eyes. 
 All color combinations are tested with WebAIM AAA, to ensure accessability. 
@@ -134,25 +134,83 @@ Players must match pairs of cards based on memory. The goal is to match all pair
 
 
 ## **Current Features Common to all pages**
+
+#### *Logo:*
+The Memory Master logotype is included in all pages, alway displayed on top.
+![Memory Master logotype](assets/images/memory-master-logo.png)
+
+* The logotype is linked to the start page.
+* Has smaller ration on smaller screens and on pages with less space. 
+
+#### *Title:*
+All pages have a title to make it obvious to the user what the page is about.
+
+![Titel from instructions page](docs/screenshots/title.png)
 ​
-#### *Navigation Bar:*
-This is an example of the features section, your going to talk about each section of the page and what it offers for the navbar for example
-​
-* The user is given links to each section of the page
-* Each option is presented in a way that is always obvious and reable
-* on smaller screens a hamburger menu is provided to ensure mobile users have an optimal experience
+* Gives the user a clear understanding about what the page is about. 
 ​
 #### *features
+
+##### *Navigation:*
+Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not avalible on settings page). 
+![Header navigation](docs/screenshots/header-nav.png)
+
+The instructions page have a navigation in the bottom right to skip the instruction and forward to the settings page.
+
+![Footer navigation](docs/screenshots/footer-nav.png)
 ​
-* This is where you will place all of your features think about each section of the page include a screenshot and a few bullet points on how it's presented and why
+* Each option is presented with icons which is easy to understand. 
+* The user can easily changes the settings and go back to the instructions.
+​
+##### *Header:*
+The game pages and the settings page have a header that includes navigation links mentioned in the [navigation]() section, the logotype centered below the links and the game pages also have the moves counter and timer in the header to the right. 
+
+![Header of game pages](docs/screenshots/header-gamepage.png)
+​ 
+* The counter gives the user an overview of how many attempts have been made.
+* The timer gives and overview of how long the user has taken to find the pairs. 
+
+##### *Instructions:*
+When starting the game the user get instructions how to play.  
+
+![Image of instructions](docs/screenshots/instructions.png)
+​ 
+* Easy for the user to understand what the game is about.
+* The user gets to know the flow, how to start the game and when it ends.
+
+##### *Settings/choices:*
+Before starting the game, the user get to choose theme, difficulty and if they want sound effects. 
+
+![Image of settings/choices](docs/screenshots/settings.png)
+​ 
+* Users make their choice through a dropdown menu one every option.
+* Options are divided boxes to provide more clarity about what settings/choice are being made. 
+
+##### *Game board:*
+All game pages has memory cards that flips when clicking them. They are flipping back if no match is found and hidden if a match is found.
+The cards include icons of chosen theme and the cards have sound effects when flipping, finding or not findig a match to make the game more fun.
+
+![Game board Medium Mode](docs/screenshots/game-board.png)
+​ 
+* Easy for the user to know if it is a match or not. 
+* More fun for the user with different themes. 
+
+##### *Score board:*
+When the game if finished, the user goes to the results page where they find their score.
+
+![Score borad](docs/screenshots/scoreboard.png)
+​ 
+* User can see how long it took to finish the game.
+* Users see the amount of attempts needed to finish the game.
+* User see what difficulty level the game was.
 ​
 ## **Future-Enhancements**
 ​
-A webpage is a living beast it's going to evolve past the initial stages of release generally, it's always good to discuss where you this the page may go in the future
+We belive that Memory Master have a lot of potetial and can be enhanced in many ways. 
 ​
-* At the time of making this page i didn't have the understanding to actual send e-mails from the contact form so intergration with email.js to send e-mails would improve the users experience
-​
-* Due to the subject matter, we have discussed the idea of including a small JS game to engage the user
+* Make it possible for users to play against each other or a computer.
+* Collect scores among users, a high score page, so the users can rank themselfs in comparison to other players.
+* Let the users be able to create an account to save their scores (moves and times).
 ​
 ## **Testing Phase**
 ​
@@ -163,9 +221,23 @@ Here is a good idea to talk about how and why you have tested with certain tools
 * Responsiveness - How do you test this, dev tools? checking on multiple devices?
 ​
 * Functionality - Each feature needs to be tested before something is complete, talk about the process, click each link check each image, does form validation work, if your using javascript or anything else, does it always behave as the user expects
+
+### **Validators**
+All validators were used in incognito mode. 
+
+#### **HTML** - (https://validator.w3.org/)
+![W3 HTML Validator Screenshot](docs/screenshots/html-validator.png)
+* No errors were found.
+
+
+#### **CSS** - (https://jigsaw.w3.org/css-validator/)
+![W3 CSS Validator Screenshot](docs/screenshots/css-validator.png)
+* No errors were found. 
+
+#### **Jshint**
+![JS Hint Validation Screenshot](docs/screenshots/js-validator.png)
 ​
-* Validators - Here include images from w3c html validator and css jigsaw (jshint for js and pep8 for python) and the results that came from it
-​
+* *"Warning: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (countFlippedCards, timerInterval, startTimer, playSound, flipSound, flippedCards, checkMatch)"*
 ​
 ## **Bugs**
 ​
@@ -174,6 +246,10 @@ We always have bugs in development, a few bullet points here to talk about bugs 
 * Issue - When on mobile the user had horizontal scroll with items overflowing
 * Cause - The images had absolute positioning and caused them to go off screen
 * Resolution - Changed the width of the image to stay within the confines of the screen.
+
+* Issue - Problems matching all pairs on difficulty level medium (one match could not be made) and hard (two pairs could not be matched).
+* Cause - Could not find a cause to the problem. 
+* Resolution - By making new divs for the cards that could not be match the problem got solved. We could not see any problems with the existing divs, but changing them helped. 
 ​
 ***
 ## **Deployment**
@@ -184,11 +260,10 @@ I deployed the page on GitHub pages via the following procedure: -
 3. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
 4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
 ​
-You  can find the live site via the following URL - [live webpage](https://yoururlhere)
+You  can find the live site via the following URL - [Memory Master | The Ultimate Memory Game](https://natashary.github.io/memory-game/)
 ***
 ​
 ## **Tech**
-​​
 - HTML
 - CSS
 - JavaScript
@@ -200,17 +275,19 @@ It's always nice to mention those that helped you get there, if people gave you 
 ​
 ### **Content:**
 ​
-* All fonts are imported from Google Fonts - ![fonts.google.com](https://fonts.google.com)
-* All icons on memory cards are taken from Font Awesome - ![fontawesome.com](https://fontawesome.com/)
-* Wireframes were created in Adobe XD - ![adobexdplatform.com](https://adobexdplatform.com/)
-* Animations on buttons are inspired from W3School - ![w3school.com](https://www.w3schools.com/css/css3_animations.asp)
-* Flipping card with CSS from W3School - ![w3school.com](https://www.w3schools.com/howto/howto_css_flip_card.asp)
-* Spread operator for cloning symbols array with  from Tutorial Points - ![tutorialpoints.com](https://www.tutorialspoint.com/how-to-clone-an-array-using-spread-operator-in-javascript#:~:text=The%20(...),same%20as%20the%20original%20array.)
-* Code for delaying cards flipping back if they don't match from Stackoverflow ![stackoverflow.com](https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript)
-* Favicon created with Favicon.io - ![favicon.ic](https://favicon.io/favicon-converter/)
+* All fonts are imported from [Google Fonts](https://fonts.google.com)
+* All icons on memory cards are taken from [Font Awesome](https://fontawesome.com/)
+* Animations on buttons are inspired from [W3School](https://www.w3schools.com/css/css3_animations.asp)
+* Flipping card with CSS from [W3School](https://www.w3schools.com/howto/howto_css_flip_card.asp)
+* Spread operator for cloning symbols array with  from [Tutorial Points](https://www.tutorialspoint.com/how-to-clone-an-array-using-spread-operator-in-javascript#:~:text=The%20(...),same%20as%20the%20original%20array.)
+* Code for delaying cards flipping back if they don't match from [Stackoverflow](https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript)
+
 
 ### **Media:**
 ​
-* Memory Masters logotyp was created with Canva - ![canva.com](https://canva.com)
-* TinyPNG was used for image compression - ![tinypng.com](https://tinypng.com/)
-* Sound effects are taken from Pixabay - ![pixabay.com](https://pixabay.com/sound-effects/search/)
+* Memory Masters logotyp was created with [Canva](https://canva.com)
+* Images compressed with [TinyPNG](https://tinypng.com/)
+* Sound effects are taken from [Pixabay](https://pixabay.com/sound-effects/search/)
+* Screenshot in README.md under "site overview" was created with [Am I Responsive](https://ui.dev/amiresponsive)
+* Favicon created with [Favicon.ic](https://favicon.io/favicon-converter/)
+* Wireframes were created in [Adobe XD](https://adobexdplatform.com/)
