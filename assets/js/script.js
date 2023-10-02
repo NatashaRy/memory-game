@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let timerInterval;
     let countMatchingPairs = 0;
     let difficulty;
-    const flipSound = new Audio('assets/sound/flip.mp3');
-    const matchSound = new Audio('assets/sound/match.mp3');
-    const nomatchSound = new Audio('assets/sound/nomatch.mp3');
-    const cheeringSound = new Audio('assets/sound/cheering.mp3');
+    let flipSound = new Audio('assets/sound/flip.mp3');
+    let matchSound = new Audio('assets/sound/match.mp3');
+    let nomatchSound = new Audio('assets/sound/nomatch.mp3');
+    let cheeringSound = new Audio('assets/sound/cheering.mp3');
 
     /**
      * Timer counting how long it takes for the player to find all pairs.
@@ -245,9 +245,9 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function displayResults() {
         if (window.location.pathname.includes('results.html')) {
-            const storedTotalTime = sessionStorage.getItem('totalTime');
-            const storedTotalMoves = sessionStorage.getItem('totalMoves');
-            const storedLevel = sessionStorage.getItem('level');
+            let storedTotalTime = sessionStorage.getItem('totalTime');
+            let storedTotalMoves = sessionStorage.getItem('totalMoves');
+            let storedLevel = sessionStorage.getItem('level');
 
             if (storedTotalTime && storedTotalMoves && storedLevel) {
                 document.getElementById('total-moves').textContent = storedTotalMoves;
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('level').textContent = storedLevel;
             }
             playSound(cheeringSound);
-            console.log('Played sound: Cheering.')
+            console.log('Played sound: Cheering.');
         }
     }
     displayResults();
