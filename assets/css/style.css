@@ -8,9 +8,6 @@ body {
     padding: 25px 40px;
     margin: 0;
 }
-.max-height {
-    height: 88vh;
-}
 .logo {
     width: 120px;
     margin-bottom: 20px;
@@ -66,6 +63,7 @@ body {
     margin-bottom: 60px;
     font-weight: bold;
     margin: 20px 10px;
+    line-height: 1;
 }
 
 .card-title {
@@ -238,7 +236,7 @@ body {
 }
 
 .intro {
-    max-width: 50%;
+    width: 75%;
 }
 
 #heading-start {
@@ -263,13 +261,15 @@ body {
 } 
 
 /* --------- Instructions + choice page */
+.instruction-box {
+    width: 80%;
+}
 .instruction-cards, .chioce-cards {
     display: flex;
     align-items: stretch;
     gap: 30px;
     margin-top: 10px;
     flex-wrap: wrap;
-    width: 70%;
     justify-content: center;
 }
 #choice-logo {
@@ -285,7 +285,6 @@ body {
 .instruction, .choice {
     background-color: #FAFAFA;
     border: solid 3px #00695C;
-    width: 22%;
     padding: 15px 20px;
     width: 300px;
 }
@@ -338,4 +337,21 @@ body {
 }
 .play-again {
     margin-top: 20px;
+}
+/* Media query min 1455px */
+@media screen and (min-width: 1455px) {
+    .instruction-box {
+        width: 30%;
+    }
+}
+
+/* Media query max 480px */
+@media screen and (max-width: 480px) {
+    #logotype {
+        width: 140px;
+    }
+    .heading1 {
+        font-size: 25px;
+        line-height: 1;
+    }
 }
