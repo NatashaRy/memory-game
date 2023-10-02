@@ -213,3 +213,4 @@ It's always nice to mention those that helped you get there, if people gave you 
 ​
 * Memory Masters logotyp was created with Canva - ![canva.com](https://canva.com)
 * TinyPNG was used for image compression - ![tinypng.com](https://tinypng.com/)
+* Sound effects are taken from Pixabay - ![pixabay.com](https://pixabay.com/sound-effects/search/)
