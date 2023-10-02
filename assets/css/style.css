@@ -81,7 +81,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* --------- Buttons */
+/* --------- Buttons and links */
 /* Hover animation */
 @keyframes btn-hover {
     from {background-color: #D32F2F;}
@@ -99,6 +99,7 @@ body {
     border-radius: 17px;
     letter-spacing: 2px;
     line-height: 1.6;
+    border: solid 3px #212121;
 }
 .btn:hover {
     background-color: #4FC3F7;
@@ -108,7 +109,9 @@ body {
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
-
+a {
+    text-decoration: none;
+}
 
 /* --------- Icons */
 .header-icons {
