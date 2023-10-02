@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let timerInterval;
     let countMatchingPairs = 0;
     let difficulty;
+    const flipSound = new Audio('assets/sound/flip.mp3');
+    const matchSound = new Audio('assets/sound/match.mp3');
+    const nomatchSound = new Audio('assets/sound/nomatch.mp3');
+    const cheeringSound = new Audio('assets/sound/cheering.mp3');
 
     /**
      * Timer counting how long it takes for the player to find all pairs.
@@ -31,6 +35,37 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
     }
 
+    // ----------- Play audio effect
+    function playSound(audioObj) {
+        if (sessionStorage.getItem('audioEnabled') === 'true') {
+            audioObj.play();
+        }
+    }
+
+        /**
+     * Start the game when Start game with chosen theme and difficulty when button is clicked.
+     * Stores if the player want to play with or without sound.
+     */
+
+        let startGameButton = document.getElementById('start-game');
+        if (startGameButton) {
+            startGameButton.addEventListener('click', function() {
+                let soundChoice = document.getElementById('sound').value;
+                if (soundChoice === 'yes') {
+                    sessionStorage.setItem('audioEnabled', 'true');
+                    console.log('Sound choice true stored.')
+                } else {
+                    sessionStorage.setItem('audioEnabled', 'false');
+                    console.log('Sound choice false stored.')
+                }
+    
+                let difficulty = document.getElementById('difficulty').value;
+                let theme = document.getElementById('theme').value;
+                window.location.href = difficulty + '-game.html?theme=' + theme;
+                console.log('Starting game....');
+            });
+        }
+
     /**
      * Prohibit the player to click the same card two times in one attempt and limits the player to only be able to flip two cards in one attempt.
      * Timer starts when first card is flipped. 1,5 seconds delay before flipping cards back if no match is found.
@@ -45,6 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 startTimer();
                 console.log('Starting timer...');
             }
+
+            playSound(flipSound);
+            console.log('Played Sound effect: Flip');
 
             if (flippedCards.includes(this)) {
                 alert('This card is already flipped, flip an other card.');
@@ -79,10 +117,14 @@ document.addEventListener('DOMContentLoaded', function() {
             flippedCards[1].style.visibility ='hidden';
             countMatchingPairs++;
             console.log('Matching pair found and hidden.');
+            playSound(matchSound);
+            console.log('Played Sound effect: Match');
         } else {
             flippedCards[0].classList.remove('flipped');
             flippedCards[1].classList.remove('flipped');
             console.log('No match found.');
+            playSound(nomatchSound);
+            console.log('Played Sound effect: No match');
         }
         if (countMatchingPairs === cards.length / 2) {
             allPairsMatched();
@@ -182,19 +224,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     } 
     /**
-     * Start the game when Start game with chosen theme and difficulty when button is clicked.
-     */
-
-    let startGameButton = document.getElementById('start-game');
-    if (startGameButton) {
-        startGameButton.addEventListener('click', function() {
-            let difficulty = document.getElementById('difficulty').value;
-            let theme = document.getElementById('theme').value;
-            window.location.href = difficulty + '-game.html?theme=' + theme;
-            console.log('Starting game....');
-        });
-    }
-    /**
      * Checks if all pairs are matched and redirect to results page.
      * Store tracked time, moves and chosen difficulty level in the session, to show on results page.
      */
@@ -225,6 +254,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('total-time').textContent = storedTotalTime;
                 document.getElementById('level').textContent = storedLevel;
             }
+            playSound(cheeringSound);
+            console.log('Played sound: Cheering.')
         }
     }
     displayResults();
