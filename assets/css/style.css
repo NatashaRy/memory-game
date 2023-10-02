@@ -361,7 +361,7 @@ body {
     .card-container {
         width: auto;
         margin-bottom: 30px;
-        gap: auto;
+        gap: 10px;
     }
 }
 
