@@ -21,7 +21,7 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
     * [***Title***](#title)
     * [***Navigation***](#navigation)
     * [***Header***](#header)
-    * [***Instructions***][#instructions]
+    * [***Instructions***](#instructions)
     * [***Settings/Choices***](#settingschoices)
     * [***Game Board***](#game-board-1)
     * [***Score Board***](#score-board)
