@@ -4,7 +4,7 @@ Memory Master is an engaging memory game that help the user improve cognitive sk
 ​
 We provide a fun game in a relaxing gaming enviroment. Our target audience are people who like to play online games, primarily those who prefer genres as puzzle and strategy. We also like to attract people who are seeking fun ways to improve their memory aswell as being challanged. Since we provide different variations of themes and difficulites Memory Master is suitable for all ages.
 
-![Am I responsive screenshot](docs/screenshots/am-i-responsive.png)
+![Am I responsive screenshot.](docs/screenshots/am-i-responsive.png)
 ​
 ## Table of contents:
 1. [**Site Overview**](#site-overview)
@@ -82,7 +82,7 @@ We have made a color palette for Memory Master to create a harmounious and engag
 
 **Almost black** (#212121): For our paragraphs we have chosen a foundational color. It ensures legibility and provides a solid contrast against the lighter shades in the palette.
 
-![Eight shapes contrast grid](docs/screenshots/contrast-grid.png)
+![Eight shapes contrast grid.](docs/screenshots/contrast-grid.png)
 
 Together, these colors not only create a visually appealing interface but also prioritize user experience, ensuring that Memory Master is both delightful to play and easy on the eyes. 
 All color combinations are tested with WebAIM AAA, to ensure accessability. 
@@ -137,7 +137,7 @@ Players must match pairs of cards based on memory. The goal is to match all pair
 
 #### *Logo:*
 The Memory Master logotype is included in all pages, alway displayed on top.
-![Memory Master logotype](assets/images/memory-master-logo.png)
+![Memory Master logotype.](assets/images/memory-master-logo.png)
 
 * The logotype is linked to the start page.
 * Has smaller ration on smaller screens and on pages with less space. 
@@ -145,7 +145,7 @@ The Memory Master logotype is included in all pages, alway displayed on top.
 #### *Title:*
 All pages have a title to make it obvious to the user what the page is about.
 
-![Titel from instructions page](docs/screenshots/title.png)
+![Titel from instructions page.](docs/screenshots/title.png)
 ​
 * Gives the user a clear understanding about what the page is about. 
 ​
@@ -153,19 +153,19 @@ All pages have a title to make it obvious to the user what the page is about.
 
 ##### *Navigation:*
 Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not avalible on settings page). 
-![Header navigation](docs/screenshots/header-nav.png)
+![Header navigation.](docs/screenshots/header-nav.png)
 
 The instructions page have a navigation in the bottom right to skip the instruction and forward to the settings page.
 
-![Footer navigation](docs/screenshots/footer-nav.png)
+![Footer navigation.](docs/screenshots/footer-nav.png)
 ​
 * Each option is presented with icons which is easy to understand. 
 * The user can easily changes the settings and go back to the instructions.
 ​
 ##### *Header:*
-The game pages and the settings page have a header that includes navigation links mentioned in the [navigation]() section, the logotype centered below the links and the game pages also have the moves counter and timer in the header to the right. 
+The game pages and the settings page have a header that includes navigation links mentioned in the [navigation](#navigation) section, the logotype centered below the links and the game pages also have the moves counter and timer in the header to the right. 
 
-![Header of game pages](docs/screenshots/header-gamepage.png)
+![Header of game pages.](docs/screenshots/header-gamepage.png)
 ​ 
 * The counter gives the user an overview of how many attempts have been made.
 * The timer gives and overview of how long the user has taken to find the pairs. 
@@ -173,7 +173,7 @@ The game pages and the settings page have a header that includes navigation link
 ##### *Instructions:*
 When starting the game the user get instructions how to play.  
 
-![Image of instructions](docs/screenshots/instructions.png)
+![Image of instructions.](docs/screenshots/instructions.png)
 ​ 
 * Easy for the user to understand what the game is about.
 * The user gets to know the flow, how to start the game and when it ends.
@@ -181,7 +181,7 @@ When starting the game the user get instructions how to play.
 ##### *Settings/choices:*
 Before starting the game, the user get to choose theme, difficulty and if they want sound effects. 
 
-![Image of settings/choices](docs/screenshots/settings.png)
+![Image of settings/choices.](docs/screenshots/settings.png)
 ​ 
 * Users make their choice through a dropdown menu one every option.
 * Options are divided boxes to provide more clarity about what settings/choice are being made. 
@@ -190,7 +190,7 @@ Before starting the game, the user get to choose theme, difficulty and if they w
 All game pages has memory cards that flips when clicking them. They are flipping back if no match is found and hidden if a match is found.
 The cards include icons of chosen theme and the cards have sound effects when flipping, finding or not findig a match to make the game more fun.
 
-![Game board Medium Mode](docs/screenshots/game-board.png)
+![Game board Medium Mode.](docs/screenshots/game-board.png)
 ​ 
 * Easy for the user to know if it is a match or not. 
 * More fun for the user with different themes. 
@@ -198,7 +198,7 @@ The cards include icons of chosen theme and the cards have sound effects when fl
 ##### *Score board:*
 When the game if finished, the user goes to the results page where they find their score.
 
-![Score borad](docs/screenshots/scoreboard.png)
+![Score borad.](docs/screenshots/scoreboard.png)
 ​ 
 * User can see how long it took to finish the game.
 * Users see the amount of attempts needed to finish the game.
@@ -239,16 +239,16 @@ Responsivness has been tested using DevTools for each browser, both on chosen di
 All validators were used in incognito mode. 
 
 #### **HTML** - (https://validator.w3.org/)
-![W3 HTML Validator Screenshot](docs/screenshots/html-validator.png)
+![W3 HTML Validator Screenshot.](docs/screenshots/html-validator.png)
 * No errors were found.
 
 
 #### **CSS** - (https://jigsaw.w3.org/css-validator/)
-![W3 CSS Validator Screenshot](docs/screenshots/css-validator.png)
+![W3 CSS Validator Screenshot.](docs/screenshots/css-validator.png)
 * No errors were found. 
 
 #### **Jshint** - (https://jshint.com/)
-![JS Hint Validation Screenshot](docs/screenshots/js-validator.png)
+![JS Hint Validation Screenshot.](docs/screenshots/js-validator.png)
 ​
 * Issue found:
     * *"Warning: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (countFlippedCards, timerInterval, startTimer, playSound, flipSound, flippedCards, checkMatch)"*
@@ -260,48 +260,48 @@ All validators were used in incognito mode.
 * Both desktop and mobile tests was preformed on all pages.
 
 #### **Desktop**
-![Lighthouse index.html Screenshot](docs/screenshots/desktop-index.png)
+![Lighthouse index.html Screenshot.](docs/screenshots/desktop-index.png)
 *index.html*
 
-![Lighthouse instructions.html Screenshot](docs/screenshots/desktop-instructions.png)
+![Lighthouse instructions.html Screenshot.](docs/screenshots/desktop-instructions.png)
 *instructions.html*
 
-![Lighthouse choice.html Screenshot](docs/screenshots/desktop-choice.png)
+![Lighthouse choice.html Screenshot.](docs/screenshots/desktop-choice.png)
 *choice.html*
 
-![Lighthouse easy-game.html Screenshot](docs/screenshots/desktop-easy.png)
+![Lighthouse easy-game.html Screenshot.](docs/screenshots/desktop-easy.png)
 *easy-game.html*
 
-![Lighthouse medium-game.html Screenshot](docs/screenshots/desktop-medium.png)
+![Lighthouse medium-game.html Screenshot.](docs/screenshots/desktop-medium.png)
 *medium-game.html*
 
-![Lighthouse hard-game.html Screenshot](docs/screenshots/desktop-hard.png)
+![Lighthouse hard-game.html Screenshot.](docs/screenshots/desktop-hard.png)
 *hard-game.html*
 
-![Lighthouse results.html Screenshot](docs/screenshots/desktop-results.png)
+![Lighthouse results.html Screenshot.](docs/screenshots/desktop-results.png)
 *results.html*
 
 
 #### **Mobile**
-![Lighthouse index.html Screenshot](docs/screenshots/mobile-index.png)
+![Lighthouse index.html Screenshot.](docs/screenshots/mobile-index.png)
 *index.html*
 
-![Lighthouse instructions.html Screenshot](docs/screenshots/mobile-instructions.png)
+![Lighthouse instructions.html Screenshot.](docs/screenshots/mobile-instructions.png)
 *instructions.html*
 
-![Lighthouse choice.html Screenshot](docs/screenshots/mobile-choice.png)
+![Lighthouse choice.html Screenshot.](docs/screenshots/mobile-choice.png)
 *choice.html*
 
-![Lighthouse easy-game.html Screenshot](docs/screenshots/mobile-easy.png)
+![Lighthouse easy-game.html Screenshot.](docs/screenshots/mobile-easy.png)
 *easy-game.html*
 
-![Lighthouse medium-game.html Screenshot](docs/screenshots/mobile-medium.png)
+![Lighthouse medium-game.html Screenshot.](docs/screenshots/mobile-medium.png)
 *medium-game.html*
 
-![Lighthouse hard-game.html Screenshot](docs/screenshots/mobile-hard.png)
+![Lighthouse hard-game.html Screenshot.](docs/screenshots/mobile-hard.png)
 *hard-game.html*
 
-![Lighthouse results.html Screenshot](docs/screenshots/mobile-results.png)
+![Lighthouse results.html Screenshot.](docs/screenshots/mobile-results.png)
 *results.html*
 
 ​
