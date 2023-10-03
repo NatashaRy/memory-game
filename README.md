@@ -152,7 +152,7 @@ The Memory Master logotype is included in all pages, alway displayed on top.
 All pages have a title to make it obvious to the user what the page is about.
 
 ​![Screenshot title instructions page.](docs/screenshots/title.png)
-​*Instructions.html*
+​* *Instructions.html*
 
 * Gives the user a clear understanding about what the page is about. 
 
