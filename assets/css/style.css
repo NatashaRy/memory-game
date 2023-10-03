@@ -13,6 +13,7 @@ body {
     margin-bottom: 20px;
     margin: 0;
     padding: 0;
+    height: auto;
 }
 .height {
     height: 88vh;
@@ -31,6 +32,7 @@ body {
     flex-direction: row;
     margin: 0;
     padding: 0;
+    gap: 0;
 }
 .justify-c {
     justify-content: center;
@@ -269,12 +271,12 @@ a {
 /* --------- Instructions + choice page */
 .instruction-cards, .chioce-cards {
     display: flex;
-    align-items: stretch;
-    gap: 30px;
-    margin-top: 10px;
+    margin-top: 0;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
     margin-bottom: 30px;
+    width: 1200px;
 }
 #choice-logo {
     padding-top: 40px;
@@ -283,19 +285,19 @@ a {
 .chioce-cards {
     flex-wrap: nowrap;
     margin-bottom: 60px;
-
 }
 
 .instruction, .choice {
     background-color: #FAFAFA;
     border: solid 3px #00695C;
     padding: 15px 20px;
-    width: 300px;
+    margin: 15px;
+    width: 30%;
+    box-sizing: border-box;
 }
 
 .choice {
     padding: 40px 30px;
-    width: 260px;
 }
 
 #difficulty, #theme, #sound {
@@ -352,11 +354,15 @@ a {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .instruction, .choice {
+        width: 300px;
+    }
     .jfc1200 {
         justify-content: start;
     }
     .instruction-cards {
         margin-bottom: 30px;
+        width: auto;
     }
     .height {
         height: auto;
@@ -372,6 +378,7 @@ a {
 @media screen and (max-width: 482px) {
     #logotype {
         width: 140px;
+        height: auto;
     }
     .logo {
         margin-top: 30px;
