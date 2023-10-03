@@ -103,11 +103,14 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Checking for matching pair...');
         }
     }
+function createCardClicked(card) {
+    return function() {
+        cardClicked(card);
+    };
+}
 
-    for (let card of cards) {
-        card.addEventListener('click', function() {
-            cardClicked(card);
-    });
+for (let card of cards) {
+    card.addEventListener('click', createCardClicked(card));
 }
 
     /**
