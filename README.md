@@ -14,11 +14,18 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
     * [***Site Aims***](#site-aims)
     * [***Wireframes***](#wireframes)
     * [***Color Scheme***](#color-scheme)
-    * [***Typography**](#typography)
+    * [***Typography***](#typography)
+    * [***Game rules and mechanics***](#game-rules-and-mechanics)
 1. [**Current Features Common to all pages**](#current-features-common-to-all-pages)
-    * [***Header Element:***](#header-element)
+    * [***Logo***](#logo)
+    * [***Title***](#title)
     * [***The rest of your features***](#features)
-    * [**Footer**](#footer)
+    * [***Navigation***](#navigation)
+    * [***Header***](#header)
+    * [***Instructions***](#instructions)
+    * [***Settings/Choices***](#settingschoices)
+    * [***Game Board***](#game-board-1)
+    * [***Score Board***](#score-board)
 1. [**Future-Enhancements**](#future-enhancements)
 1. [**Testing Phase**](#testing-phase)
 1. [**Deployment**](#deployment)
@@ -48,13 +55,13 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
 ​
 ​
 ### **Wireframes:**
-#### **Pages on desktop**
+**D*esktop**
 ![Image of wireframed pages for desktop.](docs/wireframes/desktop-wireframes.png)
 
-#### **Pages on tablet**
+**Tablet**
 ![Image of wireframed pages for tablet.](docs/wireframes/tablet-wireframes.png)
 
-#### **Pages on mobile**
+**Mobile**
 ![Image of wireframed pages for mobile.](docs/wireframes/mobile-wireframes.png)
 ​
 ### **Color Scheme:**
@@ -62,14 +69,14 @@ We have made a color palette for Memory Master to create a harmounious and engag
 
 ​![Image of color scheme.](docs/images/mm-colors.png)
 
-#### **General benefits for our color palette**
+**General benefits for our color palette**
 * The palette is not overly vibrant or distracting, allowing players to focus on the gameplay and memory tasks.
 * The colors, when used with proper contrast, can cater to a wider audience, including those with visual impairments.
 * The calming nature of the primary colors can set a relaxed mood, making the game more enjoyable and less stressful.
 * Different shades and contrasts allow for a clear distinction between flipped and unflipped cards, matched pairs, and other game elements.
 
 
-#### **Color explaination**
+**Color explaination**
 **Soft blue** (#E0F7FA): Our main color is a gentle shade provides a serene backdrop, setting a calming atmosphere that's conducive for concentration and focus, essential for a memory game.
 
 **Light teal** (#4FC3F7): Beloning to the same color family as the soft blue to ensure cohesiveness and a harmonious look. The color adds a splash of vibrancy and playfulness, making the game interface lively and inviting.
@@ -102,7 +109,7 @@ All color combinations are tested with WebAIM AAA, to ensure accessability.
 ## **Game rules and mechanics**
 Players must match pairs of cards based on memory. The goal is to match all pairs in the fewest moves and the shortest time possible.
 
-### **Game board:**
+**Game board:**
 * The game board consist of a grid of cards, face down.
 * Grid size are adjusted depending on difficulty: 
     * Desktop:
@@ -115,34 +122,34 @@ Players must match pairs of cards based on memory. The goal is to match all pair
         * Medium: 4*4 cards (totalt 16 cards, 8 pairs) 
         * Hard: 4*6 cards (totalt 24 cards, 12 pairs)
 
-### **Card matching**
+**Card matching**
 * Every card has a twin, two of the cards has the same symbol.
 * Users flip two cards at the time, trying to find the matching pairs.
 * If the card matches, they will disapear from the grid. If not, they flip back face down.
 
-### **Moves and scoring**
+**Moves and scoring**
 * Each attempt to match two cards count as a move.
 * The game tracks the number of moves made.
 * Users are scored based on the number of moves: fewer moves results in a higher score.
 
-### **Timer**
+**Timer**
 * A timer starts when the game begins, tracking how long the player takes to match all pairs.
 
-### **End of game**
+**End of game**
 * The game ends when all card pair are matched.
 * Users recive feedback on their performance, including time and total moves. 
 
 
 ## **Current Features Common to all pages**
 
-#### *Logo:*
+**Logo:**
 The Memory Master logotype is included in all pages, alway displayed on top.
 ![Memory Master logotype.](assets/images/memory-master-logo.png)
 
 * The logotype is linked to the start page.
 * Has smaller ration on smaller screens and on pages with less space. 
 
-#### *Title:*
+**Title:**
 All pages have a title to make it obvious to the user what the page is about.
 
 ![Titel from instructions page.](docs/screenshots/title.png)
@@ -151,7 +158,7 @@ All pages have a title to make it obvious to the user what the page is about.
 ​
 ### **Features**
 
-##### *Navigation:*
+**Navigation:**
 Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not avalible on settings page). 
 ![Header navigation.](docs/screenshots/header-nav.png)
 
@@ -162,7 +169,7 @@ The instructions page have a navigation in the bottom right to skip the instruct
 * Each option is presented with icons which is easy to understand. 
 * The user can easily changes the settings and go back to the instructions.
 ​
-##### *Header:*
+**Header:**
 The game pages and the settings page have a header that includes navigation links mentioned in the [navigation](#navigation) section, the logotype centered below the links and the game pages also have the moves counter and timer in the header to the right. 
 
 ![Header of game pages.](docs/screenshots/header-gamepage.png)
@@ -170,7 +177,7 @@ The game pages and the settings page have a header that includes navigation link
 * The counter gives the user an overview of how many attempts have been made.
 * The timer gives and overview of how long the user has taken to find the pairs. 
 
-##### *Instructions:*
+**Instructions:**
 When starting the game the user get instructions how to play.  
 
 ![Image of instructions.](docs/screenshots/instructions.png)
@@ -178,7 +185,7 @@ When starting the game the user get instructions how to play.
 * Easy for the user to understand what the game is about.
 * The user gets to know the flow, how to start the game and when it ends.
 
-##### *Settings/choices:*
+**Settings/choices:**
 Before starting the game, the user get to choose theme, difficulty and if they want sound effects. 
 
 ![Image of settings/choices.](docs/screenshots/settings.png)
@@ -186,7 +193,7 @@ Before starting the game, the user get to choose theme, difficulty and if they w
 * Users make their choice through a dropdown menu one every option.
 * Options are divided boxes to provide more clarity about what settings/choice are being made. 
 
-##### *Game board:*
+**Game board:**
 All game pages has memory cards that flips when clicking them. They are flipping back if no match is found and hidden if a match is found.
 The cards include icons of chosen theme and the cards have sound effects when flipping, finding or not findig a match to make the game more fun.
 
@@ -195,10 +202,10 @@ The cards include icons of chosen theme and the cards have sound effects when fl
 * Easy for the user to know if it is a match or not. 
 * More fun for the user with different themes. 
 
-##### *Score board:*
+**Score board:**
 When the game if finished, the user goes to the results page where they find their score.
 
-![Score borad.](docs/screenshots/scoreboard.png)
+![Score board.](docs/screenshots/scoreboard.png)
 ​ 
 * User can see how long it took to finish the game.
 * Users see the amount of attempts needed to finish the game.
@@ -213,7 +220,6 @@ We belive that Memory Master have a lot of potetial and can be enhanced in many 
 * Let the users be able to create an account to save their scores (moves and times).
 ​
 ## **Testing Phase**
-​
 ### **Responsivness and functionality**
 We have tested the responsiveness and functionality of the game in several browsers and devices, to ensure cross-compability which will provide the expected user experience.
 Functionality have been tested by clicking all elements.
@@ -306,14 +312,14 @@ All validators were used in incognito mode.
 
 ​
 ## **Bugs**
-1. Game did not detect matching pairs even thought there were a match
+1. **Game did not detect matching pairs even thought there were a match**
 * Issue found: During development
     * Problems matching all pairs on difficulty level medium (one match could not be made) and hard (two pairs could not be matched).
 * Solution: 
     * By making new divs in the HTML-code for the cards that could not match the problem got solved. We could not see any problems with the existing divs, but changing them helped. 
 
 
-2. Symbol size
+2. **Symbol size**
 * Issue found: During testing
     * While testing the game boards on mobile devices we realized the symbols were bigger than the cards.
 * Solution: 
@@ -328,7 +334,7 @@ I deployed the page on GitHub pages via the following procedure: -
 3. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
 4. A message will be displayed to indicate a successful deployment to GitHub pages and provide the live link.
 ​
-You  can find the live site via the following URL - [Memory Master | The Ultimate Memory Game](https://natashary.github.io/memory-game/)
+You can find the live site via the following URL - [Memory Master | The Ultimate Memory Game](https://natashary.github.io/memory-game/)
 ***
 ​
 ## **Tech**
