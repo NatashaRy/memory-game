@@ -16,13 +16,12 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
     * [***Color Scheme***](#color-scheme)
     * [***Typography***](#typography)
     * [***Game rules and mechanics***](#game-rules-and-mechanics)
-1. [**Current Features Common to all pages**](#current-features-common-to-all-pages)
+1. [**Current Features**](#current-features-common-to-all-pages)
     * [***Logo***](#logo)
     * [***Title***](#title)
-    * [***The rest of your features***](#features)
     * [***Navigation***](#navigation)
     * [***Header***](#header)
-    * [***Instructions***](#instructions)
+    * [***Instructions***][#instructions]
     * [***Settings/Choices***](#settingschoices)
     * [***Game Board***](#game-board-1)
     * [***Score Board***](#score-board)
@@ -68,13 +67,13 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
 We have made a color palette for Memory Master to create a harmounious and engaging gaming enviroment. Shades of blue and green are our main colors with a touch of red in our dark accent color to make importent elements pop compared to other elements.
 
 ​![Image of color scheme.](docs/images/mm-colors.png)
-
+ 
 **General benefits for our color palette**
 * The palette is not overly vibrant or distracting, allowing players to focus on the gameplay and memory tasks.
 * The colors, when used with proper contrast, can cater to a wider audience, including those with visual impairments.
 * The calming nature of the primary colors can set a relaxed mood, making the game more enjoyable and less stressful.
 * Different shades and contrasts allow for a clear distinction between flipped and unflipped cards, matched pairs, and other game elements.
-
+ 
 
 **Color explaination**
 **Soft blue** (#E0F7FA): Our main color is a gentle shade provides a serene backdrop, setting a calming atmosphere that's conducive for concentration and focus, essential for a memory game.
@@ -88,9 +87,9 @@ We have made a color palette for Memory Master to create a harmounious and engag
 **Coral** (#D32F2F): Our vibrant accent color captures attention and is perfect for highlighting important game elements. Its warm contrasts create a good dynamic in the interface with the cooler shades. 
 
 **Almost black** (#212121): For our paragraphs we have chosen a foundational color. It ensures legibility and provides a solid contrast against the lighter shades in the palette.
-
+ 
 ​![Eight shapes contrast grid.](docs/screenshots/contrast-grid.png)
-
+ 
 Together, these colors not only create a visually appealing interface but also prioritize user experience, ensuring that Memory Master is both delightful to play and easy on the eyes. 
 All color combinations are tested with WebAIM AAA, to ensure accessability. 
 
@@ -99,9 +98,9 @@ All color combinations are tested with WebAIM AAA, to ensure accessability.
   * Open Sans - For all the headings.
   * Lato - For all body text.
   * Lato Bold - For all buttons.  
-
+ 
 ![Image of typography scheme.](docs/images/mm-typography.png)
-​
+​ 
 * Both Open Sans and Lato are sans-serifs and known for clarity and simplity, which is very suitable for a game interface wher quick readability might be crucial. These fonts can ensure that users can easily read instruction, scores and other game-related texts. 
 * The fonts provides clean lines and modern design, perfect for a modern and memory game. 
 * All fonts were sourced from Google fonts, as stated in the credits.
@@ -140,25 +139,23 @@ Players must match pairs of cards based on memory. The goal is to match all pair
 * Users recive feedback on their performance, including time and total moves. 
 
 
-## **Current Features Common to all pages**
+## **Current Features**
 
-**Logo**
+### **Logo**
 The Memory Master logotype is included in all pages, alway displayed on top.
 ![Memory Master logotype.](assets/images/memory-master-logo.png)
 
 * The logotype is linked to the start page.
 * Has smaller ration on smaller screens and on pages with less space. 
 
-**Title**
+### **Title**
 All pages have a title to make it obvious to the user what the page is about.
 
 ​![Screenshot title instructions page.](docs/screenshots/instructions.png)
 ​
 * Gives the user a clear understanding about what the page is about. 
-​
-### **Features**
 
-#### **Navigation:**
+### **Navigation:**
 Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not avalible on settings page). 
 ​![Screenshot header navigation.](docs/screenshots/header-nav.png)
 
@@ -169,7 +166,7 @@ The instructions page have a navigation in the bottom right to skip the instruct
 * Each option is presented with icons which is easy to understand. 
 * The user can easily changes the settings and go back to the instructions.
 ​
-**Header:**
+### **Header:**
 The game pages and the settings page have a header that includes navigation links mentioned in the [navigation](#navigation) section, the logotype centered below the links and the game pages also have the moves counter and timer in the header to the right. 
 
 ​![Screenshot header of game page.](docs/screenshots/header-gamepage.png)
@@ -177,7 +174,7 @@ The game pages and the settings page have a header that includes navigation link
 * The counter gives the user an overview of how many attempts have been made.
 * The timer gives and overview of how long the user has taken to find the pairs. 
 
-**Instructions:**
+### **Instructions:**
 When starting the game the user get instructions how to play.  
 
 ​![Screenshot instructions.](docs/screenshots/instructions.png)
@@ -185,7 +182,7 @@ When starting the game the user get instructions how to play.
 * Easy for the user to understand what the game is about.
 * The user gets to know the flow, how to start the game and when it ends.
 
-**Settings/choices:**
+### **Settings and choices:**
 Before starting the game, the user get to choose theme, difficulty and if they want sound effects. 
 
 ​![Screenshot settings and choices.](docs/screenshots/settings.png)
@@ -193,7 +190,7 @@ Before starting the game, the user get to choose theme, difficulty and if they w
 * Users make their choice through a dropdown menu one every option.
 * Options are divided boxes to provide more clarity about what settings/choice are being made. 
 
-**Game board:**
+### **Game board:**
 All game pages has memory cards that flips when clicking them. They are flipping back if no match is found and hidden if a match is found.
 The cards include icons of chosen theme and the cards have sound effects when flipping, finding or not findig a match to make the game more fun.
 
@@ -202,7 +199,7 @@ The cards include icons of chosen theme and the cards have sound effects when fl
 * Easy for the user to know if it is a match or not. 
 * More fun for the user with different themes. 
 
-**Score board:**
+### **Score board:**
 When the game if finished, the user goes to the results page where they find their score.
 
 ​![Screenshot score board.](docs/screenshots/scoreboard.png)
@@ -231,11 +228,11 @@ Responsivness has been tested using DevTools for each browser, both on chosen di
 * Mozilla Firefox
 * Microsoft Edge
 
-##### **Tablets**
+##### **Tablet**
 * Apple Ipad Air (4th gen) - Google Chrome, Safari
 * Samsung Galaxy A7 - Google Chrome
 
-##### **Mobiles**
+##### **Mobile**
 * Samsung Galaxy S22 Ultra - Google Chrome
 * Samsung Galaxy A54 - Google Chrome
 * OnePlus 9 Pro - Mozilla Firefox
@@ -261,6 +258,7 @@ All validators were used in incognito mode.
 * Solution: 
     * To resolve the issue of functions within loops we added a function "createCardClicked(card)" that returns a new function, which calls "cardClicked(card)", ensuring the "card" parameter is correctly scoped. The "addEventListener" method within the for-loop now calls "createCardClicked(card)" to resolve the issue of creating functions within the loop and referencing outer schoped variables directly. 
 
+ 
 ### **Lighthouse Score**
 * The tests were preformed in incognito mode.
 * Both desktop and mobile tests was preformed on all pages.
@@ -287,7 +285,7 @@ All validators were used in incognito mode.
 ![Lighthouse score desktop results page screenshot.](docs/screenshots/lighthouse/desktop-results.png)
 *results.html*
 
-
+ 
 #### **Mobile**
 ![Lighthouse score mobile index page screenshot.](docs/screenshots/lighthouse/mobile-index.png)
 *index.html*
@@ -317,8 +315,7 @@ All validators were used in incognito mode.
     * Problems matching all pairs on difficulty level medium (one match could not be made) and hard (two pairs could not be matched).
 * Solution: 
     * By making new divs in the HTML-code for the cards that could not match the problem got solved. We could not see any problems with the existing divs, but changing them helped. 
-
-
+ 
 2. **Symbol size**
 * Issue found: During testing
     * While testing the game boards on mobile devices we realized the symbols were bigger than the cards.
@@ -327,7 +324,7 @@ All validators were used in incognito mode.
 ​
 ***
 ## **Deployment**
-I deployed the page on GitHub pages via the following procedure: -
+I deployed the page on GitHub pages via the following procedure: 
 ​
 1. From the project's [repository](https://github.com/NatashaRy/memory-game), go to the **Settings** tab.
 2. From the left-hand menu, select the **Pages** tab.
@@ -336,19 +333,16 @@ I deployed the page on GitHub pages via the following procedure: -
 ​
 You can find the live site via the following URL - [Memory Master | The Ultimate Memory Game](https://natashary.github.io/memory-game/)
 ***
-​
-## **Tech**
+​## **Tech**
 - HTML
 - CSS
 - JavaScript
 ​
 ## **Credits**
 ### **Honorable mentions**
-​
 It's always nice to mention those that helped you get there, if people gave you support on slack or the local cat scared you into completing give them a mention!
 ​
 ### **Content:**
-​
 * All fonts are imported from [Google Fonts](https://fonts.google.com)
 * All icons on memory cards are taken from [Font Awesome](https://fontawesome.com/)
 * Animations on buttons are inspired from [W3School](https://www.w3schools.com/css/css3_animations.asp)
@@ -358,10 +352,11 @@ It's always nice to mention those that helped you get there, if people gave you 
 
 
 ### **Media:**
-​
 * Memory Masters logotyp was created with [Canva](https://canva.com)
 * Images compressed with [TinyPNG](https://tinypng.com/)
 * Sound effects are taken from [Pixabay](https://pixabay.com/sound-effects/search/)
 * Screenshot in README.md under "site overview" was created with [Am I Responsive](https://ui.dev/amiresponsive)
 * Favicon created with [Favicon.ic](https://favicon.io/favicon-converter/)
 * Wireframes were created in [Adobe XD](https://adobexdplatform.com/)
+
+[def]: #instructions
