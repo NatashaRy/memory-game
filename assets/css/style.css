@@ -360,7 +360,7 @@ a {
     .jfc1200 {
         justify-content: start;
     }
-    .instruction-cards {
+    .instruction-cards, .chioce-cards {
         margin-bottom: 30px;
         width: auto;
     }
