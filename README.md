@@ -157,6 +157,7 @@ All pages have a title to make it obvious to the user what the page is about.
 
 ### **Navigation:**
 Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not avalible on settings page). 
+
 ​![Screenshot header navigation.](docs/screenshots/header-nav.png)
 
 The instructions page have a navigation in the bottom right to skip the instruction and forward to the settings page.
@@ -248,6 +249,9 @@ All validators were used in incognito mode.
 
 #### **CSS** - (https://jigsaw.w3.org/css-validator/)
 ​![Screenshot CSS validator.](docs/screenshots/css-validator.png)
+
+![W3 CSS validator](https://jigsaw.w3.org/css-validator/images/vcss)
+
 * No errors were found. 
 
 #### **Jshint** - (https://jshint.com/)
@@ -262,51 +266,44 @@ All validators were used in incognito mode.
 ### **Lighthouse Score**
 * The tests were preformed in incognito mode.
 * Both desktop and mobile tests was preformed on all pages.
+* The game site is lightweight without any images except for the logotype. 
+* We have used aria-labels on the linked icons all pages has unique meta titles and decriptions.
+* All pages have unique meta titles aswell as meta descriptions.
 
-#### **Desktop**
+#### **Score**
 ![Lighthouse score desktop index page screenshot.](docs/screenshots/lighthouse/desktop-index.png)
-*index.html*
+***Desktop score: Index.html***
+![Lighthouse score mobile index page screenshot.](docs/screenshots/lighthouse/mobile-index.png)
+***Mobile score: Index.html***
 
-![Lighthouse score desktop instructions page screenshot.](docs/screenshots/lighthouse/desktop-instructions.png)
-*instructions.html*
+**Performance**
+* Desktop 100 on all pages.
+* Mobile 99 on all pages.
 
-![Lighthouse score desktop settings and choice page screenshot.](docs/screenshots/lighthouse/desktop-choice.png)
-*choice.html*
+* Issue on mobile: ***Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles.***
+* Solution: This is not something we will fix at this time. The affected resources are Google Fonts and Font Awesome from which we get fonts and symbols. In the future this could be fixed by using local fonts and symbols or use add a web font loader, optimize critical CSS and so on. 
 
-![Lighthouse score desktop easy mode game page screenshot.](docs/screenshots/lighthouse/desktop-easy.png)
-*easy-game.html*
+**Accessibility**
+* Desktop 100 on all pages.
+* Mobile 100 on all pages.
 
-![Lighthouse score desktop medium mode game page screenshot.](docs/screenshots/lighthouse/desktop-medium.png)
-*medium-game.html*
-
-![Lighthouse score desktop hard mode game page screenshot.](docs/screenshots/lighthouse/desktop-hard.png)
-*hard-game.html*
+**Best Practices**
+* Desktop 100 on all pages except results.html (92).
+* Mobile 100 on all pages except results.html (92).
 
 ![Lighthouse score desktop results page screenshot.](docs/screenshots/lighthouse/desktop-results.png)
-*results.html*
-
- 
-#### **Mobile**
-![Lighthouse score mobile index page screenshot.](docs/screenshots/lighthouse/mobile-index.png)
-*index.html*
-
-![Lighthouse score mobile instructions page screenshot.](docs/screenshots/lighthouse/mobile-instructions.png)
-*instructions.html*
-
-![Lighthouse score mobile settings and choice page screenshot.](docs/screenshots/lighthouse/mobile-choice.png)
-*choice.html*
-
-![Lighthouse score mobile easy mode game page screenshot.](docs/screenshots/lighthouse/mobile-easy.png)
-*easy-game.html*
-
-![Lighthouse score mobile medium mode game page screenshot.](docs/screenshots/lighthouse/mobile-medium.png)
-*medium-game.html*
-
-![Lighthouse score mobile hard mode game page screenshot.](docs/screenshots/lighthouse/mobile-hard.png)
-*hard-game.html*
+***Desktop score: Results.html***
 
 ![Lighthouse score mobile results page screenshot.](docs/screenshots/lighthouse/mobile-results.png)
-*results.html*
+***Mobile score: Results.html***
+
+* Results page (92): 
+    * Issue for both desktop and mobile: ***"Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns"***
+    * Solution: We do not intend to fix this problem since the users chooses to use audio or not in the beginning of the game. The audio autoplays to give the user a pleasant surprise if sound is chosen. 
+
+**SEO**
+* Desktop 100 on all pages.
+* Mobile 100 on all pages.
 
 ​
 ## **Bugs**
