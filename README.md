@@ -149,7 +149,7 @@ All pages have a title to make it obvious to the user what the page is about.
 ​
 * Gives the user a clear understanding about what the page is about. 
 ​
-#### *features
+### **Features**
 
 ##### *Navigation:*
 Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not avalible on settings page). 
@@ -214,13 +214,26 @@ We belive that Memory Master have a lot of potetial and can be enhanced in many 
 ​
 ## **Testing Phase**
 ​
-This is the hardest bit of the readme, when we have completed a page we need to discuss testing.
-​
-Here is a good idea to talk about how and why you have tested with certain tools and validators so here a list of things to talk through
-​
-* Responsiveness - How do you test this, dev tools? checking on multiple devices?
-​
-* Functionality - Each feature needs to be tested before something is complete, talk about the process, click each link check each image, does form validation work, if your using javascript or anything else, does it always behave as the user expects
+### **Responsivness and functionality**
+We have tested the responsiveness and functionality of the game in several browsers and devices, to ensure cross-compability which will provide the expected user experience.
+Functionality have been tested by clicking all elements.
+
+#### **Tested browsers**
+Responsivness has been tested using DevTools for each browser, both on chosen dimensions and by making the window smaller. 
+
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+
+##### **Tablets**
+* Apple Ipad Air (4th gen) - Google Chrome, Safari
+* Samsung Galaxy A7 - Google Chrome
+
+##### **Mobiles**
+* Samsung Galaxy S22 Ultra - Google Chrome
+* Samsung Galaxy A54 - Google Chrome
+* OnePlus 9 Pro - Mozilla Firefox
+
 
 ### **Validators**
 All validators were used in incognito mode. 
@@ -234,22 +247,77 @@ All validators were used in incognito mode.
 ![W3 CSS Validator Screenshot](docs/screenshots/css-validator.png)
 * No errors were found. 
 
-#### **Jshint**
+#### **Jshint** - (https://jshint.com/)
 ![JS Hint Validation Screenshot](docs/screenshots/js-validator.png)
 ​
-* *"Warning: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (countFlippedCards, timerInterval, startTimer, playSound, flipSound, flippedCards, checkMatch)"*
+* Issue found:
+    * *"Warning: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (countFlippedCards, timerInterval, startTimer, playSound, flipSound, flippedCards, checkMatch)"*
+* Solution: 
+    * To resolve the issue of functions within loops we added a function "createCardClicked(card)" that returns a new function, which calls "cardClicked(card)", ensuring the "card" parameter is correctly scoped. The "addEventListener" method within the for-loop now calls "createCardClicked(card)" to resolve the issue of creating functions within the loop and referencing outer schoped variables directly. 
+
+### **Lighthouse Score**
+* The tests were preformed in incognito mode.
+* Both desktop and mobile tests was preformed on all pages.
+
+#### **Desktop**
+![Lighthouse index.html Screenshot](docs/screenshots/desktop-index.png)
+*index.html*
+
+![Lighthouse instructions.html Screenshot](docs/screenshots/desktop-instructions.png)
+*instructions.html*
+
+![Lighthouse choice.html Screenshot](docs/screenshots/desktop-choice.png)
+*choice.html*
+
+![Lighthouse easy-game.html Screenshot](docs/screenshots/desktop-easy.png)
+*easy-game.html*
+
+![Lighthouse medium-game.html Screenshot](docs/screenshots/desktop-medium.png)
+*medium-game.html*
+
+![Lighthouse hard-game.html Screenshot](docs/screenshots/desktop-hard.png)
+*hard-game.html*
+
+![Lighthouse results.html Screenshot](docs/screenshots/desktop-results.png)
+*results.html*
+
+
+#### **Mobile**
+![Lighthouse index.html Screenshot](docs/screenshots/mobile-index.png)
+*index.html*
+
+![Lighthouse instructions.html Screenshot](docs/screenshots/mobile-instructions.png)
+*instructions.html*
+
+![Lighthouse choice.html Screenshot](docs/screenshots/mobile-choice.png)
+*choice.html*
+
+![Lighthouse easy-game.html Screenshot](docs/screenshots/mobile-easy.png)
+*easy-game.html*
+
+![Lighthouse medium-game.html Screenshot](docs/screenshots/mobile-medium.png)
+*medium-game.html*
+
+![Lighthouse hard-game.html Screenshot](docs/screenshots/mobile-hard.png)
+*hard-game.html*
+
+![Lighthouse results.html Screenshot](docs/screenshots/mobile-results.png)
+*results.html*
+
 ​
 ## **Bugs**
-​
-We always have bugs in development, a few bullet points here to talk about bugs you found and how you fixed them, in later projects this will be more detailed
-​
-* Issue - When on mobile the user had horizontal scroll with items overflowing
-* Cause - The images had absolute positioning and caused them to go off screen
-* Resolution - Changed the width of the image to stay within the confines of the screen.
+1. Game did not detect matching pairs even thought there were a match
+* Issue found: During development
+    * Problems matching all pairs on difficulty level medium (one match could not be made) and hard (two pairs could not be matched).
+* Solution: 
+    * By making new divs in the HTML-code for the cards that could not match the problem got solved. We could not see any problems with the existing divs, but changing them helped. 
 
-* Issue - Problems matching all pairs on difficulty level medium (one match could not be made) and hard (two pairs could not be matched).
-* Cause - Could not find a cause to the problem. 
-* Resolution - By making new divs for the cards that could not be match the problem got solved. We could not see any problems with the existing divs, but changing them helped. 
+
+2. Symbol size
+* Issue found: During testing
+    * While testing the game boards on mobile devices we realized the symbols were bigger than the cards.
+* Solution: 
+    * By decresing the font-size of the symbols for 480px media query we could solve the problem.  
 ​
 ***
 ## **Deployment**
