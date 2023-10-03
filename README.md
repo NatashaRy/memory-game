@@ -55,14 +55,14 @@ We provide a fun game in a relaxing gaming enviroment. Our target audience are p
 ​
 ​
 ### **Wireframes:**
-**D*esktop**
-![Image of wireframed pages for desktop.](docs/wireframes/desktop-wireframes.png)
+**Desktop**
+​![Desktop wireframes.](docs/wireframes/desktop-wireframes.png)
 
 **Tablet**
-![Image of wireframed pages for tablet.](docs/wireframes/tablet-wireframes.png)
+​![Tablet wireframes.](docs/wireframes/tablet-wireframes.png)
 
 **Mobile**
-![Image of wireframed pages for mobile.](docs/wireframes/mobile-wireframes.png)
+​![Mobile wireframes.](docs/wireframes/mobile-wireframes.png)
 ​
 ### **Color Scheme:**
 We have made a color palette for Memory Master to create a harmounious and engaging gaming enviroment. Shades of blue and green are our main colors with a touch of red in our dark accent color to make importent elements pop compared to other elements.
@@ -89,7 +89,7 @@ We have made a color palette for Memory Master to create a harmounious and engag
 
 **Almost black** (#212121): For our paragraphs we have chosen a foundational color. It ensures legibility and provides a solid contrast against the lighter shades in the palette.
 
-![Eight shapes contrast grid.](docs/screenshots/contrast-grid.png)
+​![Eight shapes contrast grid.](docs/screenshots/contrast-grid.png)
 
 Together, these colors not only create a visually appealing interface but also prioritize user experience, ensuring that Memory Master is both delightful to play and easy on the eyes. 
 All color combinations are tested with WebAIM AAA, to ensure accessability. 
@@ -109,7 +109,7 @@ All color combinations are tested with WebAIM AAA, to ensure accessability.
 ## **Game rules and mechanics**
 Players must match pairs of cards based on memory. The goal is to match all pairs in the fewest moves and the shortest time possible.
 
-**Game board:**
+**Game board**
 * The game board consist of a grid of cards, face down.
 * Grid size are adjusted depending on difficulty: 
     * Desktop:
@@ -142,29 +142,29 @@ Players must match pairs of cards based on memory. The goal is to match all pair
 
 ## **Current Features Common to all pages**
 
-**Logo:**
+**Logo**
 The Memory Master logotype is included in all pages, alway displayed on top.
 ![Memory Master logotype.](assets/images/memory-master-logo.png)
 
 * The logotype is linked to the start page.
 * Has smaller ration on smaller screens and on pages with less space. 
 
-**Title:**
+**Title**
 All pages have a title to make it obvious to the user what the page is about.
 
-![Titel from instructions page.](docs/screenshots/title.png)
+​![Screenshot title instructions page.](docs/screenshots/instructions.png)
 ​
 * Gives the user a clear understanding about what the page is about. 
 ​
 ### **Features**
 
-**Navigation:**
+#### **Navigation:**
 Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not avalible on settings page). 
-![Header navigation.](docs/screenshots/header-nav.png)
+​![Screenshot header navigation.](docs/screenshots/header-nav.png)
 
 The instructions page have a navigation in the bottom right to skip the instruction and forward to the settings page.
 
-![Footer navigation.](docs/screenshots/footer-nav.png)
+​![Screenshot footer navigation.](docs/screenshots/footer-nav.png)
 ​
 * Each option is presented with icons which is easy to understand. 
 * The user can easily changes the settings and go back to the instructions.
@@ -172,7 +172,7 @@ The instructions page have a navigation in the bottom right to skip the instruct
 **Header:**
 The game pages and the settings page have a header that includes navigation links mentioned in the [navigation](#navigation) section, the logotype centered below the links and the game pages also have the moves counter and timer in the header to the right. 
 
-![Header of game pages.](docs/screenshots/header-gamepage.png)
+​![Screenshot header of game page.](docs/screenshots/header-gamepage.png)
 ​ 
 * The counter gives the user an overview of how many attempts have been made.
 * The timer gives and overview of how long the user has taken to find the pairs. 
@@ -180,7 +180,7 @@ The game pages and the settings page have a header that includes navigation link
 **Instructions:**
 When starting the game the user get instructions how to play.  
 
-![Image of instructions.](docs/screenshots/instructions.png)
+​![Screenshot instructions.](docs/screenshots/instructions.png)
 ​ 
 * Easy for the user to understand what the game is about.
 * The user gets to know the flow, how to start the game and when it ends.
@@ -188,7 +188,7 @@ When starting the game the user get instructions how to play.
 **Settings/choices:**
 Before starting the game, the user get to choose theme, difficulty and if they want sound effects. 
 
-![Image of settings/choices.](docs/screenshots/settings.png)
+​![Screenshot settings and choices.](docs/screenshots/settings.png)
 ​ 
 * Users make their choice through a dropdown menu one every option.
 * Options are divided boxes to provide more clarity about what settings/choice are being made. 
@@ -197,7 +197,7 @@ Before starting the game, the user get to choose theme, difficulty and if they w
 All game pages has memory cards that flips when clicking them. They are flipping back if no match is found and hidden if a match is found.
 The cards include icons of chosen theme and the cards have sound effects when flipping, finding or not findig a match to make the game more fun.
 
-![Game board Medium Mode.](docs/screenshots/game-board.png)
+​![Screenshot medium game board.](docs/screenshots/game-board.png)
 ​ 
 * Easy for the user to know if it is a match or not. 
 * More fun for the user with different themes. 
@@ -205,7 +205,7 @@ The cards include icons of chosen theme and the cards have sound effects when fl
 **Score board:**
 When the game if finished, the user goes to the results page where they find their score.
 
-![Score board.](docs/screenshots/scoreboard.png)
+​![Screenshot score board.](docs/screenshots/scoreboard.png)
 ​ 
 * User can see how long it took to finish the game.
 * Users see the amount of attempts needed to finish the game.
@@ -245,16 +245,16 @@ Responsivness has been tested using DevTools for each browser, both on chosen di
 All validators were used in incognito mode. 
 
 #### **HTML** - (https://validator.w3.org/)
-![W3 HTML Validator Screenshot.](docs/screenshots/html-validator.png)
+​![Screenshot HTML validator.](docs/screenshots/html-validator.png)
 * No errors were found.
 
 
 #### **CSS** - (https://jigsaw.w3.org/css-validator/)
-![W3 CSS Validator Screenshot.](docs/screenshots/css-validator.png)
+​![Screenshot CSS validator.](docs/screenshots/css-validator.png)
 * No errors were found. 
 
 #### **Jshint** - (https://jshint.com/)
-![JS Hint Validation Screenshot.](docs/screenshots/js-validator.png)
+​![Screenshot jshint.](docs/screenshots/js-validator.png)
 ​
 * Issue found:
     * *"Warning: Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (countFlippedCards, timerInterval, startTimer, playSound, flipSound, flippedCards, checkMatch)"*
@@ -266,48 +266,48 @@ All validators were used in incognito mode.
 * Both desktop and mobile tests was preformed on all pages.
 
 #### **Desktop**
-![Lighthouse index.html Screenshot.](docs/screenshots/desktop-index.png)
+![Lighthouse score desktop index page screenshot.](docs/screenshots/lighthouse/desktop-index.png)
 *index.html*
 
-![Lighthouse instructions.html Screenshot.](docs/screenshots/desktop-instructions.png)
+![Lighthouse score desktop instructions page screenshot.](docs/screenshots/lighthouse/desktop-instructions.png)
 *instructions.html*
 
-![Lighthouse choice.html Screenshot.](docs/screenshots/desktop-choice.png)
+![Lighthouse score desktop settings and choice page screenshot.](docs/screenshots/lighthouse/desktop-choice.png)
 *choice.html*
 
-![Lighthouse easy-game.html Screenshot.](docs/screenshots/desktop-easy.png)
+![Lighthouse score desktop easy mode game page screenshot.](docs/screenshots/lighthouse/desktop-easy.png)
 *easy-game.html*
 
-![Lighthouse medium-game.html Screenshot.](docs/screenshots/desktop-medium.png)
+![Lighthouse score desktop medium mode game page screenshot.](docs/screenshots/lighthouse/desktop-medium.png)
 *medium-game.html*
 
-![Lighthouse hard-game.html Screenshot.](docs/screenshots/desktop-hard.png)
+![Lighthouse score desktop hard mode game page screenshot.](docs/screenshots/lighthouse/desktop-hard.png)
 *hard-game.html*
 
-![Lighthouse results.html Screenshot.](docs/screenshots/desktop-results.png)
+![Lighthouse score desktop results page screenshot.](docs/screenshots/lighthouse/desktop-results.png)
 *results.html*
 
 
 #### **Mobile**
-![Lighthouse index.html Screenshot.](docs/screenshots/mobile-index.png)
+![Lighthouse score mobile index page screenshot.](docs/screenshots/lighthouse/mobile-index.png)
 *index.html*
 
-![Lighthouse instructions.html Screenshot.](docs/screenshots/mobile-instructions.png)
+![Lighthouse score mobile instructions page screenshot.](docs/screenshots/lighthouse/mobile-instructions.png)
 *instructions.html*
 
-![Lighthouse choice.html Screenshot.](docs/screenshots/mobile-choice.png)
+![Lighthouse score mobile settings and choice page screenshot.](docs/screenshots/lighthouse/mobile-choice.png)
 *choice.html*
 
-![Lighthouse easy-game.html Screenshot.](docs/screenshots/mobile-easy.png)
+![Lighthouse score mobile easy mode game page screenshot.](docs/screenshots/lighthouse/mobile-easy.png)
 *easy-game.html*
 
-![Lighthouse medium-game.html Screenshot.](docs/screenshots/mobile-medium.png)
+![Lighthouse score mobile medium mode game page screenshot.](docs/screenshots/lighthouse/mobile-medium.png)
 *medium-game.html*
 
-![Lighthouse hard-game.html Screenshot.](docs/screenshots/mobile-hard.png)
+![Lighthouse score mobile hard mode game page screenshot.](docs/screenshots/lighthouse/mobile-hard.png)
 *hard-game.html*
 
-![Lighthouse results.html Screenshot.](docs/screenshots/mobile-results.png)
+![Lighthouse score mobile results page screenshot.](docs/screenshots/lighthouse/mobile-results.png)
 *results.html*
 
 ​
