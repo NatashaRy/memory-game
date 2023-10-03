@@ -9,10 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let timerInterval;
     let countMatchingPairs = 0;
     let difficulty;
-    let flipSound = new Audio('assets/sound/flip.mp3');
-    let matchSound = new Audio('assets/sound/match.mp3');
-    let nomatchSound = new Audio('assets/sound/nomatch.mp3');
-    let cheeringSound = new Audio('assets/sound/cheering.mp3');
+
+    const flipSound = new Audio('assets/sounds/flip.mp3');
+    const matchSound = new Audio('assets/sounds/match.mp3');
+    const nomatchSound = new Audio('assets/sounds/nomatch.mp3');
+    const cheeringSound = new Audio('assets/sounds/cheering.mp3');
+    const themes = {
+        animals: ["fa-solid fa-hippo", "fa-solid fa-dog", "fa-solid fa-otter", "fa-solid fa-cow", "fa-solid fa-fish", "fa-solid fa-dragon","fa-solid fa-kiwi-bird", "fa-solid fa-worm", "fa-solid fa-spider", "fa-solid fa-shrimp", "fa-solid fa-mosquito", "fa-solid fa-locust", "fa-solid fa-horse-head", "fa-solid fa-horse","fa-solid fa-frog", "fa-solid fa-dove", "fa-solid fa-crow", "fa-solid fa-cat","fa-solid fa-bugs"],
+        foods: ["fa-solid fa-carrot", "fa-solid fa-burger", "fa-solid fa-cookie", "fa-solid fa-drumstick-bite", "fa-solid fa-ice-cream", "fa-solid fa-pizza-slice", "fa-solid fa-bacon", "fa-solid fa-egg", "fa-solid fa-mug-hot", "fa-solid fa-martini-glass-citrus", "fa-solid fa-cheese", "fa-solid fa-candy-cane", "fa-solid fa-cake-candles", "fa-solid fa-bread-slice", "fa-solid fa-bowl-rice"],
+        sports: ["fa-solid fa-baseball-bat-ball", "fa-solid fa-baseball", "fa-solid fa-table-tennis-paddle-ball", "fa-solid fa-person-swimming", "fa-solid fa-person-snowboarding", "fa-solid fa-golf-ball-tee","fa-solid fa-futbol", "fa-solid fa-football", "fa-solid fa-bowling-ball", "fa-solid fa-basketball", "fa-solid fa-person-biking", "fa-solid fa-person-running", "fa-solid fa-person-skating", "fa-solid fa-person-skiing","fa-solid fa-dumbbell", "fa-solid fa-bicycle", "fa-solid fa-hockey-puck", "fa-solid fa-volleyball","fa-solid fa-stopwatch-20"]
+    };
 
     /**
      * Timer counting how long it takes for the player to find all pairs.
@@ -53,16 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 let soundChoice = document.getElementById('sound').value;
                 if (soundChoice === 'yes') {
                     sessionStorage.setItem('audioEnabled', 'true');
-                    console.log('Sound choice true stored.');
                 } else {
                     sessionStorage.setItem('audioEnabled', 'false');
-                    console.log('Sound choice false stored.');
                 }
     
                 let difficulty = document.getElementById('difficulty').value;
                 let theme = document.getElementById('theme').value;
                 window.location.href = difficulty + '-game.html?theme=' + theme;
-                console.log('Starting game....');
             });
         }
 
@@ -77,30 +80,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!timerInterval) {
             startTimer();
-            console.log('Starting timer...');
         }
 
         playSound(flipSound);
-        console.log('Played Sound effect: Flip');
 
         if (flippedCards.includes(card)) {
             alert('This card is already flipped, flip an other card.');
-            console.log('Card is already flipped.');
             return;
         }
 
         card.classList.toggle('flipped');
         flippedCards.push(card);
-        console.log('Flipped card.');
 
         countFlippedCards++;
-        console.log('Flips are counted');
 
         if (countFlippedCards == 2) {
             setTimeout(() => {
                 checkMatch();
             }, 1200);
-            console.log('Checking for matching pair...');
         }
     }
 function createCardClicked(card) {
@@ -123,15 +120,11 @@ for (let card of cards) {
             flippedCards[0].style.visibility ='hidden';
             flippedCards[1].style.visibility ='hidden';
             countMatchingPairs++;
-            console.log('Matching pair found and hidden.');
             playSound(matchSound);
-            console.log('Played Sound effect: Match');
         } else {
             flippedCards[0].classList.remove('flipped');
             flippedCards[1].classList.remove('flipped');
-            console.log('No match found.');
             playSound(nomatchSound);
-            console.log('Played Sound effect: No match');
         }
         movesCount++;
         updateMoves()
@@ -148,15 +141,10 @@ for (let card of cards) {
     function updateMoves() {
         let moves = document.getElementById('moves');
             moves.textContent = movesCount;
-            console.log('Updating moves...');
         }
 
     // -------- Sets of different themes of symbols player can choose from.
-    let themes = {
-        animals: ["fa-solid fa-hippo", "fa-solid fa-dog", "fa-solid fa-otter", "fa-solid fa-cow", "fa-solid fa-fish", "fa-solid fa-dragon","fa-solid fa-kiwi-bird", "fa-solid fa-worm", "fa-solid fa-spider", "fa-solid fa-shrimp", "fa-solid fa-mosquito", "fa-solid fa-locust", "fa-solid fa-horse-head", "fa-solid fa-horse","fa-solid fa-frog", "fa-solid fa-dove", "fa-solid fa-crow", "fa-solid fa-cat","fa-solid fa-bugs"],
-        foods: ["fa-solid fa-carrot", "fa-solid fa-burger", "fa-solid fa-cookie", "fa-solid fa-drumstick-bite", "fa-solid fa-ice-cream", "fa-solid fa-pizza-slice", "fa-solid fa-bacon", "fa-solid fa-egg", "fa-solid fa-mug-hot", "fa-solid fa-martini-glass-citrus", "fa-solid fa-cheese", "fa-solid fa-candy-cane", "fa-solid fa-cake-candles", "fa-solid fa-bread-slice", "fa-solid fa-bowl-rice"],
-        sports: ["fa-solid fa-baseball-bat-ball", "fa-solid fa-baseball", "fa-solid fa-table-tennis-paddle-ball", "fa-solid fa-person-swimming", "fa-solid fa-person-snowboarding", "fa-solid fa-golf-ball-tee","fa-solid fa-futbol", "fa-solid fa-football", "fa-solid fa-bowling-ball", "fa-solid fa-basketball", "fa-solid fa-person-biking", "fa-solid fa-person-running", "fa-solid fa-person-skating", "fa-solid fa-person-skiing","fa-solid fa-dumbbell", "fa-solid fa-bicycle", "fa-solid fa-hockey-puck", "fa-solid fa-volleyball","fa-solid fa-stopwatch-20"]
-    };
+
 
     /**
      * Determind difficulty based on page.
