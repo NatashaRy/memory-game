@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const seconds = totalSeconds % 60;
         const milliseconds = totalMilliseconds % 1000;
     
-        document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
+        document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(2, '0')}`;
     }
 
     // ----------- Play audio effect
