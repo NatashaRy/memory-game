@@ -70,41 +70,45 @@ document.addEventListener('DOMContentLoaded', function() {
      * Prohibit the player to click the same card two times in one attempt and limits the player to only be able to flip two cards in one attempt.
      * Timer starts when first card is flipped. 1,5 seconds delay before flipping cards back if no match is found.
      */
+    function cardClicked(card) {
+        if (countFlippedCards == 2) {
+            return;
+        }
+
+        if (!timerInterval) {
+            startTimer();
+            console.log('Starting timer...');
+        }
+
+        playSound(flipSound);
+        console.log('Played Sound effect: Flip');
+
+        if (flippedCards.includes(card)) {
+            alert('This card is already flipped, flip an other card.');
+            console.log('Card is already flipped.');
+            return;
+        }
+
+        card.classList.toggle('flipped');
+        flippedCards.push(card);
+        console.log('Flipped card.');
+
+        countFlippedCards++;
+        console.log('Flips are counted');
+
+        if (countFlippedCards == 2) {
+            setTimeout(() => {
+                checkMatch();
+            }, 1200);
+            console.log('Checking for matching pair...');
+        }
+    }
+
     for (let card of cards) {
         card.addEventListener('click', function() {
-            if (countFlippedCards == 2) {
-                return;
-            }
-
-            if (!timerInterval) {
-                startTimer();
-                console.log('Starting timer...');
-            }
-
-            playSound(flipSound);
-            console.log('Played Sound effect: Flip');
-
-            if (flippedCards.includes(this)) {
-                alert('This card is already flipped, flip an other card.');
-                console.log('Card is already flipped.');
-                return;
-            }
-
-            this.classList.toggle('flipped');
-            flippedCards.push(this);
-            console.log('Flipped card.');
-
-            countFlippedCards++;
-            console.log('Flips are counted');
-
-            if (countFlippedCards == 2) {
-                setTimeout(() => {
-                    checkMatch();
-                }, 1200);
-                console.log('Checking for matching pair...');
-            }
-        });
-    }
+            cardClicked(card);
+    });
+}
 
     /**
      * Compare flipped cards.
