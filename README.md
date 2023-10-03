@@ -272,9 +272,9 @@ All validators were used in incognito mode.
 
 #### **Score**
 ![Lighthouse score desktop index page screenshot.](docs/screenshots/lighthouse/desktop-index.png)
-***Desktop score: Index.html***
+* *Desktop score: Index.html*
 ![Lighthouse score mobile index page screenshot.](docs/screenshots/lighthouse/mobile-index.png)
-***Mobile score: Index.html***
+* *Mobile score: Index.html*
 
 **Performance**
 * Desktop 100 on all pages.
@@ -292,10 +292,10 @@ All validators were used in incognito mode.
 * Mobile 100 on all pages except results.html (92).
 
 ![Lighthouse score desktop results page screenshot.](docs/screenshots/lighthouse/desktop-results.png)
-***Desktop score: Results.html***
+* *Desktop score: Results.html*
 
 ![Lighthouse score mobile results page screenshot.](docs/screenshots/lighthouse/mobile-results.png)
-***Mobile score: Results.html***
+* *Mobile score: Results.html*
 
 * Results page (92): 
     * Issue for both desktop and mobile: ***"Errors logged to the console indicate unresolved problems. They can come from network request failures and other browser concerns"***
