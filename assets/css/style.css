@@ -409,4 +409,7 @@ a {
     .easy-container {
         width: auto;
     }
+    .symbol {
+        font-size: 45px;
+    }
 }
