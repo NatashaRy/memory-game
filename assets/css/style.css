@@ -16,7 +16,7 @@ body {
     height: auto;
 }
 .height {
-    height: 88vh;
+    height: 85vh;
 }
 
 /* -------- Generic classes */
@@ -117,27 +117,26 @@ a {
 
 /* --------- Icons */
 .header-icons {
-    margin-top: 10px;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .fa-gear {
-    font-size: 24px;
+    font-size: 27px;
 }
 
 .fa-question {
-    font-size: 24px;
+    font-size: 27px;
     padding: 0 5px;
 }
 
 .fa-arrow-right {
-    font-size: 26px
+    font-size: 32px
 }
 
 .icons {
     color: #FAFAFA;
     margin: 5px;
-    padding: 13px 11px 10px;
+    padding: 17px 12px 10px;
     border: solid 3px #212121;
     border-radius: 26px;
     background-color: #D32F2F;
@@ -252,7 +251,6 @@ a {
     margin-bottom: 15px;
 }
 
-
 /* --------- Easy game page */
 .heading1 {
     padding-bottom: 30px;
@@ -312,6 +310,10 @@ a {
     width: 95%;
     padding: 6px;
     margin-top: 10px;
+}
+
+.footer {
+    margin: 30px;
 }
 /* ---------- Results page */
 .heading-results {

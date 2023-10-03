@@ -133,14 +133,15 @@ for (let card of cards) {
             playSound(nomatchSound);
             console.log('Played Sound effect: No match');
         }
+        movesCount++;
+        updateMoves()
+        
         if (countMatchingPairs === cards.length / 2) {
             allPairsMatched();
         }
 
         countFlippedCards = 0;
-        flippedCards = [];
-        movesCount++;
-        updateMoves();
+        flippedCards = [];;
     }
 
     // -------- Updates moves displayed on game page. 
