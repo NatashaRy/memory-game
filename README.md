@@ -343,6 +343,7 @@ You can find the live site via the following URL - [Memory Master | The Ultimate
 It's always nice to mention those that helped you get there, if people gave you support on slack or the local cat scared you into completing give them a mention!
 ​
 ### **Content:**
+* All code was written by me, some code are inspired by others who are referenced below. 
 * All fonts are imported from [Google Fonts](https://fonts.google.com)
 * All icons on memory cards are taken from [Font Awesome](https://fontawesome.com/)
 * Animations on buttons are inspired from [W3School](https://www.w3schools.com/css/css3_animations.asp)
