@@ -350,7 +350,6 @@ It's always nice to mention those that helped you get there, if people gave you 
 * Spread operator for cloning symbols array with  from [Tutorial Points](https://www.tutorialspoint.com/how-to-clone-an-array-using-spread-operator-in-javascript#:~:text=The%20(...),same%20as%20the%20original%20array.)
 * Code for delaying cards flipping back if they don't match from [Stackoverflow](https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript)
 
-
 ### **Media:**
 * Memory Masters logotyp was created with [Canva](https://canva.com)
 * Images compressed with [TinyPNG](https://tinypng.com/)
@@ -358,5 +357,3 @@ It's always nice to mention those that helped you get there, if people gave you 
 * Screenshot in README.md under "site overview" was created with [Am I Responsive](https://ui.dev/amiresponsive)
 * Favicon created with [Favicon.ic](https://favicon.io/favicon-converter/)
 * Wireframes were created in [Adobe XD](https://adobexdplatform.com/)
-
-[def]: #instructions
