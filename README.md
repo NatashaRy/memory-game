@@ -305,6 +305,9 @@ All validators were used in incognito mode.
 * Desktop 100 on all pages.
 * Mobile 100 on all pages.
 
+### **Accessability**
+We also used [WAVE](https://wave.webaim.org/) to test the accessability on every page an no errors were found.
+
 ​
 ## **Bugs**
 1. **Game did not detect matching pairs even thought there were a match**
