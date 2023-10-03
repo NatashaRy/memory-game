@@ -333,7 +333,7 @@ I deployed the page on GitHub pages via the following procedure:
 ​
 You can find the live site via the following URL - [Memory Master | The Ultimate Memory Game](https://natashary.github.io/memory-game/)
 ***
-​## **Tech**
+## **Tech**
 - HTML
 - CSS
 - JavaScript
