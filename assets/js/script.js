@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let timerInterval;
     let countMatchingPairs = 0;
     let difficulty;
+    let startGameButton = document.getElementById('start-game');
 
     const flipSound = new Audio('assets/sounds/flip.mp3');
     const matchSound = new Audio('assets/sounds/match.mp3');
@@ -52,22 +53,20 @@ document.addEventListener('DOMContentLoaded', function() {
      * Start the game when Start game with chosen theme and difficulty when button is clicked.
      * Stores if the player want to play with or without sound.
      */
+    if (startGameButton) {
+        startGameButton.addEventListener('click', function() {
+            let soundChoice = document.getElementById('sound').value;
+            if (soundChoice === 'yes') {
+                sessionStorage.setItem('audioEnabled', 'true');
+            } else {
+                sessionStorage.setItem('audioEnabled', 'false');
+            }
 
-        let startGameButton = document.getElementById('start-game');
-        if (startGameButton) {
-            startGameButton.addEventListener('click', function() {
-                let soundChoice = document.getElementById('sound').value;
-                if (soundChoice === 'yes') {
-                    sessionStorage.setItem('audioEnabled', 'true');
-                } else {
-                    sessionStorage.setItem('audioEnabled', 'false');
-                }
-    
-                let difficulty = document.getElementById('difficulty').value;
-                let theme = document.getElementById('theme').value;
-                window.location.href = difficulty + '-game.html?theme=' + theme;
-            });
-        }
+            let difficulty = document.getElementById('difficulty').value;
+            let theme = document.getElementById('theme').value;
+            window.location.href = difficulty + '-game.html?theme=' + theme;
+        });
+    }
 
     /**
      * Prohibit the player to click the same card two times in one attempt and limits the player to only be able to flip two cards in one attempt.
@@ -85,7 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
         playSound(flipSound);
 
         if (flippedCards.includes(card)) {
-            alert('This card is already flipped, flip an other card.');
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "You already selected this card!",
+                showConfirmButton: false,
+                timer: 1500,
+            });
             return;
         }
 
@@ -143,9 +148,6 @@ for (let card of cards) {
             moves.textContent = movesCount;
         }
 
-    // -------- Sets of different themes of symbols player can choose from.
-
-
     /**
      * Determind difficulty based on page.
      * Generate symbols based on chosen theme.
@@ -172,7 +174,6 @@ for (let card of cards) {
         let gameSymbols = [...selectedSymbols, ...selectedSymbols];
         
         gameSymbols.sort(() => Math.random() - 0.5);
-        console.log(`Shuffled symbols ${gameSymbols}`);
         return gameSymbols;
     }
 
@@ -181,7 +182,6 @@ for (let card of cards) {
 
     if (window.location.pathname.includes('easy-game.html')) {
         difficulty = 'Easy';
-        console.log('Easy game page loaded.');
 
         let shuffledSymbols = generateSymbols('easy', theme);
         for (let i = 0; i < cards.length; i++) {
@@ -190,11 +190,9 @@ for (let card of cards) {
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
 
-            console.log(`Symbols: ${shuffledSymbols}`);
         }
     } else if (window.location.pathname.includes('medium-game.html')) {
         difficulty = 'Medium';
-        console.log('Medium game page loaded.');
 
         let shuffledSymbols = generateSymbols('medium', theme);
         for (let i = 0; i < cards.length; i++) {
@@ -203,11 +201,9 @@ for (let card of cards) {
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
 
-            console.log(`Symbols: ${shuffledSymbols}`);
         }
     } else if (window.location.pathname.includes('hard-game.html')) {
         difficulty = 'Hard';
-        console.log('Hard game page loaded.');
 
         let shuffledSymbols = generateSymbols('hard', theme);
         for (let i = 0; i < cards.length; i++) {
@@ -216,7 +212,6 @@ for (let card of cards) {
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
 
-            console.log(`Symbols: ${shuffledSymbols}`);
         }
     } 
     /**
@@ -228,11 +223,6 @@ for (let card of cards) {
         sessionStorage.setItem('totalTime', totalTime);
         sessionStorage.setItem('totalMoves', movesCount.toString());
         sessionStorage.setItem('level', difficulty.toString());
-    
-        console.log("Stored totalTime:", totalTime);
-        console.log("Stored totalMoves:", movesCount);
-        console.log("Stored level:", difficulty);
-        
         window.location.href = ('results.html');
     }
 
@@ -251,7 +241,6 @@ for (let card of cards) {
                 document.getElementById('level').textContent = storedLevel;
             }
             playSound(cheeringSound);
-            console.log('Played sound: Cheering.');
         }
     }
     displayResults();
