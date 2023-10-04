@@ -255,7 +255,7 @@ To test the games responsiveness and functionality we have performed different t
 * Samsung Galaxy A54 - Google Chrome
 * OnePlus 9 Pro - Mozilla Firefox
 
-*Tested with emulator mode*
+*Tested with emulators*
 * Apple Iphone 15 Pro Max - Safari
 * Google Pixel 7 - Google Chrome
 
