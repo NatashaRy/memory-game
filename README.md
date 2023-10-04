@@ -541,7 +541,7 @@ You can find the live site via the following URL - [Memory Master | The Ultimate
 * All icons on memory cards are taken from [Font Awesome](https://fontawesome.com/)
 * Animations on buttons are inspired from [W3School](https://www.w3schools.com/css/css3_animations.asp)
 * Flipping card with CSS from [W3School](https://www.w3schools.com/howto/howto_css_flip_card.asp)
-* Spread operator for cloning symbols array with  from [Tutorialspoint](https://www.tutorialspoint.com/how-to-clone-an-array-using-spread-operator-in-javascript#:~:text=The%20(...),same%20as%20the%20 original%20array.)
+* Spread operator for cloning symbols array with  from [Tutorialspoint](https://www.tutorialspoint.com/javascript-spread-operator#:~:text=The%20JavaScript%20spread%20operator%20allows,preceded%20by%20the%20array%20name.)
 * Code for delaying cards flipping back if they don't match from [Stackoverflow](https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript)
 * For some of the texts are written or modified by [ChatGPT](https://chat.openai.com/)
 * For alert pop up we used [SweetAlert](https://sweetalert2.github.io/#examples)
