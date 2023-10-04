@@ -159,7 +159,7 @@ All pages have a title to make it obvious to the user what the page is about.
 
 * Gives the user a clear understanding about what the page is about. 
 
-### **Header:**
+### **Header and top navigation:**
 All pages except index.html and results.html have a header. The header differs slightly depending on the page, images below show the difference between different headers on different pages.
 
 ​![Screenshot header of instructions page.](docs/screenshots/header-instructions.png)
@@ -187,17 +187,13 @@ All pages except index.html and results.html have a header. The header differs s
 
 * The header is responsive and will stack the elements on smaller screens to give a better user experience. 
 
-### **Navigation:**
-Not all pages have a navigation. Game pages and settings pages have navigations on top left linking to instructions and setting (option not available on settings page). 
-
-​![Screenshot header navigation.](docs/screenshots/header-nav.png)
-
-The instructions page has a navigation in the bottom right to skip the instruction and forward to the settings page.
+### **Footer navigation:**
+The instructions page has a footer navigation in the bottom right to skip the instruction and forward to the settings page.
 
 ​![Screenshot footer navigation.](docs/screenshots/footer-nav.png)
 ​
-* Each option is presented with icons which are easy to understand. 
-* The user can easily change the settings and go back to the instructions.
+* Easy for the user to move fast forward. 
+* The arrow makes it clear that clicking would take the user to the next step. 
 
 ### **Instructions:**
 When starting the game the user gets instructions on how to play.  
