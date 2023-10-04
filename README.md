@@ -47,7 +47,6 @@ We provide a fun game in a relaxing gaming environment. Our target audience are 
 * As a user, I want to challenge myself and improve my skills.
 ​
 ### **Site Aims:**
-​​
 * To provide a fun, engaging and interactive online game.
 * To challenge the users memory skills to improve cognitivity.
 * To offer a variety of options to keep the user entertained.
@@ -240,13 +239,7 @@ We believe that Memory Masters have a lot of potential and can be enhanced in ma
 ## **Testing Phase**
 To test the games responsiveness and functionality we have performed different types of manual testing on a variety of browsers and devices, all described below. The bugs we found are described under [bugs](#bugs) with an explanation of our solutions.
 
-### **Responsiveness**
-We have tested the responsiveness of the game in several browsers and devices, to ensure cross-compatibility which will provide the expected user experience.
-
 **Browsers used for the testing**
-
-Responsiveness has been tested using DevTools for each browser, both on chosen dimensions and by making the window smaller. 
-
 * Google Chrome
 * Mozilla Firefox
 * Microsoft Edge
@@ -262,6 +255,15 @@ Responsiveness has been tested using DevTools for each browser, both on chosen d
 * Samsung Galaxy A54 - Google Chrome
 * OnePlus 9 Pro - Mozilla Firefox
 
+*Tested with emulator mode*
+* Apple Iphone 15 Pro Max - Safari
+* Google Pixel 7 - Google Chrome
+
+
+### **Responsiveness**
+We have tested the responsiveness of the game in several browsers and devices, listed above, to ensure cross-compatibility which will provide the expected user experience.
+Responsiveness has been tested using DevTools for each browser, both on chosen dimensions and by making the window smaller. 
+
 
 ### **Functionality**
 Functionality has been tested by clicking all elements in the game to see what happens and if the expected action occurs. 
@@ -270,61 +272,45 @@ Functionality has been tested by clicking all elements in the game to see what h
 * All headlines and texts are clearly visible in all browsers and on all devices we have tested the game on. 
 
 
-**Browsers used for testing**
-* Google Chrome
-* Mozilla Firefox
-* Microsoft Edge
-
-**Tablet used for testing**
-
-* Apple Ipad Air (4th gen) - Google Chrome, Safari
-* Samsung Galaxy A7 - Google Chrome
-
-**Mobile phones used for the testing**
-
-* Samsung Galaxy S22 Ultra - Google Chrome
-* Samsung Galaxy A54 - Google Chrome
-
-
 #### **Global elements**
 
 1. **Header**
-    1.1. **Question mark icon**
-            * Placement: Top left.
-            * On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
-            * On click: Redirect to instructions page. - Works as expected.
+    1. **Question mark icon**
+      - Placement: Top left.
+      - On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
+      - On click: Redirect to instructions page. - Works as expected.
 
-    1.2. **Logotype**
-            * Placement: Top middle.
-            * On hover: Nothing happens. - Works as expected.
-            * On click: Redirect to the index page. - Works as expected.
+    2. **Gear icon**
+      - Placement: Top left next to question mark icon.
+      - On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
+      - On click: Redirect to settings/choice page. - Works as expected.
 
-    1.3. **Gear icon**
-        * Placement: Top left next to question mark icon.
-        * On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
-        * On click: Redirect to settings/choice page. - Works as expected.
+    3. **Logotype**
+      - Placement: Top center.
+      - On hover: Nothing happens. - Works as expected.
+      - On click: Redirect to the index page. - Works as expected.
 
-    1.4. **Movies counter**
-        * Placement: Top right.
-        * On hover: Nothing happens. - Works as expected.
-        * On click: When clicking a card on the game board the counter adds it to moves. - Works as expected.
+    4. **Movies counter**
+      - Placement: Top right.
+      - On hover: Nothing happens. - Works as expected.
+      - On click: When clicking a card on the game board the counter adds it to moves. - Works as expected.
 
-    1.5. **Timer**
-        * Placement: Top right below moves counter.
-        * On hover: Nothing happens. - Works as expected.
-        * On click: When clicking the first card on the game board the counter automatically starts counting the time. - Works as expected.
+    5. **Timer**
+      - Placement: Top right below moves counter.
+      - On hover: Nothing happens. - Works as expected.
+      - On click: When clicking the first card on the game board the counter automatically starts counting the time. - Works as expected.
 
 
 #### **Index page**
 Page elements: Logotype, H1, paragraph, button.
 
 1. **Logotype**
-    * Placement: Middle top. 
+    * Placement: Center top. 
     * On hover: Nothing happens. - Works as expected.
     * On click: Redirects to index page (reloads index page). - Works as expected.
 
 1. **Button: "I wanna play!"**
-    * Placement: Middle bottom.
+    * Placement: Center bottom.
     * On hover: Fades slowly from red to light blue. - Works as expected.
     * On click: Redirects to How to play/instructions page. - Works as expected.
 
@@ -332,8 +318,11 @@ Page elements: Logotype, H1, paragraph, button.
 #### **Instructions page**
 Page elements: Header (Logotype), H1, five instruction cards with an icon, headline and text, arrow icon.
 
+1. **Instruction cards**
+    * Placement: Row with 3 instruction boxes + row with 2 instruction boxes below. - Works as expected.
+        * Are stacked on smaller screens. - Works as expected.
 
-1. **Arrow icon**
+2. **Arrow icon**
     * Placement: Down right corner.
     * On hover: The background shifters colour from red to green, the border disappears. - Works as expected.
     * On click: Redirect to settings/choice page. - Works as expected.
@@ -343,29 +332,31 @@ Page elements: Header (Logotype), H1, five instruction cards with an icon, headl
 Page elements: Header (Question mark icon, logotype), H1, three choice cards with an icon, headling, options dropdown, button. 
 
 1. **Choice cards**
+    One row on desktop/Stacked on smaller screens. - Works as expected.
+
     * Choice card 1: Theme.
-        * Placement: Left.
+        * Placement: Left/Top on smaller screens. - Works as expected.
         * Default option: Animals.
         * On hover: Nothing happens. - Works as expected.
         * On click: Opens dropdown with three options: Animals, foods, sports. - Works as expected.
         * On click on options: Activate chosen option and close dropdown. - Works as expected.
 
     * Choice card 2: Difficulty.
-        * Placement: Middle.
+        * Placement: Center/Center on smaller screens. - Works as expected.
         * Default option: Easy.
         * On hover: Nothing happens. - Works as expected.
         * On click: Opens dropdown with three options: Easy, Medium, Hard. - Works as expected.
         * On click on options: Activate chosen option and close dropdown. - Works as expected.
 
     * Choice card 3: Sound.
-        * Placement: Right.
+        * Placement: Right/Bottom on smaller screens. - Works as expected.
         * Default option: No.
         * On hover: Nothing happens. - Works as expected.
         * On click: Opens dropdown with three options: No, Yes - Works as expected.
         * On click on options: Activate chosen option and close dropdown. - Works as expected.
 
 4. **Button: Start game**
-    * Placement: Middle bottom.
+    * Placement: Center bottom.
     * On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
     * On click: Redirects to game page with game board based on difficulty - Works as expected.
 
@@ -375,12 +366,12 @@ Page elements: Header (Question mark icon, gear icon, logotype, movies counter, 
 All themes have been tested on every difficulty level, both with and without sound.
 
 1. **Cards back**
-    * Placement: Middle of page.
+    * Placement: Center of page.
     * On hover: Nothing happens. - Works as expected.
     * On click: Card turns and if the user chooses to use sound, the flip sound plays automatically. - Works as expected.
 
 2. **Cards front**
-    * Placement: Middle of flipped cards. 
+    * Placement: Center of flipped cards. 
     * On hover: Nothing happens. - Works as expected.
     * On click before solution: Game thinks it is a match. - Did not work as expected, explanation of issues and solution in [bugs](#bugs) number 2.
     * On click after solution: Pop up alerts the user that the card already has been flipped.
@@ -400,7 +391,7 @@ All themes have been tested on every difficulty level, both with and without sou
 Page elements: Logotype, H1, sub-title, score board, button.
 
 1. **Logotype**
-    * Placement: Middle top. 
+    * Placement: Center top. 
     * On hover: Nothing happens. - Works as expected.
     * On click: Redirects to index page (reloads index page). - Works as expected.
 
@@ -409,7 +400,7 @@ Page elements: Logotype, H1, sub-title, score board, button.
     * Results matches based on the game played. - Works as expected.
 
 3. **Button: Play again**
-    * Placement: Middle bottom.
+    * Placement: Center bottom.
     * On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
     * On click: Redirects to settings/choice page to let the user choose difficulty level and theme. - Works as expected.
 
@@ -514,8 +505,12 @@ We also used [WAVE](https://wave.webaim.org/) to test the accessibility on every
 4. **None visible symbols** 
 * Issue found: During development
     * While developing the game we realised that some cards did not have symbols when they were flipped.
+
 * Solution: 
     * Using DevTools we could detect the symbols not visible and remove them from the game, which solved the problem. 
+
+* *Note!* 
+It has been reported that some symbols sometimes have trouble loading properly in the Brave browser on Android devices. The game works properly in other browsers on the device which indicates that the issue probably is related to Brave browsers shields. We do not intend to fix the issue at this point, since we can not recreate it.
 
 ​
 ***

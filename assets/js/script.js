@@ -3,15 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     /**
      * Global variables.
      */
-    let cards = document.querySelectorAll('.card');
-    let movesCount = 0;
-    let countFlippedCards = 0;
-    let flippedCards = [];
-    let startTime;
-    let timerInterval;
-    let countMatchingPairs = 0;
-    let difficulty;
-
     const startGameButton = document.getElementById('start-game');
     const urlParams = new URLSearchParams(window.location.search);
     const theme = urlParams.get('theme');
@@ -25,18 +16,25 @@ document.addEventListener('DOMContentLoaded', function() {
         sports: ["fa-solid fa-baseball-bat-ball", "fa-solid fa-baseball", "fa-solid fa-table-tennis-paddle-ball", "fa-solid fa-person-swimming", "fa-solid fa-person-snowboarding", "fa-solid fa-golf-ball-tee","fa-solid fa-futbol", "fa-solid fa-football", "fa-solid fa-bowling-ball", "fa-solid fa-basketball", "fa-solid fa-person-biking", "fa-solid fa-person-running", "fa-solid fa-person-skating", "fa-solid fa-person-skiing","fa-solid fa-dumbbell", "fa-solid fa-bicycle", "fa-solid fa-hockey-puck", "fa-solid fa-volleyball","fa-solid fa-stopwatch-20"]
     };
 
+    let cards = document.querySelectorAll('.card');
+    let movesCount = 0;
+    let countFlippedCards = 0;
+    let flippedCards = [];
+    let startTime;
+    let timerInterval;
+    let countMatchingPairs = 0;
+    let difficulty;
 
-     /**
-      * Records the current time and set up inteval that calls updateTimer() every 10 milliseconds.
-      */
+    /**
+     * Records the current time and set up interval that calls updateTimer() every 10 milliseconds.
+     */
     function startTimer() {
         startTime = Date.now() - (0 * 1000);
         timerInterval = setInterval(updateTimer, 10);
     }
 
     /**
-     * Updating the time and stop the timer when all pairs are matched.
-     * The timer display format is MM:SS:ss and updates every 10 milliseconds.
+     * Updating the time and stopping the timer when all pairs are matched. 
      */
     function updateTimer() {
         const currentTime = Date.now() - startTime;
@@ -46,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const seconds = totalSeconds % 60;
         const hundredths = Math.floor((totalMilliseconds % 1000) /10);
     
-        document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
+        document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(hundredths).padStart(2, '0')}`;
     }
 
     /**
-     * Plays audio file automatically if audio is enabled.
+     * Plays audio files automatically if audio is enabled.
      * @param {Audio} audioObj 
      */
     function playSound(audioObj) {
@@ -60,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * When start game-button is clicked the users sound choice will be stored in the session storage.
-     * The users choices of theme and difficulty will be retived and the user redirects to the game based on the chosen theme and difficulty.
+     * Users' sound choice is stored in the session storage.  
+     *  Users' choices of theme and difficulty will be retrieved and the user redirected to the game based on the theme and difficulty.
      */
     if (startGameButton) {
         startGameButton.addEventListener('click', function() {
@@ -79,11 +77,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * Manages the flipping card logic, sound effects and checks matches in the game.
-     * Invoke the startTimer funciton if the timerInterval have not started.
-     * Counts the number of flipped cards in the game and limit it to two flipped cards in one attempt.
-     * If the user chosen to play with sound the flip sound will be played.
-     * Alert the user if the same card is tried to flip twice in a row and flip the cards back after 1,2 seconds if two cards are flipped without a match.
+     * Flip clicked cards, alert the user if same card is clicked twice and limit the user to only flip two cards in one attempt.
+     * Plays flip sound if audio is enabled.
      * 
      * @param {HTMLElement} card 
      * @returns {void}
@@ -123,8 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * When a card is clicked and the createCardClicked() is invoked ant it creates and returns a new function. 
-     * The new function, will call the cardClicked() function when invoked.
+     * Creates and returns a new function that calls cardClicked() when invoked.
      * 
      * @param {Element} card 
      * @returns {Function}
@@ -140,10 +134,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
-     * Checks if the flipped cards value are a match and counts the numbers of matching pairs, to see if all pairs are matched.
-     * If the player chosen to use sound the sounds for match/nomatch will be played.
-     * Number of attempts are counted and invokes the updateMoves for displaying the total moves.
-     * Resets the array of flipped cards to empty.
+     * Check flipped cards for matching values and count the number of matching pairs, update number of moves and resets flipped cards to empty.
+     * Plays sound if audio is enabled.
+     * 
      */
     function checkMatch() {
         if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
@@ -176,9 +169,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
     /**
-     * Determind difficulty based on page and generates symbols based on chosen theme.
-     * Symbols are cloned with spread operator and shuffled with sort method. 
-     * Amount of pairs are based on chosen difficulty. 
+     * Generates and clone right amount of symbols on cards based on chosen theme and difficulty. 
+     * Difficulty is determined based on page.
      * 
      * @param {string} difficulty 
      * @param {string} theme 
@@ -244,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /**
      * Check if all pairs are matched, if yes, the user is redirected to results page.
-     * Total time, moves and difficulty level will be stored in the session storage.
+     * Stores total time, moves and difficulty level in the session storage.
      */
     function allPairsMatched() {
         const totalTime = document.getElementById('timer').textContent;
@@ -254,9 +246,8 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = ('results.html');
     }
     /**
-     * Gets the total time, moves and difficulty level from the session storage.
-     * Cherring sound is played if the user has chosen to play with sound.
-     * The stored items are displayed on the results page. 
+     * Gets and display the total time, moves and difficulty level from the session storage.
+     * Plays cheering sound if audio is enabled.
      */
     function displayResults() {
         if (window.location.pathname.includes('results.html')) {
