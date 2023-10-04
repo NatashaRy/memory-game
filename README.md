@@ -142,9 +142,11 @@ Players must match pairs of cards based on memory. The goal is to match all pair
 ## **Current Features**
 
 ### **Logo**
-The Memory Master logotype is included in all pages, alway displayed on top.
+The logotype is M on cards as suitable for this type of game. We chose to use two M because of the game name **M**emory **M**aster and putting each one on the back of cards since the game is all about flipping cards and finding pairs. 
+
 ![Memory Master logotype.](assets/images/memory-master-logo.png)
 
+* The Memory Master logotype is included in all pages, alway displayed on top.
 * The logotype is linked to the start page.
 * Has a smaller ratio on smaller screens and on pages with less space. 
 
