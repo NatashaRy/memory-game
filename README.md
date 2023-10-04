@@ -168,7 +168,7 @@ All pages except index.html and results.html have a header. The header differs s
 * Only contains the linked logotype for recognition factor.
 
 
-​![Screenshot header of choices page.](docs/screenshots/header-choices.png)
+​![Screenshot header of choices page.](docs/screenshots/header-choice.png)
 
 ​*Header: Choices.html*
 * Question mark icon linking to the instructions, making it easy for the user to get back to see how to play the game.
