@@ -230,7 +230,7 @@ a {
 
 /* --------- Card symbols */
 .symbol {
-    font-size: 65px;
+    font-size: 80px;
     -webkit-text-stroke: 1.5px #212121;
     -webkit-text-fill-color: #4FC3F7;
 }
@@ -473,11 +473,14 @@ a {
         width: auto;
         gap: 18px;
     }
-    .symbol {
-        font-size: 45px;
-    }
-    
 }
+/* Media query max 500px */
+@media screen and (max-width: 500px) {
+    .symbol {
+        font-size: 55px;
+        }
+}
+
 /* Media query max 360px */
 @media screen and (max-width: 360px) {
     /* --------- Generic styles */
@@ -527,6 +530,10 @@ a {
         flex-wrap: nowrap;
         gap: 0;
     }
+    /* --------- Symbols */
+    .symbol {
+        font-size: 35px;
+        }
 
     /* --------- Results */
     .result-list li {
