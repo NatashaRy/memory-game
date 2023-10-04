@@ -220,22 +220,87 @@ We belive that Memory Master have a lot of potetial and can be enhanced in many 
 * Let the users be able to create an account to save their scores (moves and times).
 ​
 ## **Testing Phase**
-### **Responsivness and functionality**
-We have tested the responsiveness and functionality of the game in several browsers and devices, to ensure cross-compability which will provide the expected user experience.
-Functionality have been tested by clicking all elements.
+To test the games responsivness and functionality we have preformed different types of manual testing on a vary of browsers and devices, all described below. The bugs we found are described under [bugs](#bugs) with an explination of our solutions.
 
-#### **Tested browsers**
+### **Responsivness**
+We have tested the responsiveness of the game in several browsers and devices, to ensure cross-compability which will provide the expected user experience.
+
+**Browsers used for the testing**
+
 Responsivness has been tested using DevTools for each browser, both on chosen dimensions and by making the window smaller. 
 
 * Google Chrome
 * Mozilla Firefox
 * Microsoft Edge
 
-##### **Tablet**
+**Tablet used for the testing**
+
 * Apple Ipad Air (4th gen) - Google Chrome, Safari
 * Samsung Galaxy A7 - Google Chrome
 
-##### **Mobile**
+**Mobile phones used for the testing**
+
+* Samsung Galaxy S22 Ultra - Google Chrome
+* Samsung Galaxy A54 - Google Chrome
+* OnePlus 9 Pro - Mozilla Firefox
+
+
+### **Functionality**
+Functionality have been tested by clicking all elements in the game to see what happens and if the expected action accurs. The test were preformed page by page and are described below together with a list of browsers and devices used.
+All headlines and texts are clearly visible in all browsers and on all devices we have tested the game on. 
+
+**Browsers used for testing**
+* Google Chrome
+* Mozilla Firefox
+* Microsoft Edge
+
+**Tablet used for testing**
+
+* Apple Ipad Air (4th gen) - Google Chrome, Safari
+* Samsung Galaxy A7 - Google Chrome
+
+**Mobile phones used for the testing**
+
+* Samsung Galaxy S22 Ultra - Google Chrome
+* Samsung Galaxy A54 - Google Chrome
+
+#### **Index page**
+Page elements: Logotype, H1, paragraph, button.
+
+##### **Tests preformed**
+1. **Logotype**
+    * Placement: Middle top. 
+    * On hover: Nothing happens. - Works as expected.
+    * On click: Page reloads, since the logotype is linked to the index page. - Works as expected.
+
+2. **Button: "I wanna play!"**
+    * Placement: Middle bottom.
+    * On hover: Fades slowly from red to light blue. - Works as expected.
+    * On click: Redirects to How to play/instructions page. - Works as expected.
+
+
+#### **Instructions page**
+Page elements: Logotype, H1, instruction cards with an icon, headline and text, arrow icon.
+
+##### **Tests preformed**
+1. **Logotype**
+    * Placement: Top middle.
+    * On hover: Nothing happens. - Works as expected.
+    * Click: The logotype redirected us to the index page. - Works as expected.
+
+2. **Arrow icon**
+    * Placement: Down right corner-
+    * On hover: The background shiftes color from red to green, the border disappears. - Works as expected.
+
+
+
+
+
+#### **Tablet**
+* Apple Ipad Air (4th gen) - Google Chrome, Safari
+* Samsung Galaxy A7 - Google Chrome
+
+#### **Mobile**
 * Samsung Galaxy S22 Ultra - Google Chrome
 * Samsung Galaxy A54 - Google Chrome
 * OnePlus 9 Pro - Mozilla Firefox
@@ -323,11 +388,20 @@ We also used [WAVE](https://wave.webaim.org/) to test the accessability on every
 * Solution: 
     * By making new divs in the HTML-code for the cards that could not match the problem got solved. We could not see any problems with the existing divs, but changing them helped. 
  
-2. **Symbol size**
+
+ 2. **Pair detected when clicking the same card**
+* Issue found: During testing
+    * When testing the functionality we realized the game would count two clicks on the same card as a pair. 
+* Solution: 
+    * But adding an if-statement in the "cardClicked" function we could prohib the user to click the same card twice in the same attempt. We also chose to send a pop up message to alert the user that the card already has been flipped. 
+
+
+3. **Symbol size**
 * Issue found: During testing
     * While testing the game boards on mobile devices we realized the symbols were bigger than the cards.
 * Solution: 
     * By decresing the font-size of the symbols for 480px media query we could solve the problem.  
+
 ​
 ***
 ## **Deployment**
@@ -357,6 +431,7 @@ It's always nice to mention those that helped you get there, if people gave you 
 * Flipping card with CSS from [W3School](https://www.w3schools.com/howto/howto_css_flip_card.asp)
 * Spread operator for cloning symbols array with  from [Tutorial Points](https://www.tutorialspoint.com/how-to-clone-an-array-using-spread-operator-in-javascript#:~:text=The%20(...),same%20as%20the%20original%20array.)
 * Code for delaying cards flipping back if they don't match from [Stackoverflow](https://stackoverflow.com/questions/17883692/how-to-set-time-delay-in-javascript)
+* For some of the texts are written or modified by [ChatGPT](https://chat.openai.com/)
 
 ### **Media:**
 * Memory Masters logotyp was created with [Canva](https://canva.com)
