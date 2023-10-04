@@ -539,9 +539,6 @@ You can find the live site via the following URL - [Memory Master | The Ultimate
 - JavaScript
 ​
 ## **Credits**
-### **Honourable mentions**
-It's always nice to mention those that helped you get there, if people gave you support on slack or the local cat scared you into completing, give them a mention!
-​
 ### **Content:**
 * All code was written by me, some code is inspired by others who are referenced below. 
 * All fonts are imported from [Google Fonts](https://fonts.google.com)
