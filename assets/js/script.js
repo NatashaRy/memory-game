@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // ------------ Global variables   
+    /**
+     * Global variables.
+     */
     let cards = document.querySelectorAll('.card');
     let movesCount = 0;
     let countFlippedCards = 0;
@@ -9,8 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let timerInterval;
     let countMatchingPairs = 0;
     let difficulty;
-    let startGameButton = document.getElementById('start-game');
 
+    const startGameButton = document.getElementById('start-game');
+    const urlParams = new URLSearchParams(window.location.search);
+    const theme = urlParams.get('theme');
     const flipSound = new Audio('assets/sounds/flip.mp3');
     const matchSound = new Audio('assets/sounds/match.mp3');
     const nomatchSound = new Audio('assets/sounds/nomatch.mp3');
@@ -21,56 +25,68 @@ document.addEventListener('DOMContentLoaded', function() {
         sports: ["fa-solid fa-baseball-bat-ball", "fa-solid fa-baseball", "fa-solid fa-table-tennis-paddle-ball", "fa-solid fa-person-swimming", "fa-solid fa-person-snowboarding", "fa-solid fa-golf-ball-tee","fa-solid fa-futbol", "fa-solid fa-football", "fa-solid fa-bowling-ball", "fa-solid fa-basketball", "fa-solid fa-person-biking", "fa-solid fa-person-running", "fa-solid fa-person-skating", "fa-solid fa-person-skiing","fa-solid fa-dumbbell", "fa-solid fa-bicycle", "fa-solid fa-hockey-puck", "fa-solid fa-volleyball","fa-solid fa-stopwatch-20"]
     };
 
-    /**
-     * Timer counting how long it takes for the player to find all pairs.
-     * Function includes starting timer, updating the time and stop the timer when all pairs are matched.
-     * The timer display format is MM:SS:sss and updates every 10 milliseconds.
-     */
+
+     /**
+      * Records the current time and set up inteval that calls updateTimer() every 10 milliseconds.
+      */
     function startTimer() {
         startTime = Date.now() - (0 * 1000);
         timerInterval = setInterval(updateTimer, 10);
     }
 
+    /**
+     * Updating the time and stop the timer when all pairs are matched.
+     * The timer display format is MM:SS:ss and updates every 10 milliseconds.
+     */
     function updateTimer() {
         const currentTime = Date.now() - startTime;
         const totalMilliseconds = currentTime;
         const totalSeconds = Math.floor(totalMilliseconds / 1000);
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
-        const milliseconds = totalMilliseconds % 1000;
+        const hundredths = Math.floor((totalMilliseconds % 1000) /10);
     
-        document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(2, '0')}`;
+        document.getElementById('timer').textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
     }
 
-    // ----------- Play audio effect
+    /**
+     * Plays audio file automatically if audio is enabled.
+     * @param {Audio} audioObj 
+     */
     function playSound(audioObj) {
         if (sessionStorage.getItem('audioEnabled') === 'true') {
             audioObj.play();
         }
     }
 
-        /**
-     * Start the game when Start game with chosen theme and difficulty when button is clicked.
-     * Stores if the player want to play with or without sound.
+    /**
+     * When start game-button is clicked the users sound choice will be stored in the session storage.
+     * The users choices of theme and difficulty will be retived and the user redirects to the game based on the chosen theme and difficulty.
      */
     if (startGameButton) {
         startGameButton.addEventListener('click', function() {
-            let soundChoice = document.getElementById('sound').value;
+            const soundChoice = document.getElementById('sound').value;
             if (soundChoice === 'yes') {
                 sessionStorage.setItem('audioEnabled', 'true');
             } else {
                 sessionStorage.setItem('audioEnabled', 'false');
             }
 
-            let difficulty = document.getElementById('difficulty').value;
-            let theme = document.getElementById('theme').value;
+            const difficulty = document.getElementById('difficulty').value;
+            const theme = document.getElementById('theme').value;
             window.location.href = difficulty + '-game.html?theme=' + theme;
         });
     }
 
     /**
-     * Prohibit the player to click the same card two times in one attempt and limits the player to only be able to flip two cards in one attempt.
-     * Timer starts when first card is flipped. 1,5 seconds delay before flipping cards back if no match is found.
+     * Manages the flipping card logic, sound effects and checks matches in the game.
+     * Invoke the startTimer funciton if the timerInterval have not started.
+     * Counts the number of flipped cards in the game and limit it to two flipped cards in one attempt.
+     * If the user chosen to play with sound the flip sound will be played.
+     * Alert the user if the same card is tried to flip twice in a row and flip the cards back after 1,2 seconds if two cards are flipped without a match.
+     * 
+     * @param {HTMLElement} card 
+     * @returns {void}
      */
     function cardClicked(card) {
         if (countFlippedCards == 2) {
@@ -105,20 +121,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1200);
         }
     }
-function createCardClicked(card) {
-    return function() {
-        cardClicked(card);
-    };
-}
-
-for (let card of cards) {
-    card.addEventListener('click', createCardClicked(card));
-}
 
     /**
-     * Compare flipped cards.
-     * If a match is found the pairs are removed, otherwise the cards are flipped back over.
-     * Moves are counted.
+     * When a card is clicked and the createCardClicked() is invoked ant it creates and returns a new function. 
+     * The new function, will call the cardClicked() function when invoked.
+     * 
+     * @param {Element} card 
+     * @returns {Function}
+     */
+    function createCardClicked(card) {
+        return function() {
+            cardClicked(card);
+        };
+    }
+
+    for (let card of cards) {
+        card.addEventListener('click', createCardClicked(card));
+    }
+
+    /**
+     * Checks if the flipped cards value are a match and counts the numbers of matching pairs, to see if all pairs are matched.
+     * If the player chosen to use sound the sounds for match/nomatch will be played.
+     * Number of attempts are counted and invokes the updateMoves for displaying the total moves.
+     * Resets the array of flipped cards to empty.
      */
     function checkMatch() {
         if (flippedCards[0].innerHTML === flippedCards[1].innerHTML) {
@@ -132,31 +157,36 @@ for (let card of cards) {
             playSound(nomatchSound);
         }
         movesCount++;
-        updateMoves()
+        updateMoves();
         
         if (countMatchingPairs === cards.length / 2) {
             allPairsMatched();
         }
 
         countFlippedCards = 0;
-        flippedCards = [];;
+        flippedCards = [];
     }
 
-    // -------- Updates moves displayed on game page. 
+    /**
+     * Update the total moves displayed.
+     */
     function updateMoves() {
         let moves = document.getElementById('moves');
             moves.textContent = movesCount;
         }
-
+    
     /**
-     * Determind difficulty based on page.
-     * Generate symbols based on chosen theme.
-     * Adding symbols to the cards with the right amount of pairs based on chosen difficulty. 
-     * The symbols are cloned with spread operator and shuffled with sort method.
+     * Determind difficulty based on page and generates symbols based on chosen theme.
+     * Symbols are cloned with spread operator and shuffled with sort method. 
+     * Amount of pairs are based on chosen difficulty. 
+     * 
+     * @param {string} difficulty 
+     * @param {string} theme 
+     * @returns {string[]}
      */
     function generateSymbols(difficulty, theme) {
-        let symbols = themes[theme];
-    
+        const symbols = themes[theme];
+        
         let numbersOfPairs;
         switch (difficulty) {
             case 'easy':
@@ -170,23 +200,20 @@ for (let card of cards) {
                 break;
         }
 
-        let selectedSymbols = symbols.slice(0, numbersOfPairs);
-        let gameSymbols = [...selectedSymbols, ...selectedSymbols];
+        const selectedSymbols = symbols.slice(0, numbersOfPairs);
+        const gameSymbols = [...selectedSymbols, ...selectedSymbols];
         
         gameSymbols.sort(() => Math.random() - 0.5);
         return gameSymbols;
     }
 
-    let urlParams = new URLSearchParams(window.location.search);
-    let theme = urlParams.get('theme');
-
     if (window.location.pathname.includes('easy-game.html')) {
         difficulty = 'Easy';
 
-        let shuffledSymbols = generateSymbols('easy', theme);
+        const shuffledSymbols = generateSymbols('easy', theme);
         for (let i = 0; i < cards.length; i++) {
-            let symbolElement = cards[i].querySelector('.symbol');
-            let icon = document.createElement('i');
+            const symbolElement = cards[i].querySelector('.symbol');
+            const icon = document.createElement('i');
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
 
@@ -194,10 +221,10 @@ for (let card of cards) {
     } else if (window.location.pathname.includes('medium-game.html')) {
         difficulty = 'Medium';
 
-        let shuffledSymbols = generateSymbols('medium', theme);
+        const shuffledSymbols = generateSymbols('medium', theme);
         for (let i = 0; i < cards.length; i++) {
-            let symbolElement = cards[i].querySelector('.symbol');
-            let icon = document.createElement('i');
+            const symbolElement = cards[i].querySelector('.symbol');
+            const icon = document.createElement('i');
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
 
@@ -205,18 +232,19 @@ for (let card of cards) {
     } else if (window.location.pathname.includes('hard-game.html')) {
         difficulty = 'Hard';
 
-        let shuffledSymbols = generateSymbols('hard', theme);
+        const shuffledSymbols = generateSymbols('hard', theme);
         for (let i = 0; i < cards.length; i++) {
-            let symbolElement = cards[i].querySelector('.symbol');
-            let icon = document.createElement('i');
+            const symbolElement = cards[i].querySelector('.symbol');
+            const icon = document.createElement('i');
             icon.className = shuffledSymbols[i];
             symbolElement.appendChild(icon);
 
         }
     } 
+
     /**
-     * Checks if all pairs are matched and redirect to results page.
-     * Store tracked time, moves and chosen difficulty level in the session, to show on results page.
+     * Check if all pairs are matched, if yes, the user is redirected to results page.
+     * Total time, moves and difficulty level will be stored in the session storage.
      */
     function allPairsMatched() {
         const totalTime = document.getElementById('timer').textContent;
@@ -225,15 +253,16 @@ for (let card of cards) {
         sessionStorage.setItem('level', difficulty.toString());
         window.location.href = ('results.html');
     }
-
     /**
-     * Get the stored time, moves and difficulty level to display on results page.
+     * Gets the total time, moves and difficulty level from the session storage.
+     * Cherring sound is played if the user has chosen to play with sound.
+     * The stored items are displayed on the results page. 
      */
     function displayResults() {
         if (window.location.pathname.includes('results.html')) {
-            let storedTotalTime = sessionStorage.getItem('totalTime');
-            let storedTotalMoves = sessionStorage.getItem('totalMoves');
-            let storedLevel = sessionStorage.getItem('level');
+            const storedTotalTime = sessionStorage.getItem('totalTime');
+            const storedTotalMoves = sessionStorage.getItem('totalMoves');
+            const storedLevel = sessionStorage.getItem('level');
 
             if (storedTotalTime && storedTotalMoves && storedLevel) {
                 document.getElementById('total-moves').textContent = storedTotalMoves;
