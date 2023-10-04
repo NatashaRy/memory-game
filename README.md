@@ -30,9 +30,9 @@ We provide a fun game in a relaxing gaming environment. Our target audience are 
 1. [**Deployment**](#deployment)
 1. [**Tech**](#tech)
 1. [**Credits**](#credits)
-    * [**General reference**](#general-reference)
-    * [**Content**](#content)
-    * [**Media**](#media)
+    * [***General reference***](#general-reference)
+    * [***Content***](#content)
+    * [***Media***](#media)
 ​
 ## **Planning stage**
 ### **Target Audiences:**
