@@ -15,51 +15,77 @@
         <meta name="keywords" content="Memory, memory challenge, memory game, online game">
     </head>
     <body>
-        <header class="center-content">
-            <div class="align-s header-icons">
+    <!-- Header -->
+    <header class="center-content header">
+        <div class="flex-row top-header top-header align-i-c align-s">
+
+            <!-- Navigation icons -->
+            <div class="text-left header-icons" id="header-icons-choice">
                 <a href="instructions.html" class="icons" aria-label="Link to instructions"><i class="fa-solid fa-question"></i></a>
             </div>
-            <div><a href="index.html" aria-label="Link to start page."><img class="logo" id="logotype" src="assets/images/memory-master-logo.png" alt="graphic of logotype"></a></div>
-        </header>
 
-        <section class="center-content">
-            <div><h1 class="headings heading1">Make your choice</h1></div>
-            <div class="chioce-cards center-content flex-row">
-                <div class="choice">
-                    <p>
-                        <i class="fa-solid fa-hippo expl-icons"></i>
-                    </p>
-                    <h2><label for="theme" class="heading2 card-title">Choose a theme:</label></h2>
-                    <select id="theme">
-                        <option value="animals">Animals</option>
-                        <option value="foods">Foods</option>
-                        <option value="sports">Sports</option>
-                    </select>
-                </div>
-                <div class="choice">
-                    <p>
-                        <i class="fa-solid fa-baby expl-icons"></i>
-                    </p>
-                    <h2><label for="difficulty" class="heading2 card-title">Choose difficulty:</label></h2>
-                    <select id="difficulty">
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
-                    </select>
-                </div>
-                <div class="choice">
-                    <p>
-                        <i class="fa-solid fa-volume-high expl-icons"></i>
-                    </p>
-                    <h2><label for="sound" class="heading2 card-title ">Want sound?</label></h2>
-                    <select id="sound">
-                        <option value="no">No</option>
-                        <option value="yes">Yes</option>
-                    </select>
-                </div>
+            <!-- Logotype -->
+            <div class="center-content">
+                <a href="index.html" aria-label="Link to start page.">
+                    <img class="logo" src="assets/images/memory-master-logo.png" alt="graphic of logotype">
+                </a>
             </div>
-        </section>
-        <div class="center-content"><button id="start-game" class="btn">Start game!</button></div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <section class="center-content mid-height">
+
+        <!-- Heading -->
+        <div><h1 class="headings heading1">Make your choice</h1></div>
+
+        <!-- Choices and settings -->
+        <div class="chioce-cards center-content flex-row">
+
+            <!-- Theme -->
+            <div class="choice">
+                <p>
+                    <i class="fa-solid fa-hippo expl-icons"></i>
+                </p>
+                <h2><label for="theme" class="heading2 card-title">Choose a theme:</label></h2>
+                <select id="theme">
+                    <option value="animals">Animals</option>
+                    <option value="foods">Foods</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
+
+            <!-- Difficulty -->
+            <div class="choice">
+                <p>
+                    <i class="fa-solid fa-baby expl-icons"></i>
+                </p>
+                <h2><label for="difficulty" class="heading2 card-title">Choose difficulty:</label></h2>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <!-- Sound -->
+            <div class="choice">
+                <p>
+                    <i class="fa-solid fa-volume-high expl-icons"></i>
+                </p>
+                <h2><label for="sound" class="heading2 card-title ">Want sound?</label></h2>
+                <select id="sound">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Start game button -->
+    <div class="center-content">
+        <button id="start-game" class="btn">Start game!</button>
+    </div>
+    </section>
 
         <script src="assets/js/script.js"></script>
     </body>

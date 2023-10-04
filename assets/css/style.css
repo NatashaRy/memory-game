@@ -10,13 +10,17 @@ body {
 }
 .logo {
     width: 120px;
-    margin-bottom: 20px;
-    margin: 30px;
     padding: 0;
     height: auto;
 }
-.height {
-    height: 85vh;
+.full-height {
+    height: 94vh;
+}
+.mid-height {
+    height: 70vh;
+}
+.box30 {
+    width: 30%;
 }
 
 /* -------- Generic classes */
@@ -34,6 +38,7 @@ body {
     padding: 0;
     gap: 0;
 }
+
 .justify-c {
     justify-content: center;
 }
@@ -52,8 +57,14 @@ body {
 .text-right {
     text-align: right;
 }
+.text-center {
+    text-align: center;
+}
 .top-header {
     width: 100%;
+}
+.align-i-c {
+    align-items: center;
 }
 
 /* -------- Typography */
@@ -65,10 +76,14 @@ body {
 }
 .heading1 {
     font-size: 50px;
-    margin-bottom: 60px;
     font-weight: bold;
-    margin: 20px 10px;
+    margin: 35px;
     line-height: 1;
+}
+
+#heading-start {
+    padding: 0;
+    margin: 0;
 }
 
 .card-title {
@@ -121,6 +136,9 @@ a {
 .header-icons {
     margin: 0;
 }
+#icons-gamepage {
+    margin: 0 70px 0 0;
+}
 
 .fa-gear {
     font-size: 27px;
@@ -138,7 +156,7 @@ a {
 .icons {
     color: #FAFAFA;
     margin: 5px;
-    padding: 18px 11px 8px;
+    padding: 17px 10px 9px;
     border: solid 3px #212121;
     border-radius: 26px;
     background-color: #D32F2F;
@@ -173,7 +191,7 @@ a {
     grid-template-columns: repeat(4,1fr);
     gap: 25px; 
     width: 600px;
-    margin: 0 auto;
+    margin: 40px auto 0;
 }
 
 .card {
@@ -209,9 +227,6 @@ a {
     transform: rotateY(180deg);
 }
 
-.heading-gamepage {
-    margin-bottom: 40px;
-}
 
 /* --------- Card symbols */
 .symbol {
@@ -235,6 +250,10 @@ a {
     font-size: 18px;
 }
 
+#header-icons-choice {
+    width: 47%;
+}
+
 /* --------- Landing page - Home  */
 #logotype {
     width: 200px;
@@ -248,15 +267,7 @@ a {
     width: 75%;
 }
 
-#heading-start {
-    padding-bottom: 0;
-    margin-bottom: 15px;
-}
-
 /* --------- Easy game page */
-.heading1 {
-    padding-bottom: 30px;
-} 
 .easy-container {
     grid-template-columns: repeat(2,1fr);
     width: 450px;
@@ -275,7 +286,6 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    margin-bottom: 30px;
     width: 1200px;
 }
 #choice-logo {
@@ -314,9 +324,7 @@ a {
     margin-top: 10px;
 }
 
-.footer {
-    margin: 30px;
-}
+
 /* ---------- Results page */
 .heading-results {
     color: #212121;
@@ -349,11 +357,27 @@ a {
     margin-top: 20px;
 }
 
+/* --------- Footer */
+.footer {
+    padding: 15px 0;
+}
+
 /* Media query max 1200px */
 @media screen and (max-width: 1200px) {
-    .logo {
-        margin-top: 50px;
+    /* ----------- Generic */
+    .mid-height {
+        height: auto;
     }
+    .height {
+        height: auto;
+    }
+    
+    /* ----------- Header */
+    #header-icons-choice {
+        width: 46%;
+    }
+
+    /* ----------- Choice and instruction page */
     .chioce-cards {
         flex-wrap: wrap;
         justify-content: center;
@@ -366,61 +390,154 @@ a {
     }
     .instruction-cards, .chioce-cards {
         margin-bottom: 30px;
-        width: auto;
+        width: 90%;
     }
-    .height {
-        height: auto;
-    }
-    .card-container {
+
+    /* ----------- Game board */
+    .hard-container {
         width: auto;
-        margin-bottom: 30px;
-        gap: 20px;
     }
 }
 
-/* Media query max 482px */
-@media screen and (max-width: 482px) {
-    #logotype {
-        width: 140px;
-        height: auto;
+/* Media query max 660px */
+@media screen and (max-width: 660px) {
+    /* --------- Generic styles */
+    body {
+        padding: 20px 35px;
     }
-    .logo {
-        margin-top: 30px;
-    }
-    .heading1 {
-        font-size: 30px;
-        line-height: 1;
+    .width100 {
         width: 100%;
-        padding: 5px;
-    }
-    .center-content {
-        gap: 6px;
-    }
-    .instruction, .instructions, .chioce-cards {
-        width: 250px;
-    }
-    .height {
-        height: auto;
     }
     .flex-row {
         flex-wrap: wrap;
     }
-    .count-moves {
-        margin-top: 20px;
-        width: auto;
-        padding: 10px;
+    .height {
+        height: auto;
     }
+
+    /* --------- Typography */
+    .heading1 {
+        padding: 15px 0 0 0;
+        line-height: 1.1;
+        margin: 10px;
+        width: 100%;
+    }
+    #result-main-heading {
+        font-size: 40px;
+    }
+
+    /* --------- Logotype index */
+    #logotype {
+        width: 140px;
+        height: auto;
+    }
+
+    /* --------- Header */
+    .header-icons {
+        margin: 0;
+    }
+    .icons {
+        padding: 13px 10px 8px;
+    }
+    .fa-question, .fa-gear {
+        font-size: 25px;
+    }
+    .logo {
+        width: 80px;
+    }
+    .count-moves {
+        margin-top: 15px;
+        width: 100%;
+        padding: 8px;
+        flex-wrap: nowrap;
+    }
+    #header-icons-choice {
+        width: none;
+    }
+
+    /* --------- Icons */
+    .fa-arrow-right {
+        font-size: 25px;
+    }
+
+    /* --------- Game board */
+    .easy-container, .card-container {
+        width: auto;
+        gap: 18px;
+    }
+
+    .symbol {
+        font-size: 45px;
+    }
+    
+}
+/* Media query max 360px */
+@media screen and (max-width: 360px) {
+    /* --------- Generic styles */
+    body {
+        padding: 30px 20px;
+    }
+    .center-content {
+        gap: 15px;
+    }
+
+    /* --------- Typography */
+    .heading1 {
+        padding: 15px 0 0 0;
+        line-height: 1.1;
+        font-size: 35px;
+    }
+
+    /* --------- Logotype index */
+    #logotype {
+        width: 140px;
+        height: auto;
+    }
+
+    /* --------- Header */
     .top-header {
         justify-content: center;
     }
     .header-icons {
-        width: auto;
-        margin: auto;
+        margin: 0;
     }
-    .easy-container {
-        width: auto;
+    #icons-gamepage {
+        margin: 0;
     }
-    .symbol {
-        font-size: 45px;
+    .icons {
+        padding: 13px 10px 8px;
+    }
+    .fa-question, .fa-gear {
+        font-size: 25px;
+    }
+    .logo {
+        width: 80px;
+    }
+    .count-moves {
+        margin-top: 15px;
+        width: 100%;
+        padding: 8px;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+
+    /* --------- Results */
+    .result-list li {
+        border-bottom: solid 3px #4FC3F7;
+        padding: 32px 0;
+        text-align: center;
+    }
+    #result-main-heading {
+        font-size: 20px;
+    }
+    .result-label {
+        font-size: 20px;
+        padding: 0;
+        line-height: 1.5;
+    }
+    .result-value {
+        font-size: 25px;
+        margin: 9px 0;
+        width: 100%;
     }
 }

@@ -15,24 +15,40 @@
     <meta name="keywords" content="Memory, memory challenge, memory game, online game">
 </head>
 <body>
-    <header class="center-content">
-        <div class="flex-row space-b top-header center-content">
-            <div class="text-left header-icons">
+    <!-- Header -->
+    <header class="center-content header">
+        <div class="flex-row space-b top-header center-content top-header">
+
+            <!-- Navigation icons -->
+            <div class="text-left header-icons" id="icons-gamepage">
                 <a href="instructions.html" class="icons" aria-label="Link to instructions"><i class="fa-solid fa-question"></i></a>
                 <a href="choice.html" class="icons"  aria-label="Link to settings and choices"><i class="fa-solid fa-gear"></i></a>
             </div>
-            <div class="text-right center-content">
+
+            <!-- Logotype -->
+            <div class="center-content">
+                <a href="index.html" aria-label="Link to start page.">
+                    <img class="logo" src="assets/images/memory-master-logo.png" alt="graphic of logotype">
+                </a>
+            </div>
+
+            <!-- Moves counter and timer -->
+            <div class="text-right center-content width100">
                 <div class="count-moves center-content">
                     <p class="moves center-content flex-row">Moves: <span id="moves">0</span></p>
                     <p class="timer center-content flex-row">Time: <span id="timer">00:00:00</span></p>
                 </div>
             </div>
         </div>
-        <div><img class="logo" id="logotype" src="assets/images/memory-master-logo.png" alt="graphic of logotype"></div>
     </header>
 
+    <!-- Main -->
     <section class="space-b" id="hard">
+
+        <!-- Heading -->
         <div><h1 class="headings heading1 heading-gamepage">Hard Mode</h1></div>
+
+        <!-- Game board -->
         <div class="card-container hard-container">
             <div class="card" id="card1">
                 <div class="card-front"></div>
@@ -181,6 +197,10 @@
         </div>
     </section> 
 
+    <!-- Source script for alerts -->
+    <script src="sweetalert2.all.min.js"></script>
+
+    <!-- Source JavaScripts -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
