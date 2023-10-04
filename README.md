@@ -145,7 +145,7 @@ The logotype is M on cards as suitable for this type of game. We chose to use tw
 
 ![Memory Master logotype.](assets/images/memory-master-logo.png)
 
-* The Memory Master logotype is included in all pages, alway displayed on top.
+* The Memory Master logotype is included in all pages, always displayed on top.
 * The logotype is linked to the start page.
 * Has a smaller ratio on smaller screens and on pages with less space. 
 
