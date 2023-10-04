@@ -47,7 +47,8 @@ We provide a fun game in a relaxing gaming environment. Our target audience are 
 * As a user, I want to challenge myself and improve my skills.
 ​
 ### **Site Aims:**
-​​* To provide a fun, engaging and interactive online game.
+​​
+* To provide a fun, engaging and interactive online game.
 * To challenge the users memory skills to improve cognitivity.
 * To offer a variety of options to keep the user entertained.
 
