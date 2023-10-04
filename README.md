@@ -30,7 +30,6 @@ We provide a fun game in a relaxing gaming environment. Our target audience are 
 1. [**Deployment**](#deployment)
 1. [**Tech**](#tech)
 1. [**Credits**](#credits)
-    * [**Honorable mentions**](#honorable-mentions)
     * [**General reference**](#general-reference)
     * [**Content**](#content)
     * [**Media**](#media)
@@ -146,7 +145,7 @@ The logotype is M on cards as suitable for this type of game. We chose to use tw
 
 ![Memory Master logotype.](assets/images/memory-master-logo.png)
 
-* The Memory Master logotype is included in all pages, alway displayed on top.
+* The Memory Master logotype is included in all pages, always displayed on top.
 * The logotype is linked to the start page.
 * Has a smaller ratio on smaller screens and on pages with less space. 
 
