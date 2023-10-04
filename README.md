@@ -276,29 +276,29 @@ Functionality has been tested by clicking all elements in the game to see what h
 
 1. **Header**
     1. **Question mark icon**
-      - Placement: Top left.
-      - On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
-      - On click: Redirect to instructions page. - Works as expected.
+        - Placement: Top left.
+        - On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
+        - On click: Redirect to instructions page. - Works as expected.
 
     2. **Gear icon**
-      - Placement: Top left next to question mark icon.
-      - On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
-      - On click: Redirect to settings/choice page. - Works as expected.
+        - Placement: Top left next to question mark icon.
+        - On hover: Background shifters colour from red to green, the border disappears. - Works as expected.
+        - On click: Redirect to settings/choice page. - Works as expected.
 
     3. **Logotype**
-      - Placement: Top center.
-      - On hover: Nothing happens. - Works as expected.
-      - On click: Redirect to the index page. - Works as expected.
+        - Placement: Top center.
+        - On hover: Nothing happens. - Works as expected.
+        - On click: Redirect to the index page. - Works as expected.
 
     4. **Movies counter**
-      - Placement: Top right.
-      - On hover: Nothing happens. - Works as expected.
-      - On click: When clicking a card on the game board the counter adds it to moves. - Works as expected.
+        - Placement: Top right.
+        - On hover: Nothing happens. - Works as expected.
+        - On click: When clicking a card on the game board the counter adds it to moves. - Works as expected.
 
     5. **Timer**
-      - Placement: Top right below moves counter.
-      - On hover: Nothing happens. - Works as expected.
-      - On click: When clicking the first card on the game board the counter automatically starts counting the time. - Works as expected.
+        - Placement: Top right below moves counter.
+        - On hover: Nothing happens. - Works as expected.
+        - On click: When clicking the first card on the game board the counter automatically starts counting the time. - Works as expected.
 
 
 #### **Index page**
