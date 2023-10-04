@@ -399,6 +399,14 @@ a {
     }
 }
 
+/* Media query max 820px */
+@media screen and (max-width: 820px) {
+    .hard-container {
+        grid-template-columns: repeat(4,1fr);
+        width: auto;
+    }
+}
+
 /* Media query max 660px */
 @media screen and (max-width: 660px) {
     /* --------- Generic styles */
@@ -465,7 +473,6 @@ a {
         width: auto;
         gap: 18px;
     }
-
     .symbol {
         font-size: 45px;
     }
